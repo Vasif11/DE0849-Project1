@@ -1,0 +1,16 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  # Scenario A exporter running on the Linux host (root namespace).
+  # Reached through the observability bridge gateway 10.0.5.1 - not through the user-plane path.
+  - job_name: scenario-a
+    scrape_interval: 1s
+    scrape_timeout: 900ms
+    static_configs:
+      - targets: ["10.0.5.1:9101"]
+
+  - job_name: prometheus
+    static_configs:
+      - targets: ["localhost:9090"]

@@ -1,0 +1,84 @@
+# Scenario A - containerised services of the hybrid Linux + Docker network.
+#
+#  scena-dn  (10.0.4.0/24, bridge br-dn)  : data network - application & performance services
+#  scena-obs (10.0.5.0/24, bridge br-obs) : observability plane - NOT part of the user traffic path
+name: scenario-a
+
+services:
+  app-nginx:
+    build: ./nginx
+    image: scena-nginx:1.0
+    container_name: scena-nginx
+    networks:
+      dn:
+        ipv4_address: 10.0.4.10
+    restart: unless-stopped
+
+  perf-iperf3:
+    image: networkstatic/iperf3:latest
+    container_name: scena-iperf3
+    command: ["-s"]
+    networks:
+      dn:
+        ipv4_address: 10.0.4.20
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:v2.53.2
+    container_name: scena-prometheus
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.retention.time=7d
+    networks:
+      obs:
+        ipv4_address: 10.0.5.30
+    ports:
+      - "127.0.0.1:9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prom-data:/prometheus
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:11.2.0
+    container_name: scena-grafana
+    environment:
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: "Viewer"
+      GF_USERS_DEFAULT_THEME: "light"
+      GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /etc/grafana/provisioning/dashboards/scenario-a.json
+    networks:
+      obs:
+        ipv4_address: 10.0.5.40
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+    depends_on: [prometheus]
+    restart: unless-stopped
+
+networks:
+  dn:
+    name: scena-dn
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.name: br-dn
+      # "routed": no NAT/masquerade and no raw-table drop of directly routed packets,
+      # so the UE (10.0.1.10) reaches the services with its real source address.
+      com.docker.network.bridge.gateway_mode_ipv4: routed
+    ipam:
+      config:
+        - subnet: 10.0.4.0/24
+          gateway: 10.0.4.1
+  obs:
+    name: scena-obs
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.name: br-obs
+    ipam:
+      config:
+        - subnet: 10.0.5.0/24
+          gateway: 10.0.5.1
+
+volumes:
+  prom-data:

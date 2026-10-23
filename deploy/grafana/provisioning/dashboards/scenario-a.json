@@ -1,0 +1,115 @@
+{
+  "uid": "scenario-a",
+  "title": "Scenario A - Network Observability",
+  "tags": ["DE0849", "project1"],
+  "timezone": "browser",
+  "schemaVersion": 39,
+  "version": 1,
+  "editable": true,
+  "refresh": "5s",
+  "time": { "from": "now-15m", "to": "now" },
+  "panels": [
+    {
+      "id": 1, "type": "timeseries", "title": "Panel 1 - Throughput at the UE (ue-eth0)",
+      "gridPos": { "x": 0, "y": 0, "w": 12, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "prom" },
+      "fieldConfig": { "defaults": { "unit": "bps", "custom": { "fillOpacity": 10, "lineWidth": 2 } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        { "refId": "A", "expr": "rate(scena_iface_tx_bytes_total{ns=\"ue\",iface=\"ue-eth0\"}[3s]) * 8", "legendFormat": "UE uplink (tx)" },
+        { "refId": "B", "expr": "rate(scena_iface_rx_bytes_total{ns=\"ue\",iface=\"ue-eth0\"}[3s]) * 8", "legendFormat": "UE downlink (rx)" }
+      ]
+    },
+    {
+      "id": 2, "type": "timeseries", "title": "Panel 2 - RTT UE -> Nginx (ICMP probe, 1/s)",
+      "gridPos": { "x": 12, "y": 0, "w": 12, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "prom" },
+      "fieldConfig": { "defaults": { "unit": "ms", "custom": { "lineWidth": 2, "spanNulls": false } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        { "refId": "A", "expr": "scena_probe_rtt_ms", "legendFormat": "measured RTT" },
+        { "refId": "B", "expr": "sum(scena_impair_delay_ms)", "legendFormat": "configured extra RTT (netem, both directions)" }
+      ]
+    },
+    {
+      "id": 3, "type": "timeseries", "title": "Panel 3 - Packet loss (ICMP probes, 20 s window)",
+      "gridPos": { "x": 0, "y": 8, "w": 8, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "prom" },
+      "fieldConfig": { "defaults": { "unit": "percent", "min": 0, "custom": { "lineWidth": 2 } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" } },
+      "targets": [
+        { "refId": "A", "expr": "100 * increase(scena_probe_icmp_lost_total[20s]) / clamp_min(increase(scena_probe_icmp_sent_total[20s]), 1)", "legendFormat": "ICMP probe loss %" }
+      ]
+    },
+    {
+      "id": 4, "type": "timeseries", "title": "Panel 3b - Packets dropped by tc qdisc (netem / tbf)",
+      "gridPos": { "x": 8, "y": 8, "w": 8, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "prom" },
+      "fieldConfig": { "defaults": { "unit": "pps", "min": 0, "custom": { "lineWidth": 2 } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" } },
+      "targets": [
+        { "refId": "A", "expr": "rate(scena_qdisc_drops_total{iface=~\"acc-core|core-acc|core-dn|host-core\"}[3s])", "legendFormat": "{{ns}}/{{iface}}" }
+      ]
+    },
+    {
+      "id": 5, "type": "timeseries", "title": "Panel 4 - TCP retransmissions",
+      "gridPos": { "x": 16, "y": 8, "w": 8, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "prom" },
+      "fieldConfig": { "defaults": { "unit": "short", "min": 0, "custom": { "lineWidth": 2 } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" } },
+      "targets": [
+        { "refId": "A", "expr": "rate(scena_tcp_retrans_segs_total[3s])", "legendFormat": "{{endpoint}} retrans segs/s" }
+      ]
+    },
+    {
+      "id": 6, "type": "state-timeline", "title": "Panel 5 - Path and service state",
+      "gridPos": { "x": 0, "y": 16, "w": 12, "h": 7 },
+      "datasource": { "type": "prometheus", "uid": "prom" },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [ { "type": "value", "options": { "0": { "text": "DOWN", "color": "red" }, "1": { "text": "UP", "color": "green" } } } ],
+          "thresholds": { "mode": "absolute", "steps": [ { "color": "red", "value": null }, { "color": "green", "value": 1 } ] }
+        },
+        "overrides": []
+      },
+      "options": { "showValue": "never", "mergeValues": true, "legend": { "displayMode": "list", "placement": "bottom" } },
+      "targets": [
+        { "refId": "A", "expr": "min(scena_link_up)", "legendFormat": "all path links up" },
+        { "refId": "B", "expr": "scena_nginx_up", "legendFormat": "Nginx process (stub_status)" },
+        { "refId": "C", "expr": "scena_probe_http_up", "legendFormat": "UE -> Nginx HTTP 200" }
+      ]
+    },
+    {
+      "id": 7, "type": "timeseries", "title": "Panel 6 - Application response time (HTTP probe from UE)",
+      "gridPos": { "x": 12, "y": 16, "w": 12, "h": 7 },
+      "datasource": { "type": "prometheus", "uid": "prom" },
+      "fieldConfig": { "defaults": { "unit": "s", "custom": { "lineWidth": 2 } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        { "refId": "A", "expr": "scena_probe_http_seconds", "legendFormat": "{{phase}}" }
+      ]
+    },
+    {
+      "id": 8, "type": "timeseries", "title": "Configured impairment (from tc)",
+      "gridPos": { "x": 0, "y": 23, "w": 12, "h": 6 },
+      "datasource": { "type": "prometheus", "uid": "prom" },
+      "fieldConfig": { "defaults": { "custom": { "lineWidth": 2, "lineInterpolation": "stepAfter" } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" } },
+      "targets": [
+        { "refId": "A", "expr": "sum(scena_impair_delay_ms)", "legendFormat": "added RTT [ms]" },
+        { "refId": "B", "expr": "max(scena_impair_loss_percent)", "legendFormat": "loss per direction [%]" },
+        { "refId": "C", "expr": "max(scena_impair_rate_mbit)", "legendFormat": "rate limit [Mbit/s]" }
+      ]
+    },
+    {
+      "id": 9, "type": "timeseries", "title": "Nginx requests per second",
+      "gridPos": { "x": 12, "y": 23, "w": 12, "h": 6 },
+      "datasource": { "type": "prometheus", "uid": "prom" },
+      "fieldConfig": { "defaults": { "unit": "reqps", "custom": { "lineWidth": 2 } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" } },
+      "targets": [
+        { "refId": "A", "expr": "rate(scena_nginx_requests_total[5s])", "legendFormat": "requests/s" }
+      ]
+    }
+  ]
+}

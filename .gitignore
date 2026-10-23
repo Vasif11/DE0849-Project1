@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+# large temporary captures are kept in /tmp by the scripts; only small / gzipped evidence is committed
+*.pcapng
