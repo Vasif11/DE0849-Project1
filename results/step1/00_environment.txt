@@ -1,0 +1,25 @@
+$ uname -a
+Linux DESKTOP-KEPJ21G 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 GNU/Linux
+
+$ bash -c grep PRETTY_NAME /etc/os-release
+PRETTY_NAME="Ubuntu 26.04.1 LTS"
+
+$ docker version --format Docker client {{.Client.Version}} / server {{.Server.Version}}
+Docker client 29.1.3 / server 29.1.3
+
+$ docker compose version
+Docker Compose version 2.40.3+ds1-0ubuntu1
+
+$ bash -c iperf3 --version | head -1; tcpdump --version 2>&1 | head -1; tshark --version | head -1; curl --version | head -1
+iperf 3.20 (cJSON 1.7.15)
+tcpdump version 4.99.6
+Running as user "root" and group "root". This could be dangerous.
+TShark (Wireshark) 4.6.4.
+curl 8.18.0 (x86_64-pc-linux-gnu) libcurl/8.18.0 OpenSSL/3.5.5 zlib/1.3.1 brotli/1.2.0 zstd/1.5.7 libidn2/2.3.8 libpsl/0.21.2 libssh2/1.11.1 nghttp2/1.68.0 librtmp/2.3 mit-krb5/1.22.1 OpenLDAP/2.6.10
+
+$ bash -c nproc; free -m
+4
+               total        used        free      shared  buff/cache   available
+Mem:            3916        1544         185         556        2918        2371
+Swap:           4096           2        4093
+

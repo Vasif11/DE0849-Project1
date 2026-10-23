@@ -1,0 +1,83 @@
+$ ue curl -sv http://10.0.4.10:8080/
+*   Trying 10.0.4.10:8080...
+* Established connection to 10.0.4.10 (10.0.4.10 port 8080) from 10.0.1.10 port 53048 
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: 10.0.4.10:8080
+> User-Agent: curl/8.18.0
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Server: nginx/1.27.5
+< Date: Fri, 23 Oct 2026 12:29:37 GMT
+< Content-Type: text/html
+< Content-Length: 421
+< Last-Modified: Fri, 23 Oct 2026 11:17:29 GMT
+< Connection: keep-alive
+< ETag: "6adb4249-1a5"
+< X-Served-By: scena-nginx
+< Accept-Ranges: bytes
+< 
+{ [421 bytes data]
+* Connection #0 to host 10.0.4.10:8080 left intact
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Scenario A - Application Server</title></head>
+<body>
+<h1>Scenario A application server</h1>
+<p>Served by Nginx (container scena-nginx, 10.0.4.10:8080) on the Docker data network 10.0.4.0/24.</p>
+<p>Path: UE 10.0.1.10 &rarr; Access 10.0.1.1/10.0.2.1 &rarr; Core 10.0.2.2/10.0.3.1 &rarr; Host 10.0.3.2/10.0.4.1 &rarr; Nginx 10.0.4.10</p>
+</body>
+</html>
+
+$ ue curl -s -o /dev/null -w code=%{http_code} remote=%{remote_ip}:%{remote_port} local=%{local_ip}:%{local_port} connect=%{time_connect}s ttfb=%{time_starttransfer}s total=%{time_total}s size=%{size_download}B\n http://10.0.4.10:8080/
+code=200 remote=10.0.4.10:8080 local=10.0.1.10:53056 connect=0.000158s ttfb=0.000438s total=0.000480s size=421B
+
+$ ue curl -s http://10.0.4.10:8080/health
+ok
+
+$ ue curl -s http://10.0.4.10:8080/nginx_status
+Active connections: 1 
+server accepts handled requests
+ 47 47 47 
+Reading: 0 Writing: 1 Waiting: 0 
+
+$ ue nc -zv -w 2 10.0.4.20 5201
+Connection to 10.0.4.20 5201 port [tcp/*] succeeded!
+
+$ ue iperf3 -c 10.0.4.20 -t 3
+Connecting to host 10.0.4.20, port 5201
+[  5] local 10.0.1.10 port 44850 connected to 10.0.4.20 port 5201
+[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+[  5]   0.00-1.00   sec   409 MBytes  3.42 Gbits/sec   55    288 KBytes       
+[  5]   1.00-2.00   sec   371 MBytes  3.12 Gbits/sec  117    293 KBytes       
+[  5]   2.00-3.00   sec   375 MBytes  3.15 Gbits/sec    0    297 KBytes       
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Retr
+[  5]   0.00-3.00   sec  1.15 GBytes  3.28 Gbits/sec  172            sender
+[  5]   0.00-3.00   sec  1.15 GBytes  3.28 Gbits/sec                  receiver
+
+iperf Done.
+
+$ docker logs --tail 5 scena-nginx
+10.0.4.1:39080 -> 10.0.4.10:8080 "GET /nginx_status HTTP/1.1" 200 100 rt=0.000 conn=53 reqs=1
+10.0.1.10:53114 -> 10.0.4.10:8080 "GET / HTTP/1.1" 200 421 rt=0.000 conn=54 reqs=1
+10.0.4.1:39084 -> 10.0.4.10:8080 "GET /nginx_status HTTP/1.1" 200 100 rt=0.000 conn=55 reqs=1
+10.0.1.10:53118 -> 10.0.4.10:8080 "GET / HTTP/1.1" 200 421 rt=0.000 conn=56 reqs=1
+10.0.4.1:39086 -> 10.0.4.10:8080 "GET /nginx_status HTTP/1.1" 200 100 rt=0.000 conn=57 reqs=1
+
+$ docker logs --tail 12 scena-iperf3
+Server listening on 5201 (test #138)
+-----------------------------------------------------------
+Accepted connection from 10.0.1.10, port 44842
+[  5] local 10.0.4.20 port 5201 connected to 10.0.1.10 port 44850
+[ ID] Interval           Transfer     Bitrate
+[  5]   0.00-1.00   sec   408 MBytes  3.42 Gbits/sec                  
+[  5]   1.00-2.00   sec   380 MBytes  3.19 Gbits/sec                  
+[  5]   2.00-3.00   sec   384 MBytes  3.22 Gbits/sec                  
+[  5]   3.00-3.00   sec   128 KBytes  2.27 Gbits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate
+[  5]   0.00-3.00   sec  1.15 GBytes  3.28 Gbits/sec                  receiver
+

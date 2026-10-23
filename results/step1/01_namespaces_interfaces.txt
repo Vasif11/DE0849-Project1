@@ -1,0 +1,64 @@
+$ ip netns list
+core (id: 4)
+access
+ue
+
+$ ip -n ue -br link
+lo               UNKNOWN        00:00:00:00:00:00 <LOOPBACK,UP,LOWER_UP> 
+ue-eth0@if2      UP             96:38:7e:96:a6:e4 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+
+$ ip -n ue -br addr
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+ue-eth0@if2      UP             10.0.1.10/24 fe80::9438:7eff:fe96:a6e4/64 
+
+$ ip -n ue -d link show type veth
+2: ue-eth0@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether 96:38:7e:96:a6:e4 brd ff:ff:ff:ff:ff:ff link-netns access promiscuity 0 allmulti 0 minmtu 68 maxmtu 65535 
+    veth addrgenmode eui64 numtxqueues 4 numrxqueues 4 gso_max_size 65536 gso_max_segs 65535 tso_max_size 524280 tso_max_segs 65535 gro_max_size 65536 gso_ipv4_max_size 65536 gro_ipv4_max_size 65536 
+
+$ ip -n access -br link
+lo               UNKNOWN        00:00:00:00:00:00 <LOOPBACK,UP,LOWER_UP> 
+acc-ue@if2       UP             ba:a2:b4:05:c3:0f <BROADCAST,MULTICAST,UP,LOWER_UP> 
+acc-core@if2     UP             5e:8d:71:81:31:4e <BROADCAST,MULTICAST,UP,LOWER_UP> 
+
+$ ip -n access -br addr
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+acc-ue@if2       UP             10.0.1.1/24 fe80::b8a2:b4ff:fe05:c30f/64 
+acc-core@if2     UP             10.0.2.1/24 fe80::5c8d:71ff:fe81:314e/64 
+
+$ ip -n access -d link show type veth
+2: acc-ue@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether ba:a2:b4:05:c3:0f brd ff:ff:ff:ff:ff:ff link-netns ue promiscuity 0 allmulti 0 minmtu 68 maxmtu 65535 
+    veth addrgenmode eui64 numtxqueues 4 numrxqueues 4 gso_max_size 65536 gso_max_segs 65535 tso_max_size 524280 tso_max_segs 65535 gro_max_size 65536 gso_ipv4_max_size 65536 gro_ipv4_max_size 65536 
+3: acc-core@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether 5e:8d:71:81:31:4e brd ff:ff:ff:ff:ff:ff link-netns core promiscuity 0 allmulti 0 minmtu 68 maxmtu 65535 
+    veth addrgenmode eui64 numtxqueues 4 numrxqueues 4 gso_max_size 65536 gso_max_segs 65535 tso_max_size 524280 tso_max_segs 65535 gro_max_size 65536 gso_ipv4_max_size 65536 gro_ipv4_max_size 65536 
+
+$ ip -n core -br link
+lo               UNKNOWN        00:00:00:00:00:00 <LOOPBACK,UP,LOWER_UP> 
+core-acc@if3     UP             b2:3b:f9:46:2a:d2 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+core-dn@if34     UP             82:6d:65:aa:07:fc <BROADCAST,MULTICAST,UP,LOWER_UP> 
+
+$ ip -n core -br addr
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+core-acc@if3     UP             10.0.2.2/24 fe80::b03b:f9ff:fe46:2ad2/64 
+core-dn@if34     UP             10.0.3.1/24 fe80::806d:65ff:feaa:7fc/64 
+
+$ ip -n core -d link show type veth
+2: core-acc@if3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether b2:3b:f9:46:2a:d2 brd ff:ff:ff:ff:ff:ff link-netns access promiscuity 0 allmulti 0 minmtu 68 maxmtu 65535 
+    veth addrgenmode eui64 numtxqueues 4 numrxqueues 4 gso_max_size 65536 gso_max_segs 65535 tso_max_size 524280 tso_max_segs 65535 gro_max_size 65536 gso_ipv4_max_size 65536 gro_ipv4_max_size 65536 
+3: core-dn@if34: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether 82:6d:65:aa:07:fc brd ff:ff:ff:ff:ff:ff link-netnsid 0 promiscuity 0 allmulti 0 minmtu 68 maxmtu 65535 
+    veth addrgenmode eui64 numtxqueues 4 numrxqueues 4 gso_max_size 65536 gso_max_segs 65535 tso_max_size 524280 tso_max_segs 65535 gro_max_size 65536 gso_ipv4_max_size 65536 gro_ipv4_max_size 65536 
+
+$ ip -br addr show host-core
+host-core@if3    UP             10.0.3.2/24 fe80::98e1:73ff:fe7a:6583/64 
+
+$ ip -br addr show br-dn
+br-dn            UP             10.0.4.1/24 fe80::900a:3bff:fe40:3edd/64 
+
+$ bridge link show master br-dn
+32: vethcd627ba@eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 master br-dn state forwarding priority 32 cost 2 
+39: vetha7db0dc@eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 master br-dn state forwarding priority 32 cost 2 
+

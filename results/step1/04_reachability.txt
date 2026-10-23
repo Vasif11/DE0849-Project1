@@ -1,0 +1,96 @@
+$ ue ping -c 3 -i 0.2 -W 1 10.0.1.1
+PING 10.0.1.1 (10.0.1.1) 56(84) bytes of data.
+64 bytes from 10.0.1.1: icmp_seq=1 ttl=64 time=0.126 ms
+64 bytes from 10.0.1.1: icmp_seq=2 ttl=64 time=0.047 ms
+64 bytes from 10.0.1.1: icmp_seq=3 ttl=64 time=0.681 ms
+
+--- 10.0.1.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 405ms
+rtt min/avg/max/mdev = 0.047/0.284/0.681/0.282 ms
+
+$ ue ping -c 3 -i 0.2 -W 1 10.0.2.1
+PING 10.0.2.1 (10.0.2.1) 56(84) bytes of data.
+64 bytes from 10.0.2.1: icmp_seq=1 ttl=64 time=0.678 ms
+64 bytes from 10.0.2.1: icmp_seq=2 ttl=64 time=0.044 ms
+64 bytes from 10.0.2.1: icmp_seq=3 ttl=64 time=0.309 ms
+
+--- 10.0.2.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 406ms
+rtt min/avg/max/mdev = 0.044/0.343/0.678/0.259 ms
+
+$ ue ping -c 3 -i 0.2 -W 1 10.0.2.2
+PING 10.0.2.2 (10.0.2.2) 56(84) bytes of data.
+64 bytes from 10.0.2.2: icmp_seq=1 ttl=63 time=0.225 ms
+64 bytes from 10.0.2.2: icmp_seq=2 ttl=63 time=0.057 ms
+64 bytes from 10.0.2.2: icmp_seq=3 ttl=63 time=0.049 ms
+
+--- 10.0.2.2 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 404ms
+rtt min/avg/max/mdev = 0.049/0.110/0.225/0.081 ms
+
+$ ue ping -c 3 -i 0.2 -W 1 10.0.3.1
+PING 10.0.3.1 (10.0.3.1) 56(84) bytes of data.
+64 bytes from 10.0.3.1: icmp_seq=1 ttl=63 time=0.203 ms
+64 bytes from 10.0.3.1: icmp_seq=2 ttl=63 time=0.047 ms
+64 bytes from 10.0.3.1: icmp_seq=3 ttl=63 time=0.054 ms
+
+--- 10.0.3.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 407ms
+rtt min/avg/max/mdev = 0.047/0.101/0.203/0.071 ms
+
+$ ue ping -c 3 -i 0.2 -W 1 10.0.3.2
+PING 10.0.3.2 (10.0.3.2) 56(84) bytes of data.
+64 bytes from 10.0.3.2: icmp_seq=1 ttl=62 time=0.137 ms
+64 bytes from 10.0.3.2: icmp_seq=2 ttl=62 time=0.059 ms
+64 bytes from 10.0.3.2: icmp_seq=3 ttl=62 time=0.069 ms
+
+--- 10.0.3.2 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 404ms
+rtt min/avg/max/mdev = 0.059/0.088/0.137/0.034 ms
+
+$ ue ping -c 3 -i 0.2 -W 1 10.0.4.1
+PING 10.0.4.1 (10.0.4.1) 56(84) bytes of data.
+64 bytes from 10.0.4.1: icmp_seq=1 ttl=62 time=0.522 ms
+64 bytes from 10.0.4.1: icmp_seq=2 ttl=62 time=0.136 ms
+64 bytes from 10.0.4.1: icmp_seq=3 ttl=62 time=0.052 ms
+
+--- 10.0.4.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 409ms
+rtt min/avg/max/mdev = 0.052/0.236/0.522/0.204 ms
+
+$ ue ping -c 3 -i 0.2 -W 1 10.0.4.10
+PING 10.0.4.10 (10.0.4.10) 56(84) bytes of data.
+64 bytes from 10.0.4.10: icmp_seq=1 ttl=61 time=0.060 ms
+64 bytes from 10.0.4.10: icmp_seq=2 ttl=61 time=0.094 ms
+64 bytes from 10.0.4.10: icmp_seq=3 ttl=61 time=0.419 ms
+
+--- 10.0.4.10 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 405ms
+rtt min/avg/max/mdev = 0.060/0.191/0.419/0.161 ms
+
+$ ue ping -c 3 -i 0.2 -W 1 10.0.4.20
+PING 10.0.4.20 (10.0.4.20) 56(84) bytes of data.
+64 bytes from 10.0.4.20: icmp_seq=1 ttl=61 time=0.129 ms
+64 bytes from 10.0.4.20: icmp_seq=2 ttl=61 time=0.076 ms
+64 bytes from 10.0.4.20: icmp_seq=3 ttl=61 time=0.826 ms
+
+--- 10.0.4.20 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 408ms
+rtt min/avg/max/mdev = 0.076/0.343/0.826/0.341 ms
+
+$ ue traceroute -n -q 1 -w 1 10.0.4.10
+traceroute to 10.0.4.10 (10.0.4.10), 30 hops max, 60 byte packets
+ 1  10.0.1.1  0.136 ms
+ 2  10.0.2.2  0.023 ms
+ 3  10.0.3.2  0.124 ms
+ 4  10.0.4.10  0.081 ms
+
+$ ue tracepath -n 10.0.4.10
+ 1?: [LOCALHOST]                      pmtu 1500
+ 1:  10.0.1.1                                              0.041ms 
+ 1:  10.0.1.1                                              0.010ms 
+ 2:  10.0.2.2                                              0.032ms 
+ 3:  10.0.3.2                                              0.027ms 
+ 4:  10.0.4.10                                             0.089ms reached
+     Resume: pmtu 1500 hops 4 back 4 
+

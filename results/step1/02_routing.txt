@@ -1,0 +1,63 @@
+$ ip -n ue route
+default via 10.0.1.1 dev ue-eth0 
+10.0.1.0/24 dev ue-eth0 proto kernel scope link src 10.0.1.10 
+
+$ ip netns exec ue sysctl net.ipv4.ip_forward
+net.ipv4.ip_forward = 0
+
+$ ip -n access route
+10.0.1.0/24 dev acc-ue proto kernel scope link src 10.0.1.1 
+10.0.2.0/24 dev acc-core proto kernel scope link src 10.0.2.1 
+10.0.3.0/24 via 10.0.2.2 dev acc-core 
+10.0.4.0/24 via 10.0.2.2 dev acc-core 
+
+$ ip netns exec access sysctl net.ipv4.ip_forward
+net.ipv4.ip_forward = 1
+
+$ ip -n core route
+10.0.1.0/24 via 10.0.2.1 dev core-acc 
+10.0.2.0/24 dev core-acc proto kernel scope link src 10.0.2.2 
+10.0.3.0/24 dev core-dn proto kernel scope link src 10.0.3.1 
+10.0.4.0/24 via 10.0.3.2 dev core-dn 
+
+$ ip netns exec core sysctl net.ipv4.ip_forward
+net.ipv4.ip_forward = 1
+
+$ ip route
+default via 192.168.192.1 dev eth0 proto kernel 
+10.0.1.0/24 via 10.0.3.1 dev host-core 
+10.0.2.0/24 via 10.0.3.1 dev host-core 
+10.0.3.0/24 dev host-core proto kernel scope link src 10.0.3.2 
+10.0.4.0/24 dev br-dn proto kernel scope link src 10.0.4.1 
+10.0.5.0/24 dev br-obs proto kernel scope link src 10.0.5.1 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown 
+192.168.192.0/20 dev eth0 proto kernel scope link src 192.168.202.105 
+
+$ sysctl net.ipv4.ip_forward
+net.ipv4.ip_forward = 1
+
+$ ue ip route get 10.0.4.10
+10.0.4.10 via 10.0.1.1 dev ue-eth0 src 10.0.1.10 uid 0 
+    cache 
+
+$ acc ip route get 10.0.4.10
+10.0.4.10 via 10.0.2.2 dev acc-core src 10.0.2.1 uid 0 
+    cache 
+
+$ core ip route get 10.0.4.10
+10.0.4.10 via 10.0.3.2 dev core-dn src 10.0.3.1 uid 0 
+    cache 
+
+$ ip route get 10.0.4.10
+10.0.4.10 dev br-dn src 10.0.4.1 uid 0 
+    cache 
+
+$ ip route get 10.0.1.10
+10.0.1.10 via 10.0.3.1 dev host-core src 10.0.3.2 uid 0 
+    cache 
+
+$ iptables -S DOCKER-USER
+-N DOCKER-USER
+-A DOCKER-USER -i br-dn -o host-core -j ACCEPT
+-A DOCKER-USER -i host-core -o br-dn -j ACCEPT
+

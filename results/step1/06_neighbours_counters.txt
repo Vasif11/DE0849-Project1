@@ -1,0 +1,80 @@
+$ ip -n ue neigh
+10.0.1.1 dev ue-eth0 lladdr ba:a2:b4:05:c3:0f REACHABLE 
+
+$ ip -n ue -s link
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    RX:  bytes packets errors dropped  missed   mcast           
+             0       0      0       0       0       0 
+    TX:  bytes packets errors dropped carrier collsns           
+             0       0      0       0       0       0 
+2: ue-eth0@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether 96:38:7e:96:a6:e4 brd ff:ff:ff:ff:ff:ff link-netns access
+    RX:    bytes   packets errors dropped  missed   mcast           
+     65652746523  48743619      0    1894       0       0 
+    TX:    bytes   packets errors dropped carrier collsns           
+    226118857365 151541014      0      65       0       0 
+
+$ ip -n access neigh
+10.0.2.2 dev acc-core lladdr b2:3b:f9:46:2a:d2 REACHABLE 
+10.0.1.10 dev acc-ue lladdr 96:38:7e:96:a6:e4 REACHABLE 
+
+$ ip -n access -s link
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    RX:  bytes packets errors dropped  missed   mcast           
+             0       0      0       0       0       0 
+    TX:  bytes packets errors dropped carrier collsns           
+             0       0      0       0       0       0 
+2: acc-ue@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether ba:a2:b4:05:c3:0f brd ff:ff:ff:ff:ff:ff link-netns ue
+    RX:    bytes   packets errors dropped  missed   mcast           
+    226118857365 151541014      0      65       0       0 
+    TX:    bytes   packets errors dropped carrier collsns           
+     65652746523  48743619      0    1894       0       0 
+3: acc-core@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether 5e:8d:71:81:31:4e brd ff:ff:ff:ff:ff:ff link-netns core
+    RX:    bytes   packets errors dropped  missed   mcast           
+     65655594937  48745482      0    2219       0       0 
+    TX:    bytes   packets errors dropped carrier collsns           
+    226023235998 151475938      0     776       0       0 
+
+$ ip -n core neigh
+10.0.3.2 dev core-dn lladdr 9a:e1:73:7a:65:83 REACHABLE 
+10.0.2.1 dev core-acc lladdr 5e:8d:71:81:31:4e REACHABLE 
+
+$ ip -n core -s link
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    RX:  bytes packets errors dropped  missed   mcast           
+             0       0      0       0       0       0 
+    TX:  bytes packets errors dropped carrier collsns           
+             0       0      0       0       0       0 
+2: core-acc@if3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether b2:3b:f9:46:2a:d2 brd ff:ff:ff:ff:ff:ff link-netns access
+    RX:    bytes   packets errors dropped  missed   mcast           
+    226023235998 151475938      0     775       0       0 
+    TX:    bytes   packets errors dropped carrier collsns           
+     65655594937  48745482      0    2219       0       0 
+3: core-dn@if34: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether 82:6d:65:aa:07:fc brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    RX:    bytes   packets errors dropped  missed   mcast           
+     65681081157  48764868      0     128       0       0 
+    TX:    bytes   packets errors dropped carrier collsns           
+    226007303541 151464655      0    1460       0       0 
+
+$ ip neigh show dev host-core
+10.0.3.1 lladdr 82:6d:65:aa:07:fc REACHABLE 
+
+$ ip neigh show dev br-dn
+10.0.4.20 lladdr 9e:1b:c8:a2:40:df REACHABLE 
+10.0.4.10 lladdr 62:c8:25:f6:aa:0c REACHABLE 
+
+$ ip -s link show host-core
+34: host-core@if3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether 9a:e1:73:7a:65:83 brd ff:ff:ff:ff:ff:ff link-netns core
+    RX:    bytes   packets errors dropped  missed   mcast           
+    226007303541 151464655      0    1460       0       0 
+    TX:    bytes   packets errors dropped carrier collsns           
+     65681081157  48764868      0     128       0       0 
+
