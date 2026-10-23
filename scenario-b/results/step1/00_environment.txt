@@ -1,0 +1,48 @@
+$ uname -r
+6.18.33.2-microsoft-standard-WSL2
+
+$ docker version --format Docker {{.Server.Version}}
+Docker 29.1.3
+
+$ docker compose -f /mnt/c/Users/Vasif/OneDrive/Desktop/senario/DE0849-Project1/scenario-b/deploy/docker-compose.yml images
+CONTAINER               REPOSITORY             TAG                 PLATFORM            IMAGE ID            SIZE                CREATED
+scenario-b-amf          gradiant/open5gs       2.8.0               linux/amd64         1942954babfe        99.5MB              37 minutes ago
+scenario-b-ausf         gradiant/open5gs       2.8.0               linux/amd64         1942954babfe        99.5MB              37 minutes ago
+scenario-b-bsf          gradiant/open5gs       2.8.0               linux/amd64         1942954babfe        99.5MB              37 minutes ago
+scenario-b-gnb          gradiant/ueransim      3.3.0               linux/amd64         875aaa4a713e        93.6MB              37 minutes ago
+scenario-b-grafana      grafana/grafana        11.2.0              linux/amd64         408afb9726de        128MB               2 hours ago
+scenario-b-iperf3       networkstatic/iperf3   latest              linux/amd64         bc267517f534        33.6MB              2 hours ago
+scenario-b-mongodb      mongo                  7.0                 linux/amd64         c53852c00c23        297MB               36 minutes ago
+scenario-b-nginx        scenario-b-nginx       1.0                 linux/amd64         930fa2c32bce        22MB                29 minutes ago
+scenario-b-nrf          gradiant/open5gs       2.8.0               linux/amd64         1942954babfe        99.5MB              37 minutes ago
+scenario-b-nssf         gradiant/open5gs       2.8.0               linux/amd64         1942954babfe        99.5MB              37 minutes ago
+scenario-b-pcf          gradiant/open5gs       2.8.0               linux/amd64         1942954babfe        99.5MB              37 minutes ago
+scenario-b-prometheus   prom/prometheus        v2.53.2             linux/amd64         cafe963e591c        107MB               2 hours ago
+scenario-b-scp          gradiant/open5gs       2.8.0               linux/amd64         1942954babfe        99.5MB              37 minutes ago
+scenario-b-smf          gradiant/open5gs       2.8.0               linux/amd64         1942954babfe        99.5MB              37 minutes ago
+scenario-b-udm          gradiant/open5gs       2.8.0               linux/amd64         1942954babfe        99.5MB              37 minutes ago
+scenario-b-udr          gradiant/open5gs       2.8.0               linux/amd64         1942954babfe        99.5MB              37 minutes ago
+scenario-b-ue           gradiant/ueransim      3.3.0               linux/amd64         875aaa4a713e        93.6MB              37 minutes ago
+scenario-b-upf          gradiant/open5gs       2.8.0               linux/amd64         1942954babfe        99.5MB              37 minutes ago
+
+$ docker compose -f /mnt/c/Users/Vasif/OneDrive/Desktop/senario/DE0849-Project1/scenario-b/deploy/docker-compose.yml ps --format table {{.Name}}\t{{.Image}}\t{{.Status}}
+NAME                    IMAGE                         STATUS
+scenario-b-amf          gradiant/open5gs:2.8.0        Up 29 minutes
+scenario-b-ausf         gradiant/open5gs:2.8.0        Up 29 minutes
+scenario-b-bsf          gradiant/open5gs:2.8.0        Up 29 minutes
+scenario-b-gnb          gradiant/ueransim:3.3.0       Up 29 minutes
+scenario-b-grafana      grafana/grafana:11.2.0        Up 29 minutes
+scenario-b-iperf3       networkstatic/iperf3:latest   Up 29 minutes
+scenario-b-mongodb      mongo:7.0                     Up 29 minutes
+scenario-b-nginx        scenario-b-nginx:1.0          Up 29 minutes
+scenario-b-nrf          gradiant/open5gs:2.8.0        Up 29 minutes
+scenario-b-nssf         gradiant/open5gs:2.8.0        Up 29 minutes
+scenario-b-pcf          gradiant/open5gs:2.8.0        Up 29 minutes
+scenario-b-prometheus   prom/prometheus:v2.53.2       Up 29 minutes
+scenario-b-scp          gradiant/open5gs:2.8.0        Up 29 minutes
+scenario-b-smf          gradiant/open5gs:2.8.0        Up 29 minutes
+scenario-b-udm          gradiant/open5gs:2.8.0        Up 29 minutes
+scenario-b-udr          gradiant/open5gs:2.8.0        Up 29 minutes
+scenario-b-ue           gradiant/ueransim:3.3.0       Up 27 seconds
+scenario-b-upf          gradiant/open5gs:2.8.0        Up About a minute
+

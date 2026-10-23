@@ -1,0 +1,74 @@
+$ curl --http2-prior-knowledge http://10.20.4.10:7777/nnrf-nfm/v1/nf-instances  (+ one GET per instance)
+{"nfType":"AMF","ipv4":"10.20.4.12","nfStatus":"REGISTERED","services":[]}
+{"nfType":"AUSF","ipv4":"10.20.4.16","nfStatus":"REGISTERED","services":[]}
+{"nfType":"BSF","ipv4":"10.20.4.19","nfStatus":"REGISTERED","services":[]}
+{"nfType":"NRF","ipv4":"10.20.4.10","nfStatus":"REGISTERED","services":[]}
+{"nfType":"NSSF","ipv4":"10.20.4.18","nfStatus":"REGISTERED","services":[]}
+{"nfType":"PCF","ipv4":"10.20.4.17","nfStatus":"REGISTERED","services":[]}
+{"nfType":"SCP","ipv4":"10.20.4.11","nfStatus":"REGISTERED","services":[]}
+{"nfType":"SMF","ipv4":"10.20.4.13","nfStatus":"REGISTERED","services":[]}
+{"nfType":"UDM","ipv4":"10.20.4.15","nfStatus":"REGISTERED","services":[]}
+{"nfType":"UDR","ipv4":"10.20.4.14","nfStatus":"REGISTERED","services":[]}
+
+$ docker exec scenario-b-gnb nr-cli --dump
+UERANSIM-gnb-1-1-1
+
+$ docker exec scenario-b-gnb nr-cli UERANSIM-gnb-1-1-1 --exec status
+is-ngap-up: true
+
+$ docker exec scenario-b-gnb nr-cli UERANSIM-gnb-1-1-1 --exec amf-list
+- id: 2
+
+$ docker exec scenario-b-gnb nr-cli UERANSIM-gnb-1-1-1 --exec ue-count
+1
+
+$ docker exec scenario-b-ue nr-cli imsi-001010000000001 --exec status
+cm-state: CM-CONNECTED
+rm-state: RM-REGISTERED
+mm-state: MM-REGISTERED/NORMAL-SERVICE
+5u-state: 5U1-UPDATED
+sim-inserted: true
+selected-plmn: 001/01
+current-cell: 1
+current-plmn: 001/01
+current-tac: 1
+last-tai: PLMN[001/01] TAC[1]
+stored-suci: no-identity
+stored-guti: 
+ plmn: 001/01
+ amf-region-id: 0x02
+ amf-set-id: 1
+ amf-pointer: 0
+ tmsi: 0xc000005e
+has-emergency: false
+
+$ docker exec scenario-b-ue nr-cli imsi-001010000000001 --exec ps-list
+PDU Session1: 
+ state: PS-ACTIVE
+ session-type: IPv4
+ apn: internet
+ s-nssai: 
+  sst: 0x01
+  sd: null
+ emergency: false
+ address: 10.45.0.12
+ ambr: up[1000000Kb/s] down[1000000Kb/s]
+ data-pending: false
+
+$ bash -c curl -s http://10.20.4.12:9090/metrics | grep -E '^(gnb|ran_ue|amf_session|fivegs_amffunction_rm_reginit)'
+gnb 1
+fivegs_amffunction_rm_reginitreq 11
+fivegs_amffunction_rm_reginitsucc 9
+amf_session 1
+ran_ue 1
+
+$ bash -c curl -s http://10.20.4.13:9090/metrics | grep -E '^(ues_active|pfcp_sessions_active|pfcp_peers_active|bearers_active)'
+pfcp_peers_active 1
+ues_active 1
+pfcp_sessions_active 1
+bearers_active 1
+
+$ bash -c curl -s http://10.20.5.14:9090/metrics | grep -E '^(fivegs_upffunction_upf_sessionnbr|pfcp_peers_active)'
+fivegs_upffunction_upf_sessionnbr 1
+pfcp_peers_active 1
+

@@ -1,0 +1,70 @@
+$ cns scenario-b-ue ip -br addr
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+eth0@if262       UP             10.20.1.20/24 
+uesimtun0        UNKNOWN        10.45.0.12/16 fe80::8aec:3fde:47d4:bbba/64 
+
+$ cns scenario-b-ue ip route
+default via 10.20.1.1 dev eth0 
+10.20.1.0/24 dev eth0 proto kernel scope link src 10.20.1.20 
+10.20.6.0/24 dev uesimtun0 scope link 
+10.45.0.0/16 dev uesimtun0 proto kernel scope link src 10.45.0.12 
+
+$ cns scenario-b-gnb ip -br addr
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+eth0@if229       UP             10.20.3.10/24 
+eth1@if230       UP             10.20.1.10/24 
+eth2@if231       UP             10.20.2.10/24 
+
+$ cns scenario-b-gnb ip route
+default via 10.20.2.1 dev eth2 
+10.20.1.0/24 dev eth1 proto kernel scope link src 10.20.1.10 
+10.20.2.0/24 dev eth2 proto kernel scope link src 10.20.2.10 
+10.20.3.0/24 dev eth0 proto kernel scope link src 10.20.3.10 
+
+$ cns scenario-b-upf ip -br addr
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+eth0@if258       UP             10.20.6.14/24 fe80::5889:3fff:fe63:2a90/64 
+eth1@if259       UP             10.20.3.14/24 fe80::70a0:5eff:fe15:b3fc/64 
+eth2@if260       UP             10.20.5.14/24 fe80::744d:87ff:fe24:1212/64 
+ogstun           UP             10.45.0.1/16 cafe::1/64 fe80::2bd:6939:9496:cf3e/64 
+
+$ cns scenario-b-upf ip route
+default via 10.20.6.1 dev eth0 
+10.20.3.0/24 dev eth1 proto kernel scope link src 10.20.3.14 
+10.20.5.0/24 dev eth2 proto kernel scope link src 10.20.5.14 
+10.20.6.0/24 dev eth0 proto kernel scope link src 10.20.6.14 
+10.45.0.0/16 dev ogstun proto kernel scope link src 10.45.0.1 
+
+$ cns scenario-b-nginx ip -br addr
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+eth0@if211       UP             10.20.6.20/24 
+
+$ cns scenario-b-nginx ip route
+default via 10.20.6.1 dev eth0 
+10.20.6.0/24 dev eth0 proto kernel scope link src 10.20.6.20 
+10.45.0.0/16 via 10.20.6.14 dev eth0 
+
+$ cns scenario-b-iperf3 ip -br addr
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+eth0@if212       UP             10.20.6.21/24 
+
+$ cns scenario-b-iperf3 ip route
+default via 10.20.6.1 dev eth0 
+10.20.6.0/24 dev eth0 proto kernel scope link src 10.20.6.21 
+10.45.0.0/16 via 10.20.6.14 dev eth0 
+
+$ cns scenario-b-upf sysctl net.ipv4.ip_forward
+net.ipv4.ip_forward = 1
+
+$ ue ip route get 10.20.6.20
+10.20.6.20 dev uesimtun0 src 10.45.0.12 uid 0 
+    cache 
+
+$ cns scenario-b-upf ip route get 10.45.0.2
+10.45.0.2 dev ogstun src 10.45.0.1 uid 0 
+    cache 
+
+$ cns scenario-b-nginx ip route get 10.45.0.2
+10.45.0.2 via 10.20.6.14 dev eth0 src 10.20.6.20 uid 0 
+    cache 
+

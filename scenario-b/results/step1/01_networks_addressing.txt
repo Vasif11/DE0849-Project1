@@ -1,0 +1,54 @@
+$ docker network inspect scenario-b-ran --format {{.Name}} {{(index .IPAM.Config 0).Subnet}} bridge={{index .Options "com.docker.network.bridge.name"}}{{"\n"}}{{range .Containers}}   {{.Name}} {{.IPv4Address}}{{"\n"}}{{end}}
+scenario-b-ran 10.20.1.0/24 bridge=br-ran
+   scenario-b-ue 10.20.1.20/24
+   scenario-b-gnb 10.20.1.10/24
+
+
+$ docker network inspect scenario-b-n2 --format {{.Name}} {{(index .IPAM.Config 0).Subnet}} bridge={{index .Options "com.docker.network.bridge.name"}}{{"\n"}}{{range .Containers}}   {{.Name}} {{.IPv4Address}}{{"\n"}}{{end}}
+scenario-b-n2 10.20.2.0/24 bridge=br-n2
+   scenario-b-gnb 10.20.2.10/24
+   scenario-b-amf 10.20.2.12/24
+
+
+$ docker network inspect scenario-b-n3 --format {{.Name}} {{(index .IPAM.Config 0).Subnet}} bridge={{index .Options "com.docker.network.bridge.name"}}{{"\n"}}{{range .Containers}}   {{.Name}} {{.IPv4Address}}{{"\n"}}{{end}}
+scenario-b-n3 10.20.3.0/24 bridge=br-n3
+   scenario-b-upf 10.20.3.14/24
+   scenario-b-gnb 10.20.3.10/24
+
+
+$ docker network inspect scenario-b-sbi --format {{.Name}} {{(index .IPAM.Config 0).Subnet}} bridge={{index .Options "com.docker.network.bridge.name"}}{{"\n"}}{{range .Containers}}   {{.Name}} {{.IPv4Address}}{{"\n"}}{{end}}
+scenario-b-sbi 10.20.4.0/24 bridge=br-sbi
+   scenario-b-mongodb 10.20.4.20/24
+   scenario-b-prometheus 10.20.4.30/24
+   scenario-b-udm 10.20.4.15/24
+   scenario-b-nrf 10.20.4.10/24
+   scenario-b-ausf 10.20.4.16/24
+   scenario-b-nssf 10.20.4.18/24
+   scenario-b-udr 10.20.4.14/24
+   scenario-b-pcf 10.20.4.17/24
+   scenario-b-smf 10.20.4.13/24
+   scenario-b-scp 10.20.4.11/24
+   scenario-b-amf 10.20.4.12/24
+   scenario-b-bsf 10.20.4.19/24
+
+
+$ docker network inspect scenario-b-n4 --format {{.Name}} {{(index .IPAM.Config 0).Subnet}} bridge={{index .Options "com.docker.network.bridge.name"}}{{"\n"}}{{range .Containers}}   {{.Name}} {{.IPv4Address}}{{"\n"}}{{end}}
+scenario-b-n4 10.20.5.0/24 bridge=br-n4
+   scenario-b-prometheus 10.20.5.30/24
+   scenario-b-upf 10.20.5.14/24
+   scenario-b-smf 10.20.5.13/24
+
+
+$ docker network inspect scenario-b-dn --format {{.Name}} {{(index .IPAM.Config 0).Subnet}} bridge={{index .Options "com.docker.network.bridge.name"}}{{"\n"}}{{range .Containers}}   {{.Name}} {{.IPv4Address}}{{"\n"}}{{end}}
+scenario-b-dn 10.20.6.0/24 bridge=br-n6
+   scenario-b-nginx 10.20.6.20/24
+   scenario-b-upf 10.20.6.14/24
+   scenario-b-iperf3 10.20.6.21/24
+
+
+$ docker network inspect scenario-b-obs --format {{.Name}} {{(index .IPAM.Config 0).Subnet}} bridge={{index .Options "com.docker.network.bridge.name"}}{{"\n"}}{{range .Containers}}   {{.Name}} {{.IPv4Address}}{{"\n"}}{{end}}
+scenario-b-obs 10.20.7.0/24 bridge=br-obs7
+   scenario-b-prometheus 10.20.7.30/24
+   scenario-b-grafana 10.20.7.40/24
+
+

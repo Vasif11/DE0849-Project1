@@ -1,0 +1,77 @@
+$ bash -c docker logs scenario-b-ue 2>&1 | grep -E 'Registration|registration|PDU Session|TUN|uesimtun|Authentication|Security' | tail -20
+[2026-10-23 13:37:09.098] [nas] [debug] Registration accept received
+[2026-10-23 13:37:09.098] [nas] [debug] Sending Registration Complete
+[2026-10-23 13:37:09.098] [nas] [info] Initial Registration is successful
+[2026-10-23 13:37:09.098] [nas] [debug] Sending PDU Session Establishment Request
+[2026-10-23 13:37:09.379] [nas] [debug] PDU Session Establishment Accept received
+[2026-10-23 13:37:09.379] [nas] [info] PDU Session establishment is successful PSI[1]
+[2026-10-23 13:37:09.419] [app] [info] Connection setup for PDU session[1] is successful, TUN interface[uesimtun0, 10.45.0.11] is up.
+[2026-10-23 13:38:41.725] [nas] [debug] De-registration required due to [SWITCH-OFF]
+[2026-10-23 13:38:41.735] [nas] [debug] Starting de-registration procedure due to [SWITCH-OFF]
+[2026-10-23 13:38:52.057] [nas] [debug] Initial registration required due to [MM-DEREG-NORMAL-SERVICE]
+[2026-10-23 13:38:52.058] [nas] [debug] Sending Initial Registration
+[2026-10-23 13:38:52.101] [nas] [debug] Authentication Request received
+[2026-10-23 13:38:52.113] [nas] [debug] Security Mode Command received
+[2026-10-23 13:38:52.135] [nas] [debug] Registration accept received
+[2026-10-23 13:38:52.135] [nas] [debug] Sending Registration Complete
+[2026-10-23 13:38:52.135] [nas] [info] Initial Registration is successful
+[2026-10-23 13:38:52.135] [nas] [debug] Sending PDU Session Establishment Request
+[2026-10-23 13:38:52.373] [nas] [debug] PDU Session Establishment Accept received
+[2026-10-23 13:38:52.373] [nas] [info] PDU Session establishment is successful PSI[1]
+[2026-10-23 13:38:52.397] [app] [info] Connection setup for PDU session[1] is successful, TUN interface[uesimtun0, 10.45.0.12] is up.
+
+$ bash -c docker logs scenario-b-gnb 2>&1 | grep -E 'NG Setup|SCTP|PDU session|UE Context' | tail -10
+[2026-10-23 13:34:41.647] [ngap] [info] PDU session resource(s) released for UE[9] count[1]
+[2026-10-23 13:34:42.750] [ngap] [info] PDU session resource(s) setup for UE[9] count[1]
+[2026-10-23 13:35:00.899] [ngap] [info] PDU session resource(s) setup for UE[9] count[1]
+[2026-10-23 13:35:59.376] [ngap] [debug] UE Context Release Command received
+[2026-10-23 13:35:59.629] [ngap] [info] PDU session resource(s) setup for UE[10] count[1]
+[2026-10-23 13:37:08.969] [ngap] [debug] UE Context Release Command received
+[2026-10-23 13:37:09.061] [ngap] [debug] UE Context Release Command received
+[2026-10-23 13:37:09.378] [ngap] [info] PDU session resource(s) setup for UE[13] count[1]
+[2026-10-23 13:38:41.797] [ngap] [debug] UE Context Release Command received
+[2026-10-23 13:38:52.373] [ngap] [info] PDU session resource(s) setup for UE[14] count[1]
+
+$ bash -c docker logs scenario-b-amf 2>&1 | grep -E 'gNB-N2|Registration|SUCI|IMSI|accepted|Number of' | sed 's/\x1b\[[0-9;]*m//g' | tail -15
+10/23 13:37:08.965: [gmm] INFO: [suci-0-001-01-0000-0-0-0000000001]    SUCI (../src/amf/gmm-handler.c:186)
+10/23 13:37:08.970: [amf] INFO: [Removed] Number of gNB-UEs is now 2 (../src/amf/context.c:2939)
+10/23 13:37:09.062: [amf] INFO: [Removed] Number of gNB-UEs is now 1 (../src/amf/context.c:2939)
+10/23 13:37:09.302: [gmm] INFO: [imsi-001010000000001] Registration complete (../src/amf/gmm-sm.c:3165)
+10/23 13:37:09.302: [amf] INFO: [Added] Number of AMF-Sessions is now 1 (../src/amf/context.c:2953)
+10/23 13:38:41.740: [gmm] INFO: [suci-0-001-01-0000-0-0-0000000001]    SUCI (../src/amf/gmm-handler.c:918)
+10/23 13:38:41.758: [amf] INFO: [Removed] Number of AMF-Sessions is now 0 (../src/amf/context.c:2960)
+10/23 13:38:41.799: [amf] INFO:     SUCI[suci-0-001-01-0000-0-0-0000000001] (../src/amf/ngap-handler.c:1966)
+10/23 13:38:41.799: [amf] INFO: [Removed] Number of gNB-UEs is now 0 (../src/amf/context.c:2939)
+10/23 13:38:52.067: [amf] INFO: [Added] Number of gNB-UEs is now 1 (../src/amf/context.c:2932)
+10/23 13:38:52.067: [amf] INFO: [suci-0-001-01-0000-0-0-0000000001] known UE by SUCI (../src/amf/context.c:1932)
+10/23 13:38:52.068: [gmm] INFO: Registration request (../src/amf/gmm-sm.c:1678)
+10/23 13:38:52.068: [gmm] INFO: [suci-0-001-01-0000-0-0-0000000001]    SUCI (../src/amf/gmm-handler.c:186)
+10/23 13:38:52.338: [gmm] INFO: [imsi-001010000000001] Registration complete (../src/amf/gmm-sm.c:3165)
+10/23 13:38:52.338: [amf] INFO: [Added] Number of AMF-Sessions is now 1 (../src/amf/context.c:2953)
+
+$ bash -c docker logs scenario-b-smf 2>&1 | grep -E 'PFCP|UE SUPI|IPv4|associated|Number of' | sed 's/\x1b\[[0-9;]*m//g' | tail -12
+10/23 13:37:51.476: [smf] INFO: PFCP associated [10.20.5.14]:8805 (../src/smf/pfcp-sm.c:189)
+10/23 13:37:51.476: [pfcp] ERROR: Remote PFCP restarted [4001751268<4001751470] in Heartbeat REQ (../lib/pfcp/handler.c:39)
+10/23 13:37:51.476: [smf] INFO: PFCP de-associated [10.20.5.14]:8805 (../src/smf/pfcp-sm.c:205)
+10/23 13:37:51.477: [smf] INFO: PFCP associated [10.20.5.14]:8805 (../src/smf/pfcp-sm.c:189)
+10/23 13:37:51.477: [smf] INFO: UE SUPI[imsi-001010000000001] DNN[internet] IPv4[10.45.0.11] IPv6[] (../src/smf/pfcp-sm.c:476)
+10/23 13:37:51.478: [smf] ERROR: PFCP restoration (../src/smf/pfcp-sm.c:199)
+10/23 13:38:41.756: [smf] INFO: Removed Session: UE IMSI:[imsi-001010000000001] DNN:[internet:1] IPv4:[10.45.0.11] IPv6:[] (../src/smf/context.c:2037)
+10/23 13:38:41.757: [smf] INFO: [Removed] Number of SMF-Sessions is now 0 (../src/smf/context.c:3620)
+10/23 13:38:41.757: [smf] INFO: [Removed] Number of SMF-UEs is now 0 (../src/smf/context.c:1347)
+10/23 13:38:52.344: [smf] INFO: [Added] Number of SMF-UEs is now 1 (../src/smf/context.c:1069)
+10/23 13:38:52.345: [smf] INFO: [Added] Number of SMF-Sessions is now 1 (../src/smf/context.c:3612)
+10/23 13:38:52.361: [smf] INFO: UE SUPI[imsi-001010000000001] DNN[internet] IPv4[10.45.0.12] IPv6[] (../src/smf/npcf-handler.c:647)
+
+$ bash -c docker logs scenario-b-upf 2>&1 | grep -E 'PFCP|UE F-SEID|IPv4|associated|Number of' | sed 's/\x1b\[[0-9;]*m//g' | tail -10
+10/23 13:36:48.089: [upf] INFO: [Removed] Number of UPF-sessions is now 0 (../src/upf/context.c:256)
+10/23 13:37:09.353: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:212)
+10/23 13:37:09.361: [upf] INFO: UE F-SEID[UP:0x3c CP:0x6e] APN[internet] PDN-Type[1] IPv4[10.45.0.11] IPv6[] (../src/upf/context.c:498)
+10/23 13:37:51.475: [upf] INFO: PFCP associated [10.20.5.13]:8805 (../src/upf/pfcp-sm.c:168)
+10/23 13:37:51.477: [upf] WARNING: PFCP[REQ] has already been associated [10.20.5.13]:8805 (../src/upf/pfcp-sm.c:256)
+10/23 13:37:51.478: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:212)
+10/23 13:37:51.479: [upf] INFO: UE F-SEID[UP:0x84 CP:0x6e] APN[internet] PDN-Type[1] IPv4[10.45.0.11] IPv6[] (../src/upf/context.c:498)
+10/23 13:38:41.751: [upf] INFO: [Removed] Number of UPF-sessions is now 0 (../src/upf/context.c:256)
+10/23 13:38:52.364: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:212)
+10/23 13:38:52.365: [upf] INFO: UE F-SEID[UP:0x4a CP:0x2c] APN[internet] PDN-Type[1] IPv4[10.45.0.12] IPv6[] (../src/upf/context.c:498)
+

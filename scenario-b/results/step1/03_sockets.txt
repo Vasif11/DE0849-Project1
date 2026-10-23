@@ -1,0 +1,49 @@
+$ cns scenario-b-amf ss -lnp --sctp
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                 
+LISTEN 0      5         10.20.2.12:38412      0.0.0.0:*    users:(("open5gs-amfd",pid=48046,fd=9))
+
+$ cns scenario-b-amf ss -np --sctp
+State    Recv-Q Send-Q   Local Address:Port  Peer Address:Port Process                                  
+ESTAB    0      0           10.20.2.12:38412   10.20.2.10:43308 users:(("open5gs-amfd",pid=48046,fd=10))
+`- ESTAB 0      0      10.20.2.12%eth0:38412   10.20.2.10:43308 users:(("open5gs-amfd",pid=48046,fd=10))
+
+$ cns scenario-b-gnb ss -np --sctp
+State    Recv-Q Send-Q   Local Address:Port  Peer Address:Port Process                           
+ESTAB    0      0           10.20.2.10:43308   10.20.2.12:38412 users:(("nr-gnb",pid=48081,fd=6))
+`- ESTAB 0      0      10.20.2.10%eth2:43308   10.20.2.12:38412 users:(("nr-gnb",pid=48081,fd=6))
+
+$ cns scenario-b-upf ss -lunp
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                 
+UNCONN 0      0         10.20.3.14:2152       0.0.0.0:*    users:(("open5gs-upfd",pid=74304,fd=7))
+UNCONN 0      0         10.20.5.14:8805       0.0.0.0:*    users:(("open5gs-upfd",pid=74304,fd=6))
+UNCONN 0      0         127.0.0.11:33515      0.0.0.0:*    users:(("dockerd",pid=5560,fd=82))     
+
+$ cns scenario-b-gnb ss -lunp
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                             
+UNCONN 0      0         10.20.3.10:2152       0.0.0.0:*    users:(("nr-gnb",pid=48081,fd=5))  
+UNCONN 0      0         127.0.0.11:35344      0.0.0.0:*    users:(("dockerd",pid=5560,fd=170))
+UNCONN 0      0         10.20.1.10:4997       0.0.0.0:*    users:(("nr-gnb",pid=48081,fd=4))  
+UNCONN 0      0          127.0.0.1:36121      0.0.0.0:*    users:(("nr-gnb",pid=48081,fd=3))  
+
+$ cns scenario-b-smf ss -lunp
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                  
+UNCONN 0      0         10.20.5.13:8805       0.0.0.0:*    users:(("open5gs-smfd",pid=48011,fd=10))
+UNCONN 0      0         127.0.0.11:42328      0.0.0.0:*    users:(("dockerd",pid=5560,fd=175))     
+UNCONN 0      0         10.20.5.13:2123       0.0.0.0:*    users:(("open5gs-smfd",pid=48011,fd=8)) 
+UNCONN 0      0         10.20.5.13:2152       0.0.0.0:*    users:(("open5gs-smfd",pid=48011,fd=9)) 
+
+$ cns scenario-b-nrf ss -ltnp
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                 
+LISTEN 0      5         10.20.4.10:7777       0.0.0.0:*    users:(("open5gs-nrfd",pid=48338,fd=5))
+LISTEN 0      4096      127.0.0.11:43929      0.0.0.0:*    users:(("dockerd",pid=5560,fd=85))     
+
+$ cns scenario-b-nginx ss -ltnp
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                                                                                                              
+LISTEN 0      511          0.0.0.0:80         0.0.0.0:*    users:(("nginx",pid=47411,fd=6),("nginx",pid=47410,fd=6),("nginx",pid=47409,fd=6),("nginx",pid=47407,fd=6),("nginx",pid=47199,fd=6))
+LISTEN 0      4096      127.0.0.11:34689      0.0.0.0:*    users:(("dockerd",pid=5560,fd=95))                                                                                                  
+
+$ cns scenario-b-iperf3 ss -ltnp
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                            
+LISTEN 0      4096      127.0.0.11:38281      0.0.0.0:*    users:(("dockerd",pid=5560,fd=79))
+LISTEN 0      4096               *:5201             *:*    users:(("iperf3",pid=47187,fd=3)) 
+

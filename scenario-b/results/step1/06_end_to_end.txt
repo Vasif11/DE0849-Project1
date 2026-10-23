@@ -1,0 +1,88 @@
+$ ue ping -c 5 -i 0.2 10.20.6.20
+PING 10.20.6.20 (10.20.6.20) 56(84) bytes of data.
+64 bytes from 10.20.6.20: icmp_seq=1 ttl=63 time=3.25 ms
+64 bytes from 10.20.6.20: icmp_seq=2 ttl=63 time=1.11 ms
+64 bytes from 10.20.6.20: icmp_seq=3 ttl=63 time=1.45 ms
+64 bytes from 10.20.6.20: icmp_seq=4 ttl=63 time=1.24 ms
+64 bytes from 10.20.6.20: icmp_seq=5 ttl=63 time=1.84 ms
+
+--- 10.20.6.20 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 803ms
+rtt min/avg/max/mdev = 1.111/1.776/3.245/0.774 ms
+
+$ ue ping -c 5 -i 0.2 10.20.6.21
+PING 10.20.6.21 (10.20.6.21) 56(84) bytes of data.
+64 bytes from 10.20.6.21: icmp_seq=1 ttl=63 time=1.96 ms
+64 bytes from 10.20.6.21: icmp_seq=2 ttl=63 time=1.31 ms
+64 bytes from 10.20.6.21: icmp_seq=3 ttl=63 time=1.67 ms
+64 bytes from 10.20.6.21: icmp_seq=4 ttl=63 time=0.976 ms
+64 bytes from 10.20.6.21: icmp_seq=5 ttl=63 time=1.42 ms
+
+--- 10.20.6.21 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 803ms
+rtt min/avg/max/mdev = 0.976/1.465/1.959/0.332 ms
+
+$ ue traceroute -n -q 1 -w 1 10.20.6.20
+traceroute to 10.20.6.20 (10.20.6.20), 30 hops max, 60 byte packets
+ 1  10.45.0.1  1.269 ms
+ 2  10.20.6.20  1.191 ms
+
+$ ue curl -sv http://10.20.6.20/
+*   Trying 10.20.6.20:80...
+* Established connection to 10.20.6.20 (10.20.6.20 port 80) from 10.45.0.12 port 37812 
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: 10.20.6.20
+> User-Agent: curl/8.18.0
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Server: nginx/1.27.5
+< Date: Fri, 23 Oct 2026 13:39:23 GMT
+< Content-Type: text/html
+< Content-Length: 400
+< Last-Modified: Fri, 23 Oct 2026 13:05:39 GMT
+< Connection: keep-alive
+< ETag: "6adb5ba3-190"
+< X-Served-By: scenario-b-nginx
+< Accept-Ranges: bytes
+< 
+{ [400 bytes data]
+* Connection #0 to host 10.20.6.20:80 left intact
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Scenario B - N6 application server</title></head>
+<body>
+<h1>Scenario B application server</h1>
+<p>Nginx (scenario-b-nginx, 10.20.6.20:80) on the N6 data network 10.20.6.0/24.</p>
+<p>Path: UE (10.45.0.x, uesimtun0) &rarr; gNB (N3 GTP-U 10.20.3.10) &rarr; UPF (10.20.3.14 / N6 10.20.6.14) &rarr; Nginx 10.20.6.20</p>
+</body>
+</html>
+
+$ ue curl -s -o /dev/null -w code=%{http_code} remote=%{remote_ip}:%{remote_port} local=%{local_ip}:%{local_port} connect=%{time_connect}s ttfb=%{time_starttransfer}s total=%{time_total}s size=%{size_download}B\n http://10.20.6.20/
+code=200 remote=10.20.6.20:80 local=10.45.0.12:37828 connect=0.001302s ttfb=0.002011s total=0.002253s size=400B
+
+$ ue iperf3 -c 10.20.6.21 -t 3
+Connecting to host 10.20.6.21, port 5201
+[  5] local 10.45.0.12 port 58306 connected to 10.20.6.21 port 5201
+[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+[  5]   0.00-1.00   sec  29.9 MBytes   250 Mbits/sec   19    101 KBytes       
+[  5]   1.00-2.00   sec  33.1 MBytes   278 Mbits/sec   23    136 KBytes       
+[  5]   2.00-3.00   sec  37.2 MBytes   312 Mbits/sec   17   96.1 KBytes       
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Retr
+[  5]   0.00-3.00   sec   100 MBytes   280 Mbits/sec   59            sender
+[  5]   0.00-3.00   sec  99.8 MBytes   279 Mbits/sec                  receiver
+
+iperf Done.
+
+$ docker logs --tail 3 scenario-b-nginx
+10.45.0.12:43548 -> 10.20.6.20:80 "GET / HTTP/1.1" 200 400 rt=0.000
+10.45.0.12:37812 -> 10.20.6.20:80 "GET / HTTP/1.1" 200 400 rt=0.000
+10.45.0.12:37828 -> 10.20.6.20:80 "GET / HTTP/1.1" 200 400 rt=0.000
+
+### Contrast: a request from inside the data network only proves N6/Docker connectivity, not 5G
+$ cns scenario-b-iperf3 curl -s -o /dev/null -w code=%{http_code} local=%{local_ip} (DN-internal, bypasses UE/gNB/N3/UPF)\n http://10.20.6.20/
+code=200 local=10.20.6.21 (DN-internal, bypasses UE/gNB/N3/UPF)
+
