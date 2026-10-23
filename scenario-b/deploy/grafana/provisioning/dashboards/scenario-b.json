@@ -1,0 +1,126 @@
+{
+  "uid": "scenario-b",
+  "title": "Scenario B - 5G SA Observability",
+  "tags": ["DE0849", "project1", "5G"],
+  "timezone": "browser",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "5s",
+  "time": { "from": "now-15m", "to": "now" },
+  "panels": [
+    {
+      "id": 1, "type": "timeseries", "title": "Panel 1 - Throughput: UE tunnel vs N3 (GTP-U) vs N6",
+      "gridPos": { "x": 0, "y": 0, "w": 12, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "prom" },
+      "fieldConfig": { "defaults": { "unit": "bps", "custom": { "lineWidth": 2, "fillOpacity": 5 } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        { "refId": "A", "expr": "rate(scenb_port_tx_bytes_total{port=\"ue_tun\"}[3s]) * 8", "legendFormat": "UE uplink (uesimtun0)" },
+        { "refId": "B", "expr": "rate(scenb_port_rx_bytes_total{port=\"upf_n3\"}[3s]) * 8", "legendFormat": "N3 uplink at UPF (GTP-U incl. 44 B/pkt)" },
+        { "refId": "C", "expr": "rate(scenb_port_tx_bytes_total{port=\"upf_n6\"}[3s]) * 8", "legendFormat": "N6 uplink at UPF (plain IP)" },
+        { "refId": "D", "expr": "rate(scenb_port_rx_bytes_total{port=\"ue_tun\"}[3s]) * 8", "legendFormat": "UE downlink" }
+      ]
+    },
+    {
+      "id": 2, "type": "timeseries", "title": "Panel 2 - RTT UE -> Nginx over the PDU session",
+      "gridPos": { "x": 12, "y": 0, "w": 12, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "prom" },
+      "fieldConfig": { "defaults": { "unit": "ms", "custom": { "lineWidth": 2 } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        { "refId": "A", "expr": "scenb_probe_rtt_ms", "legendFormat": "measured RTT" },
+        { "refId": "B", "expr": "sum(scenb_impair_delay_ms{port=~\"gnb_n3|upf_n3\"})", "legendFormat": "configured extra RTT on N3" },
+        { "refId": "C", "expr": "sum(scenb_impair_delay_ms{port=\"upf_n6\"}) * 2", "legendFormat": "configured extra RTT on N6" }
+      ]
+    },
+    {
+      "id": 3, "type": "timeseries", "title": "Panel 3 - Packet loss and qdisc drops (N3 / N6)",
+      "gridPos": { "x": 0, "y": 8, "w": 8, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "prom" },
+      "fieldConfig": { "defaults": { "unit": "short", "min": 0, "custom": { "lineWidth": 2 } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" } },
+      "targets": [
+        { "refId": "A", "expr": "rate(scenb_qdisc_drops_total[3s])", "legendFormat": "{{port}} drops/s" },
+        { "refId": "B", "expr": "100 * increase(scenb_probe_icmp_lost_total[20s]) / clamp_min(increase(scenb_probe_icmp_sent_total[20s]), 1)", "legendFormat": "ICMP probe loss % (20 s)" }
+      ]
+    },
+    {
+      "id": 4, "type": "timeseries", "title": "Panel 4 - UE TCP retransmissions",
+      "gridPos": { "x": 8, "y": 8, "w": 8, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "prom" },
+      "fieldConfig": { "defaults": { "unit": "short", "min": 0, "custom": { "lineWidth": 2 } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" } },
+      "targets": [
+        { "refId": "A", "expr": "rate(scenb_ue_tcp_retrans_segs_total[3s])", "legendFormat": "retransmitted segments/s" }
+      ]
+    },
+    {
+      "id": 5, "type": "timeseries", "title": "Panel 5 - UE / PDU-session state (Open5GS metrics)",
+      "gridPos": { "x": 16, "y": 8, "w": 8, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "prom" },
+      "fieldConfig": { "defaults": { "unit": "short", "min": 0, "custom": { "lineWidth": 2, "lineInterpolation": "stepAfter" } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" } },
+      "targets": [
+        { "refId": "A", "expr": "gnb{nf=\"amf\"}", "legendFormat": "AMF: connected gNBs" },
+        { "refId": "B", "expr": "ran_ue{nf=\"amf\"}", "legendFormat": "AMF: RAN UEs" },
+        { "refId": "C", "expr": "ues_active{nf=\"smf\"}", "legendFormat": "SMF: active UEs" },
+        { "refId": "D", "expr": "pfcp_sessions_active{nf=\"smf\"}", "legendFormat": "SMF: PFCP sessions" },
+        { "refId": "E", "expr": "fivegs_upffunction_upf_sessionnbr{nf=\"upf\"}", "legendFormat": "UPF: sessions" },
+        { "refId": "F", "expr": "scenb_pdu_session_up", "legendFormat": "UE: uesimtun0 up" }
+      ]
+    },
+    {
+      "id": 6, "type": "timeseries", "title": "Panel 6 - Application response time (HTTP probe from the UE)",
+      "gridPos": { "x": 0, "y": 16, "w": 12, "h": 7 },
+      "datasource": { "type": "prometheus", "uid": "prom" },
+      "fieldConfig": { "defaults": { "unit": "s", "custom": { "lineWidth": 2 } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        { "refId": "A", "expr": "scenb_probe_http_seconds", "legendFormat": "{{phase}}" }
+      ]
+    },
+    {
+      "id": 7, "type": "state-timeline", "title": "Service availability (HTTP 200 from the UE)",
+      "gridPos": { "x": 12, "y": 16, "w": 12, "h": 7 },
+      "datasource": { "type": "prometheus", "uid": "prom" },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [ { "type": "value", "options": { "0": { "text": "DOWN", "color": "red" }, "1": { "text": "UP", "color": "green" } } } ],
+          "thresholds": { "mode": "absolute", "steps": [ { "color": "red", "value": null }, { "color": "green", "value": 1 } ] }
+        },
+        "overrides": []
+      },
+      "options": { "showValue": "never", "mergeValues": true, "legend": { "displayMode": "list", "placement": "bottom" } },
+      "targets": [
+        { "refId": "A", "expr": "scenb_probe_http_up", "legendFormat": "UE -> Nginx HTTP" },
+        { "refId": "B", "expr": "scenb_pdu_session_up", "legendFormat": "PDU session" },
+        { "refId": "C", "expr": "clamp_max(gnb{nf=\"amf\"}, 1)", "legendFormat": "N2 (gNB at AMF)" }
+      ]
+    },
+    {
+      "id": 8, "type": "timeseries", "title": "Configured impairment per segment (from tc)",
+      "gridPos": { "x": 0, "y": 23, "w": 12, "h": 6 },
+      "datasource": { "type": "prometheus", "uid": "prom" },
+      "fieldConfig": { "defaults": { "custom": { "lineWidth": 2, "lineInterpolation": "stepAfter" } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" } },
+      "targets": [
+        { "refId": "A", "expr": "max by (port) (scenb_impair_delay_ms)", "legendFormat": "{{port}} delay [ms]" },
+        { "refId": "B", "expr": "max by (port) (scenb_impair_loss_percent)", "legendFormat": "{{port}} loss [%]" },
+        { "refId": "C", "expr": "max by (port) (scenb_impair_rate_mbit)", "legendFormat": "{{port}} rate [Mbit/s]" }
+      ]
+    },
+    {
+      "id": 9, "type": "timeseries", "title": "5GC procedures (registrations, PDU sessions, auth)",
+      "gridPos": { "x": 12, "y": 23, "w": 12, "h": 6 },
+      "datasource": { "type": "prometheus", "uid": "prom" },
+      "fieldConfig": { "defaults": { "unit": "short", "custom": { "lineWidth": 2, "lineInterpolation": "stepAfter" } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" } },
+      "targets": [
+        { "refId": "A", "expr": "fivegs_amffunction_rm_reginitreq", "legendFormat": "initial registration requests" },
+        { "refId": "B", "expr": "fivegs_amffunction_rm_reginitsucc", "legendFormat": "initial registrations successful" },
+        { "refId": "C", "expr": "fivegs_amffunction_amf_authreject", "legendFormat": "authentication rejects" },
+        { "refId": "D", "expr": "sum(fivegs_smffunction_sm_pdusessioncreationsucc)", "legendFormat": "PDU sessions created" }
+      ]
+    }
+  ]
+}

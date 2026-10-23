@@ -1,0 +1,7 @@
+apiVersion: 1
+providers:
+  - name: scenario-a
+    folder: ""
+    type: file
+    options:
+      path: /etc/grafana/provisioning/dashboards

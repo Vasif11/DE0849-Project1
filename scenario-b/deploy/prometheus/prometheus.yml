@@ -1,0 +1,28 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  # Open5GS network-function metrics (control-plane addresses, not the user plane)
+  - job_name: open5gs
+    scrape_interval: 2s
+    static_configs:
+      - targets: ["10.20.4.12:9090"]
+        labels: { nf: amf }
+      - targets: ["10.20.4.13:9090"]
+        labels: { nf: smf }
+      - targets: ["10.20.4.17:9090"]
+        labels: { nf: pcf }
+      - targets: ["10.20.5.14:9090"]
+        labels: { nf: upf }
+
+  # Scenario B exporter on the host (probes from the UE, tc state, interface counters)
+  - job_name: scenario-b
+    scrape_interval: 1s
+    scrape_timeout: 900ms
+    static_configs:
+      - targets: ["10.20.7.1:9102"]
+
+  - job_name: prometheus
+    static_configs:
+      - targets: ["localhost:9090"]

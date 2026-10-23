@@ -1,0 +1,18 @@
+db_uri: mongodb://10.20.4.20/open5gs
+logger:
+  level: info
+global:
+  max:
+    ue: 64
+pcf:
+  sbi:
+    server:
+      - address: 10.20.4.17
+        port: 7777
+    client:
+      scp:
+        - uri: http://10.20.4.11:7777
+  metrics:
+    server:
+      - address: 10.20.4.17
+        port: 9090

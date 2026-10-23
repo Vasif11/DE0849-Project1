@@ -1,0 +1,13 @@
+logger:
+  level: info
+global:
+  max:
+    ue: 64
+scp:
+  sbi:
+    server:
+      - address: 10.20.4.11
+        port: 7777
+    client:
+      nrf:
+        - uri: http://10.20.4.10:7777

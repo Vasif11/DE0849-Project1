@@ -1,0 +1,19 @@
+# UERANSIM gNB - scenario-b-gnb
+mcc: '001'
+mnc: '01'
+nci: '0x000000010'      # NR Cell Identity (36 bit)
+idLength: 32            # gNB ID length in bits
+tac: 1
+
+linkIp: 10.20.1.10      # simulated radio link towards the UE (ran-net)
+ngapIp: 10.20.2.10      # N2 towards the AMF (n2-net)
+gtpIp: 10.20.3.10       # N3 towards the UPF (n3-net)
+
+amfConfigs:
+  - address: 10.20.2.12
+    port: 38412
+
+slices:
+  - sst: 1
+
+ignoreStreamIds: true

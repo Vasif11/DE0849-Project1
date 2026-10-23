@@ -1,0 +1,238 @@
+# Scenario B - 5G Standalone network: UERANSIM (UE, gNB) + Open5GS 5GC + N6 data network + observability.
+# IP plan follows the reference architecture of the assignment (10.20.x.0/24 per interface).
+name: scenario-b
+
+x-open5gs: &open5gs
+  image: gradiant/open5gs:2.8.0
+  restart: unless-stopped
+
+services:
+  # ------------------------------------------------------------------ subscriber database
+  mongodb:
+    image: mongo:7.0
+    container_name: scenario-b-mongodb
+    command: ["--bind_ip_all", "--quiet"]
+    networks:
+      sbi-net: { ipv4_address: 10.20.4.20 }
+    volumes:
+      - mongo-data:/data/db
+      - ./mongodb/add_subscriber.js:/scripts/add_subscriber.js:ro
+    restart: unless-stopped
+
+  # ------------------------------------------------------------------ 5G core control plane (SBI)
+  nrf:
+    <<: *open5gs
+    container_name: scenario-b-nrf
+    command: ["open5gs-nrfd", "-c", "/etc/open5gs/nrf.yaml"]
+    volumes: ["./open5gs/nrf.yaml:/etc/open5gs/nrf.yaml:ro"]
+    networks:
+      sbi-net: { ipv4_address: 10.20.4.10 }
+
+  scp:
+    <<: *open5gs
+    container_name: scenario-b-scp
+    command: ["open5gs-scpd", "-c", "/etc/open5gs/scp.yaml"]
+    volumes: ["./open5gs/scp.yaml:/etc/open5gs/scp.yaml:ro"]
+    networks:
+      sbi-net: { ipv4_address: 10.20.4.11 }
+    depends_on: [nrf]
+
+  ausf:
+    <<: *open5gs
+    container_name: scenario-b-ausf
+    command: ["open5gs-ausfd", "-c", "/etc/open5gs/ausf.yaml"]
+    volumes: ["./open5gs/ausf.yaml:/etc/open5gs/ausf.yaml:ro"]
+    networks:
+      sbi-net: { ipv4_address: 10.20.4.16 }
+    depends_on: [scp]
+
+  udm:
+    <<: *open5gs
+    container_name: scenario-b-udm
+    command: ["open5gs-udmd", "-c", "/etc/open5gs/udm.yaml"]
+    volumes: ["./open5gs/udm.yaml:/etc/open5gs/udm.yaml:ro"]
+    networks:
+      sbi-net: { ipv4_address: 10.20.4.15 }
+    depends_on: [scp]
+
+  udr:
+    <<: *open5gs
+    container_name: scenario-b-udr
+    command: ["open5gs-udrd", "-c", "/etc/open5gs/udr.yaml"]
+    environment:
+      DB_URI: mongodb://10.20.4.20/open5gs   # the image's DB_URI variable overrides db_uri in the YAML
+    volumes: ["./open5gs/udr.yaml:/etc/open5gs/udr.yaml:ro"]
+    networks:
+      sbi-net: { ipv4_address: 10.20.4.14 }
+    depends_on: [scp, mongodb]
+
+  pcf:
+    <<: *open5gs
+    container_name: scenario-b-pcf
+    command: ["open5gs-pcfd", "-c", "/etc/open5gs/pcf.yaml"]
+    environment:
+      DB_URI: mongodb://10.20.4.20/open5gs
+    volumes: ["./open5gs/pcf.yaml:/etc/open5gs/pcf.yaml:ro"]
+    networks:
+      sbi-net: { ipv4_address: 10.20.4.17 }
+    depends_on: [scp, mongodb]
+
+  nssf:
+    <<: *open5gs
+    container_name: scenario-b-nssf
+    command: ["open5gs-nssfd", "-c", "/etc/open5gs/nssf.yaml"]
+    volumes: ["./open5gs/nssf.yaml:/etc/open5gs/nssf.yaml:ro"]
+    networks:
+      sbi-net: { ipv4_address: 10.20.4.18 }
+    depends_on: [scp]
+
+  bsf:
+    <<: *open5gs
+    container_name: scenario-b-bsf
+    command: ["open5gs-bsfd", "-c", "/etc/open5gs/bsf.yaml"]
+    volumes: ["./open5gs/bsf.yaml:/etc/open5gs/bsf.yaml:ro"]
+    networks:
+      sbi-net: { ipv4_address: 10.20.4.19 }
+    depends_on: [scp]
+
+  amf:
+    <<: *open5gs
+    container_name: scenario-b-amf
+    command: ["open5gs-amfd", "-c", "/etc/open5gs/amf.yaml"]
+    volumes: ["./open5gs/amf.yaml:/etc/open5gs/amf.yaml:ro"]
+    networks:
+      sbi-net: { ipv4_address: 10.20.4.12 }
+      n2-net:  { ipv4_address: 10.20.2.12 }
+    depends_on: [scp]
+
+  smf:
+    <<: *open5gs
+    container_name: scenario-b-smf
+    command: ["open5gs-smfd", "-c", "/etc/open5gs/smf.yaml"]
+    volumes: ["./open5gs/smf.yaml:/etc/open5gs/smf.yaml:ro"]
+    networks:
+      sbi-net: { ipv4_address: 10.20.4.13 }
+      n4-net:  { ipv4_address: 10.20.5.13 }
+    depends_on: [scp, upf]
+
+  # ------------------------------------------------------------------ user plane
+  upf:
+    <<: *open5gs
+    container_name: scenario-b-upf
+    command: ["open5gs-upfd", "-c", "/etc/open5gs/upf.yaml"]
+    user: root                       # creates the ogstun TUN device and sets routes
+    privileged: true                 # the image entrypoint writes sysctls (ip_forward, IPv6) via /proc/sys
+    devices: ["/dev/net/tun:/dev/net/tun"]
+    environment:
+      ENABLE_NAT: "false"            # no NAT on N6: the data network sees the real UE address 10.45.0.x
+    volumes: ["./open5gs/upf.yaml:/etc/open5gs/upf.yaml:ro"]
+    networks:
+      n3-net: { ipv4_address: 10.20.3.14 }
+      n4-net: { ipv4_address: 10.20.5.14 }
+      dn-net: { ipv4_address: 10.20.6.14 }
+
+  # ------------------------------------------------------------------ RAN (UERANSIM)
+  gnb:
+    image: gradiant/ueransim:3.3.0
+    container_name: scenario-b-gnb
+    entrypoint: ["nr-gnb", "-c", "/config/gnb.yaml"]
+    volumes: ["./ueransim/gnb.yaml:/config/gnb.yaml:ro"]
+    networks:
+      ran-net: { ipv4_address: 10.20.1.10 }
+      n2-net:  { ipv4_address: 10.20.2.10 }
+      n3-net:  { ipv4_address: 10.20.3.10 }
+    depends_on: [amf]
+    restart: unless-stopped
+
+  ue:
+    image: gradiant/ueransim:3.3.0
+    container_name: scenario-b-ue
+    entrypoint: ["nr-ue", "-c", "/config/ue.yaml"]
+    cap_add: [NET_ADMIN]             # creates uesimtun0 for the PDU session
+    devices: ["/dev/net/tun:/dev/net/tun"]
+    volumes: ["./ueransim/ue.yaml:/config/ue.yaml:ro"]
+    networks:
+      ran-net: { ipv4_address: 10.20.1.20 }
+    depends_on: [gnb]
+    restart: unless-stopped
+
+  # ------------------------------------------------------------------ N6 data network services
+  nginx:
+    build: ./nginx
+    image: scenario-b-nginx:1.0
+    container_name: scenario-b-nginx
+    networks:
+      dn-net: { ipv4_address: 10.20.6.20 }
+    restart: unless-stopped
+
+  iperf3:
+    image: networkstatic/iperf3:latest
+    container_name: scenario-b-iperf3
+    command: ["-s"]
+    networks:
+      dn-net: { ipv4_address: 10.20.6.21 }
+    restart: unless-stopped
+
+  # ------------------------------------------------------------------ observability (not in the user plane)
+  prometheus:
+    image: prom/prometheus:v2.53.2
+    container_name: scenario-b-prometheus
+    command: ["--config.file=/etc/prometheus/prometheus.yml", "--storage.tsdb.retention.time=7d"]
+    networks:
+      obs-net: { ipv4_address: 10.20.7.30 }
+      sbi-net: { ipv4_address: 10.20.4.30 }   # scrapes AMF/SMF/PCF metrics
+      n4-net:  { ipv4_address: 10.20.5.30 }   # scrapes UPF metrics (control side of the UPF)
+    ports: ["127.0.0.1:9091:9090"]
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prom-data:/prometheus
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:11.2.0
+    container_name: scenario-b-grafana
+    environment:
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: "Viewer"
+      GF_USERS_DEFAULT_THEME: "light"
+      GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /etc/grafana/provisioning/dashboards/scenario-b.json
+    networks:
+      obs-net: { ipv4_address: 10.20.7.40 }
+    ports: ["127.0.0.1:3001:3000"]
+    volumes: ["./grafana/provisioning:/etc/grafana/provisioning:ro"]
+    depends_on: [prometheus]
+    restart: unless-stopped
+
+networks:
+  ran-net:
+    name: scenario-b-ran
+    driver_opts: { com.docker.network.bridge.name: br-ran }
+    ipam: { config: [{ subnet: 10.20.1.0/24, gateway: 10.20.1.1 }] }
+  n2-net:
+    name: scenario-b-n2
+    driver_opts: { com.docker.network.bridge.name: br-n2 }
+    ipam: { config: [{ subnet: 10.20.2.0/24, gateway: 10.20.2.1 }] }
+  n3-net:
+    name: scenario-b-n3
+    driver_opts: { com.docker.network.bridge.name: br-n3 }
+    ipam: { config: [{ subnet: 10.20.3.0/24, gateway: 10.20.3.1 }] }
+  sbi-net:
+    name: scenario-b-sbi
+    driver_opts: { com.docker.network.bridge.name: br-sbi }
+    ipam: { config: [{ subnet: 10.20.4.0/24, gateway: 10.20.4.1 }] }
+  n4-net:
+    name: scenario-b-n4
+    driver_opts: { com.docker.network.bridge.name: br-n4 }
+    ipam: { config: [{ subnet: 10.20.5.0/24, gateway: 10.20.5.1 }] }
+  dn-net:
+    name: scenario-b-dn
+    driver_opts: { com.docker.network.bridge.name: br-n6 }
+    ipam: { config: [{ subnet: 10.20.6.0/24, gateway: 10.20.6.1 }] }
+  obs-net:
+    name: scenario-b-obs
+    driver_opts: { com.docker.network.bridge.name: br-obs7 }
+    ipam: { config: [{ subnet: 10.20.7.0/24, gateway: 10.20.7.1 }] }
+
+volumes:
+  mongo-data:
+  prom-data:
