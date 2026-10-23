@@ -1,0 +1,59 @@
+$ nrcli status
+cm-state: CM-CONNECTED
+rm-state: RM-DEREGISTERED
+mm-state: MM-DEREGISTERED/NO-SUPI
+5u-state: 5U3-ROAMING-NOT-ALLOWED
+sim-inserted: false
+selected-plmn: 001/01
+current-cell: 1
+current-plmn: 001/01
+current-tac: 1
+last-tai: null
+stored-suci: 
+ plmn: 001/01
+ routing-indicator: 0000
+ protection-schema: 0
+ hnp-key-id: 0x00
+ scheme-output: 0000000001
+stored-guti: no-identity
+has-emergency: false
+
+$ nrcli ps-list
+
+
+$ ue ip -br addr
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+eth0@if253       UP             10.20.1.20/24 
+
+$ bash -c docker logs --since 20s scenario-b-ue 2>&1 | grep -E -i 'auth|reject|MAC|SQN|failed' | head -12
+[2026-10-23 13:36:48.118] [nas] [debug] Authentication Request received
+[2026-10-23 13:36:48.118] [nas] [debug] Received SQN [B68586DC1042]
+[2026-10-23 13:36:48.118] [nas] [debug] SQN-MS [000000000000]
+[2026-10-23 13:36:48.118] [nas] [error] AUTN validation MAC mismatch. expected [DCD96CD00CA86CF9] received [349E6401133967A2]
+[2026-10-23 13:36:48.118] [nas] [error] Sending Authentication Failure with cause [MAC_FAILURE]
+[2026-10-23 13:36:48.120] [nas] [error] Authentication Reject received
+
+$ bash -c docker logs --since 20s scenario-b-amf 2>&1 | sed 's/\x1b\[[0-9;]*m//g' | grep -E -i 'auth|reject|MAC|SQN|fail' | head -12
+10/23 13:36:48.119: [gmm] WARNING: [suci-0-001-01-0000-0-0-0000000001] Authentication failure [20] (../src/amf/gmm-sm.c:2153)
+10/23 13:36:48.119: [gmm] WARNING: Authentication failure(MAC failure) (../src/amf/gmm-sm.c:2163)
+10/23 13:36:48.119: [amf] WARNING: [suci-0-001-01-0000-0-0-0000000001] Authentication reject (../src/amf/nas-path.c:531)
+10/23 13:36:48.119: [gmm] WARNING: [imsi-001010000000001] Failure in transaction; restoring context and transitioning to REGISTERED. (../src/amf/gmm-sm.c:2216)
+
+$ bash -c docker logs --since 20s scenario-b-ausf 2>&1 | sed 's/\x1b\[[0-9;]*m//g' | grep -E -i 'auth|fail|mismatch' | head -6
+
+$ metric 10.20.4.12 fivegs_amffunction_amf_auth|fivegs_amffunction_rm_reginit|ran_ue|amf_session
+fivegs_amffunction_rm_reginitreq 9
+fivegs_amffunction_rm_reginitsucc 7
+fivegs_amffunction_amf_authreject 2
+amf_session 0
+fivegs_amffunction_amf_authreq 9
+ran_ue 2
+fivegs_amffunction_amf_authfail{cause="20"} 2
+
+$ mongo --eval printjson(db.subscribers.findOne({imsi: "001010000000001"}, {_id: 0, "security.k": 1}))
+{
+  security: {
+    k: '00112233445566778899AABBCCDDEEFF'
+  }
+}
+

@@ -1,0 +1,10 @@
+epoch,case,event
+1792762605.315270078,F1_wrong_subscriber_key,inject
+1792762626.547168701,F1_wrong_subscriber_key,recover
+1792762634.994793191,F1_wrong_subscriber_key,end
+1792762643.548965534,F2_upf_restart,inject
+1792762659.648546779,F2_upf_restart,recover
+1792762678.136009912,F2_upf_restart,end
+1792762686.718400589,F3_n3_link_down,inject
+1792762700.359363660,F3_n3_link_down,recover
+1792762709.057756094,F3_n3_link_down,end

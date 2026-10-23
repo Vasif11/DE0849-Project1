@@ -1,0 +1,13 @@
+case                       if       pkts     ngap     pfcp  gtpu_ul  gtpu_dl  gtp_err
+F1_wrong_subscriber_key    n2         11        4        0        0        0        0
+F1_wrong_subscriber_key    n3         36        0        0       21       15        0
+F1_wrong_subscriber_key    n4        122        0       10        0        0        0
+F1_wrong_subscriber_key    n6         38        0        0        0        0        0
+F2_upf_restart             n2          4        0        0        0        0        0
+F2_upf_restart             n3         42        0        0       32       11        0
+F2_upf_restart             n4         28        0        4        0        0        0
+F2_upf_restart             n6         24        0        0        0        0        0
+F3_n3_link_down            n2          6        0        0        0        0        0
+F3_n3_link_down            n3         16        0        0       16        0        0
+F3_n3_link_down            n4         77        0        4        0        0        0
+F3_n3_link_down            n6          1        0        0        0        0        0

@@ -1,0 +1,92 @@
+### phase 1: UPF down
+$ nrcli status
+cm-state: CM-CONNECTED
+rm-state: RM-REGISTERED
+mm-state: MM-REGISTERED/NORMAL-SERVICE
+5u-state: 5U1-UPDATED
+sim-inserted: true
+selected-plmn: 001/01
+current-cell: 1
+current-plmn: 001/01
+current-tac: 1
+last-tai: PLMN[001/01] TAC[1]
+stored-suci: no-identity
+stored-guti: 
+ plmn: 001/01
+ amf-region-id: 0x02
+ amf-set-id: 1
+ amf-pointer: 0
+ tmsi: 0xc0000063
+has-emergency: false
+
+$ nrcli ps-list
+PDU Session1: 
+ state: PS-ACTIVE
+ session-type: IPv4
+ apn: internet
+ s-nssai: 
+  sst: 0x01
+  sd: null
+ emergency: false
+ address: 10.45.0.11
+ ambr: up[1000000Kb/s] down[1000000Kb/s]
+ data-pending: false
+
+$ metric 10.20.4.13 pfcp_peers_active|pfcp_sessions_active|ues_active
+pfcp_peers_active 1
+ues_active 1
+pfcp_sessions_active 1
+
+$ ue curl -s -o /dev/null --max-time 2 -w code=%{http_code} total=%{time_total}\n http://10.20.6.20/
+code=000 total=2.003082
+
+$ bash -c docker logs --since 15s scenario-b-smf 2>&1 | sed 's/\x1b\[[0-9;]*m//g' | grep -E -i 'pfcp|heartbeat|association|fail' | head -8
+10/23 13:37:37.972: [pfcp] WARNING: [184] LOCAL  No Reponse. Give up! for step 1 type 1 peer [10.20.5.14]:8805 (../lib/pfcp/xact.c:640)
+10/23 13:37:37.972: [smf] WARNING: No Heartbeat from UPF [10.20.5.14]:8805 (../src/smf/pfcp-sm.c:410)
+10/23 13:37:37.972: [smf] ERROR: No UPF available (../src/smf/pfcp-sm.c:512)
+10/23 13:37:37.972: [smf] INFO: PFCP de-associated [10.20.5.14]:8805 (../src/smf/pfcp-sm.c:205)
+
+user plane usable again 12.543157943 s after 'docker start'
+### phase 2: UPF restarted - no action on the UE
+$ nrcli ps-list
+PDU Session1: 
+ state: PS-ACTIVE
+ session-type: IPv4
+ apn: internet
+ s-nssai: 
+  sst: 0x01
+  sd: null
+ emergency: false
+ address: 10.45.0.11
+ ambr: up[1000000Kb/s] down[1000000Kb/s]
+ data-pending: false
+
+$ metric 10.20.4.13 pfcp_peers_active|pfcp_sessions_active|ues_active
+pfcp_peers_active 1
+ues_active 1
+pfcp_sessions_active 1
+
+$ metric 10.20.5.14 fivegs_upffunction_upf_sessionnbr|pfcp_peers_active
+fivegs_upffunction_upf_sessionnbr 1
+pfcp_peers_active 1
+
+$ bash -c docker logs --since 40s scenario-b-smf 2>&1 | sed 's/\x1b\[[0-9;]*m//g' | grep -E -i 'pfcp|association|restor|session|UPF' | head -12
+10/23 13:37:37.972: [pfcp] WARNING: [184] LOCAL  No Reponse. Give up! for step 1 type 1 peer [10.20.5.14]:8805 (../lib/pfcp/xact.c:640)
+10/23 13:37:37.972: [smf] WARNING: No Heartbeat from UPF [10.20.5.14]:8805 (../src/smf/pfcp-sm.c:410)
+10/23 13:37:37.972: [smf] ERROR: No UPF available (../src/smf/pfcp-sm.c:512)
+10/23 13:37:37.972: [smf] INFO: PFCP de-associated [10.20.5.14]:8805 (../src/smf/pfcp-sm.c:205)
+10/23 13:37:45.477: [pfcp] WARNING: [185] LOCAL  No Reponse. Give up! for step 1 type 5 peer [10.20.5.14]:8805 (../lib/pfcp/xact.c:640)
+10/23 13:37:48.973: [smf] WARNING: Retry association with peer failed [10.20.5.14]:8805 (../src/smf/pfcp-sm.c:101)
+10/23 13:37:51.476: [smf] INFO: PFCP associated [10.20.5.14]:8805 (../src/smf/pfcp-sm.c:189)
+10/23 13:37:51.476: [pfcp] ERROR: Remote PFCP restarted [4001751268<4001751470] in Heartbeat REQ (../lib/pfcp/handler.c:39)
+10/23 13:37:51.476: [smf] INFO: PFCP de-associated [10.20.5.14]:8805 (../src/smf/pfcp-sm.c:205)
+10/23 13:37:51.477: [smf] INFO: PFCP associated [10.20.5.14]:8805 (../src/smf/pfcp-sm.c:189)
+10/23 13:37:51.477: [smf] INFO: UE SUPI[imsi-001010000000001] DNN[internet] IPv4[10.45.0.11] IPv6[] (../src/smf/pfcp-sm.c:476)
+10/23 13:37:51.478: [smf] ERROR: PFCP restoration (../src/smf/pfcp-sm.c:199)
+
+$ bash -c docker logs --since 40s scenario-b-upf 2>&1 | sed 's/\x1b\[[0-9;]*m//g' | grep -E -i 'pfcp|session|associated' | head -10
+10/23 13:37:50.238: [pfcp] INFO: pfcp_server() [10.20.5.14]:8805 (../lib/pfcp/path.c:30)
+10/23 13:37:51.475: [upf] INFO: PFCP associated [10.20.5.13]:8805 (../src/upf/pfcp-sm.c:168)
+10/23 13:37:51.477: [upf] WARNING: PFCP[REQ] has already been associated [10.20.5.13]:8805 (../src/upf/pfcp-sm.c:256)
+10/23 13:37:51.478: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:212)
+

@@ -1,0 +1,19 @@
+1792762608.079120000	10.20.2.10	10.20.2.12	InitialUEMessage, Registration request [RRCEstablishmentCause=mo-Signalling]
+1792762608.117227000	10.20.2.12	10.20.2.10	DownlinkNASTransport, Authentication request
+1792762608.119256000	10.20.2.10	10.20.2.12	UplinkNASTransport, Authentication failure (MAC failure)
+1792762608.119832000	10.20.2.12	10.20.2.10	DownlinkNASTransport, Authentication reject
+1792762628.959849000	10.20.2.10	10.20.2.12	InitialUEMessage, Registration request [RRCEstablishmentCause=mo-Signalling]
+1792762628.967257000	10.20.2.12	10.20.2.10	UEContextReleaseCommand [Cause: Nas=normal-release]
+1792762628.969523000	10.20.2.10	10.20.2.12	UEContextReleaseComplete
+1792762629.030935000	10.20.2.12	10.20.2.10	DownlinkNASTransport, Authentication request
+1792762629.033048000	10.20.2.10	10.20.2.12	UplinkNASTransport, Authentication response
+1792762629.052671000	10.20.2.12	10.20.2.10	DownlinkNASTransport, Security mode command
+1792762629.058999000	10.20.2.10	10.20.2.12	UplinkNASTransport, Security mode complete, Registration request
+1792762629.061298000	10.20.2.12	10.20.2.10	UEContextReleaseCommand [Cause: Nas=normal-release]
+1792762629.062343000	10.20.2.10	10.20.2.12	UEContextReleaseComplete
+1792762629.096893000	10.20.2.12	10.20.2.10	InitialContextSetupRequest, Registration accept
+1792762629.097890000	10.20.2.10	10.20.2.12	InitialContextSetupResponse
+1792762629.301959000	10.20.2.10	10.20.2.12	UplinkNASTransport, Registration complete, UplinkNASTransport, UL NAS transport, PDU session establishment request
+1792762629.302665000	10.20.2.12	10.20.2.10	DownlinkNASTransport, Configuration update command
+1792762629.369162000	10.20.2.12	10.20.2.10	PDUSessionResourceSetupRequest, DL NAS transport, PDU session establishment accept
+1792762629.378936000	10.20.2.10	10.20.2.12	PDUSessionResourceSetupResponse

@@ -1,0 +1,3 @@
+Message type: Authentication failure (0x59)
+5GMM cause
+5GMM cause: MAC failure (20)
