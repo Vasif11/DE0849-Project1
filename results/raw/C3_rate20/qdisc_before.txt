@@ -1,0 +1,16 @@
+## access/acc-core
+qdisc tbf 800e: root refcnt 5 rate 20Mbit burst 32Kb lat 50ms 
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+## core/core-acc
+qdisc tbf 800f: root refcnt 5 rate 20Mbit burst 32Kb lat 50ms 
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+## core/core-dn
+qdisc noqueue 0: root refcnt 2 
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+## -/host-core
+qdisc noqueue 0: root refcnt 2 
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0

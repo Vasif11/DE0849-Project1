@@ -1,0 +1,16 @@
+## access/acc-core
+qdisc netem 800a: root refcnt 5 limit 10000 delay 25ms seed 7613131656297505974
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+## core/core-acc
+qdisc netem 800b: root refcnt 5 limit 10000 delay 25ms seed 15404988028902326407
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+## core/core-dn
+qdisc noqueue 0: root refcnt 2 
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+## -/host-core
+qdisc noqueue 0: root refcnt 2 
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0

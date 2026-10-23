@@ -1,0 +1,8 @@
+condition,link,spec
+C0_baseline,none,
+C1_delay50,access-core,netem delay 25ms
+C2_loss1,access-core,netem loss 1%
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%
+C5_delay50_dn,core-dn,netem delay 25ms
+C6_loss1_dn,core-dn,netem loss 1%

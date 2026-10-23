@@ -1,0 +1,6 @@
+#kernel
+TcpActiveOpens                  50                 0.0
+TcpAttemptFails                 0                  0.0
+TcpOutSegs                      351                0.0
+TcpRetransSegs                  2                  0.0
+TcpExtTCPTimeouts               2                  0.0

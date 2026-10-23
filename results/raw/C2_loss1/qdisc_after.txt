@@ -1,0 +1,16 @@
+## access/acc-core
+qdisc netem 800c: root refcnt 5 limit 10000 loss 1% seed 11811089986309129666
+ Sent 1327166732 bytes 946991 pkt (dropped 9522, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+## core/core-acc
+qdisc netem 800d: root refcnt 5 limit 10000 loss 1% seed 5253189048344328519
+ Sent 1243277044 bytes 893185 pkt (dropped 8989, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+## core/core-dn
+qdisc noqueue 0: root refcnt 2 
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+## -/host-core
+qdisc noqueue 0: root refcnt 2 
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
