@@ -1,0 +1,421 @@
+condition,link,spec,test,rep,t,mbps,retrans,cwnd_kB,srtt_ms
+C0_baseline,none,,tcp_up,1,1.001043,3372.896916435702,0.0,403.0078125,0.347
+C0_baseline,none,,tcp_up,1,2.00114,3256.56105116396,460.0,395.9375,0.256
+C0_baseline,none,,tcp_up,1,3.001091,3214.0429120903477,20.0,291.296875,0.355
+C0_baseline,none,,tcp_up,1,4.001035,3270.691795517283,0.0,312.5078125,0.318
+C0_baseline,none,,tcp_up,1,5.001135,3334.1382108524485,66.0,257.359375,0.252
+C0_baseline,none,,tcp_up,1,6.001058,3470.005206328578,0.0,263.015625,0.34
+C0_baseline,none,,tcp_up,1,7.001066,3404.6990785921944,0.0,275.7421875,0.366
+C0_baseline,none,,tcp_up,1,8.001074,3318.71653333671,0.0,294.125,0.525
+C0_baseline,none,,tcp_up,1,9.00092,3291.9870905914254,16.0,306.8515625,0.414
+C0_baseline,none,,tcp_up,1,10.001494,3499.1867562438483,0.0,320.9921875,0.218
+C0_baseline,none,,tcp_up,2,1.001207,3452.9873368066083,0.0,442.6015625,0.464
+C0_baseline,none,,tcp_up,2,2.000992,3129.6236341587155,0.0,463.8125,0.265
+C0_baseline,none,,tcp_up,2,3.001021,3178.1417920418953,271.0,373.3125,0.139
+C0_baseline,none,,tcp_up,2,4.001095,3309.0608896346075,79.0,263.015625,0.288
+C0_baseline,none,,tcp_up,2,5.001104,3230.633771883244,0.0,298.3671875,0.489
+C0_baseline,none,,tcp_up,2,6.001097,3236.976685844924,0.0,350.6875,0.437
+C0_baseline,none,,tcp_up,2,7.000996,3182.749523073116,0.0,354.9296875,0.34
+C0_baseline,none,,tcp_up,2,8.001033,3451.784631713975,27.0,257.359375,0.331
+C0_baseline,none,,tcp_up,2,9.001023,3255.861082826471,32.0,220.59375,0.344
+C0_baseline,none,,tcp_up,2,10.001571,3363.037422327403,0.0,244.6328125,0.339
+C0_baseline,none,,tcp_up,3,1.001052,3247.169506305653,623.0,429.875,0.163
+C0_baseline,none,,tcp_up,3,2.001052,3139.436544,0.0,429.875,0.227
+C0_baseline,none,,tcp_up,3,3.00103,3076.5896508632727,231.0,664.609375,0.165
+C0_baseline,none,,tcp_up,3,4.001055,3281.9607195568,654.0,243.21875,0.191
+C0_baseline,none,,tcp_up,3,5.001116,3269.260428178944,0.0,258.7734375,0.282
+C0_baseline,none,,tcp_up,3,6.001039,3363.0422171942428,8.0,243.21875,0.536
+C0_baseline,none,,tcp_up,3,7.001042,3235.89589227874,0.0,260.1875,0.28
+C0_baseline,none,,tcp_up,3,8.001044,3258.9676035133843,299.0,287.0546875,0.467
+C0_baseline,none,,tcp_up,3,9.001105,3315.3949563508086,169.0,291.296875,0.284
+C0_baseline,none,,tcp_up,3,10.002496,3251.305740745911,135.0,230.4921875,0.286
+C0_baseline,none,,tcp_down,1,1.001056,3307.9100009613453,,0.0,
+C0_baseline,none,,tcp_down,1,2.001002,3333.6031245964377,,0.0,
+C0_baseline,none,,tcp_down,1,3.001198,3331.7215769653903,,0.0,
+C0_baseline,none,,tcp_down,1,4.00105,3058.100209733118,,0.0,
+C0_baseline,none,,tcp_down,1,5.001088,2787.009024280324,,0.0,
+C0_baseline,none,,tcp_down,1,6.000952,3395.7509705742514,,0.0,
+C0_baseline,none,,tcp_down,1,7.001034,2668.407067949368,,0.0,
+C0_baseline,none,,tcp_down,1,8.001121,3402.3330395157473,,0.0,
+C0_baseline,none,,tcp_down,1,9.001131,3272.5729258281467,,0.0,
+C0_baseline,none,,tcp_down,1,10.001058,3000.1949973074125,,0.0,
+C0_baseline,none,,tcp_down,2,1.000135,3249.0985746665083,,0.0,
+C0_baseline,none,,tcp_down,2,2.000973,3256.2453399041815,,0.0,
+C0_baseline,none,,tcp_down,2,3.001118,3043.5749359545357,,0.0,
+C0_baseline,none,,tcp_down,2,4.000177,3456.2129902087636,,0.0,
+C0_baseline,none,,tcp_down,2,5.00109,3311.5252341545934,,0.0,
+C0_baseline,none,,tcp_down,2,6.001112,3258.902337085021,,0.0,
+C0_baseline,none,,tcp_down,2,7.000132,3283.1632922759563,,0.0,
+C0_baseline,none,,tcp_down,2,8.00113,3310.1965171022534,,0.0,
+C0_baseline,none,,tcp_down,2,9.001036,3294.9355044868976,,0.0,
+C0_baseline,none,,tcp_down,2,10.001181,3229.1459878539335,,0.0,
+C0_baseline,none,,tcp_down,3,1.000544,3115.7216450164524,,0.0,
+C0_baseline,none,,tcp_down,3,2.000564,2863.603706148555,,0.0,
+C0_baseline,none,,tcp_down,3,3.000677,2825.592998586643,,0.0,
+C0_baseline,none,,tcp_down,3,4.00084,2738.43425922095,,0.0,
+C0_baseline,none,,tcp_down,3,5.000573,2870.719076694857,,0.0,
+C0_baseline,none,,tcp_down,3,6.000559,2384.4952238428345,,0.0,
+C0_baseline,none,,tcp_down,3,7.000608,3116.2151929805113,,0.0,
+C0_baseline,none,,tcp_down,3,8.00086,2422.6486081081803,,0.0,
+C0_baseline,none,,tcp_down,3,9.004752,2069.1759372941574,,0.0,
+C0_baseline,none,,tcp_down,3,10.000634,2050.019504189665,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_up,1,1.00206,363.107849592848,0.0,8207.21875,51.947
+C1_delay50,access-core,netem delay 25ms,tcp_up,1,2.001151,569.8947857380147,0.0,8207.21875,53.214
+C1_delay50,access-core,netem delay 25ms,tcp_up,1,3.001312,539.929683379516,2.0,8207.21875,52.367
+C1_delay50,access-core,netem delay 25ms,tcp_up,1,4.001202,544.2707977696532,0.0,8207.21875,57.698
+C1_delay50,access-core,netem delay 25ms,tcp_up,1,5.001265,559.904342218206,0.0,8207.21875,51.773
+C1_delay50,access-core,netem delay 25ms,tcp_up,1,6.002244,554.1542165662754,0.0,8207.21875,56.253
+C1_delay50,access-core,netem delay 25ms,tcp_up,1,7.00118,511.20043054319734,0.0,8207.21875,51.036
+C1_delay50,access-core,netem delay 25ms,tcp_up,1,8.001092,518.0421195095718,0.0,8207.21875,59.362
+C1_delay50,access-core,netem delay 25ms,tcp_up,1,9.001391,550.3378616931527,0.0,8207.21875,54.156
+C1_delay50,access-core,netem delay 25ms,tcp_up,1,10.002712,540.351434375645,0.0,8207.21875,56.055
+C1_delay50,access-core,netem delay 25ms,tcp_up,2,1.001051,307.9576961374288,0.0,8105.40625,62.253
+C1_delay50,access-core,netem delay 25ms,tcp_up,2,2.000346,563.4825693178942,0.0,8177.5234375,52.877
+C1_delay50,access-core,netem delay 25ms,tcp_up,2,3.001063,572.1122664026208,0.0,8177.5234375,53.286
+C1_delay50,access-core,netem delay 25ms,tcp_up,2,4.000336,565.5936493683797,0.0,8177.5234375,52.283
+C1_delay50,access-core,netem delay 25ms,tcp_up,2,5.000381,545.235016101252,0.0,8177.5234375,58.147
+C1_delay50,access-core,netem delay 25ms,tcp_up,2,6.000353,549.4692169312204,0.0,8177.5234375,59.282
+C1_delay50,access-core,netem delay 25ms,tcp_up,2,7.000368,552.591251874671,0.0,8177.5234375,54.839
+C1_delay50,access-core,netem delay 25ms,tcp_up,2,8.000365,524.2895625046566,9.0,8177.5234375,55.151
+C1_delay50,access-core,netem delay 25ms,tcp_up,2,9.001172,542.7243639897744,0.0,8177.5234375,51.766
+C1_delay50,access-core,netem delay 25ms,tcp_up,2,10.00183,555.3798204852535,0.0,8177.5234375,57.08
+C1_delay50,access-core,netem delay 25ms,tcp_up,3,1.001096,299.5644103482659,0.0,8229.84375,52.915
+C1_delay50,access-core,netem delay 25ms,tcp_up,3,2.00114,564.1090738415307,98.0,8229.84375,57.328
+C1_delay50,access-core,netem delay 25ms,tcp_up,3,3.001151,549.447798066088,0.0,8229.84375,54.57
+C1_delay50,access-core,netem delay 25ms,tcp_up,3,4.001089,540.0501170752048,0.0,8229.84375,51.272
+C1_delay50,access-core,netem delay 25ms,tcp_up,3,5.001142,495.9501387706555,0.0,8229.84375,55.307
+C1_delay50,access-core,netem delay 25ms,tcp_up,3,6.001227,555.6980477645617,0.0,8229.84375,58.339
+C1_delay50,access-core,netem delay 25ms,tcp_up,3,7.001235,550.4980031601176,0.0,8229.84375,78.306
+C1_delay50,access-core,netem delay 25ms,tcp_up,3,8.001312,542.0720474647134,0.0,8229.84375,55.909
+C1_delay50,access-core,netem delay 25ms,tcp_up,3,9.00117,536.9471468236881,0.0,8229.84375,52.228
+C1_delay50,access-core,netem delay 25ms,tcp_up,3,10.002284,556.174271848443,0.0,8229.84375,57.471
+C1_delay50,access-core,netem delay 25ms,tcp_down,1,1.03422,390.3441895469558,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,1,2.001046,597.5898073174023,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,1,3.001139,560.9360023497876,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,1,4.001124,591.405747133428,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,1,5.001279,561.9496494959764,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,1,6.001236,574.6443433112797,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,1,7.000968,573.724820201825,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,1,8.001015,543.1368576981796,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,1,9.000971,562.0614600875688,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,1,10.001127,568.2395210866492,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,2,1.00148,346.5657444755059,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,2,2.001154,586.345119493428,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,2,3.001077,591.4424105075001,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,2,4.001265,562.9794757714753,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,2,5.001418,573.483360290113,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,2,6.001255,581.0058188152864,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,2,7.001427,576.6176108124254,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,2,8.001358,580.951202517687,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,2,9.001363,586.1510492646936,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,2,10.001425,591.3602062723696,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,3,1.001146,372.8657671554545,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,3,2.001882,572.1014304035016,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,3,3.001704,589.404613920388,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,3,4.001854,539.9356683929303,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,3,5.001733,551.6177203258919,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,3,6.002415,571.0844424972335,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,3,7.001552,537.3346402046988,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,3,8.001603,551.522836435725,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,3,9.001851,569.2356229976546,,0.0,
+C1_delay50,access-core,netem delay 25ms,tcp_down,3,10.002093,572.383982019671,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_up,1,1.001331,312.0603045603713,272.0,12.7265625,0.141
+C2_loss1,access-core,netem loss 1%,tcp_up,1,2.001132,217.0984389115356,195.0,15.5546875,0.242
+C2_loss1,access-core,netem loss 1%,tcp_up,1,3.001185,385.8554990858377,360.0,18.3828125,0.141
+C2_loss1,access-core,netem loss 1%,tcp_up,1,4.00138,361.688181256917,333.0,21.2109375,0.169
+C2_loss1,access-core,netem loss 1%,tcp_up,1,5.001153,318.8394724257863,274.0,12.7265625,0.2
+C2_loss1,access-core,netem loss 1%,tcp_up,1,6.001669,324.89089777326814,301.0,9.8984375,0.258
+C2_loss1,access-core,netem loss 1%,tcp_up,1,7.001212,295.83362465653147,238.0,19.796875,0.167
+C2_loss1,access-core,netem loss 1%,tcp_up,1,8.001298,286.2366459895403,251.0,15.5546875,0.266
+C2_loss1,access-core,netem loss 1%,tcp_up,1,9.000375,313.8138672718459,277.0,24.0390625,0.308
+C2_loss1,access-core,netem loss 1%,tcp_up,1,10.003187,445.44078407348377,373.0,28.28125,0.332
+C2_loss1,access-core,netem loss 1%,tcp_up,2,1.001118,384.3976566703417,309.0,12.7265625,0.238
+C2_loss1,access-core,netem loss 1%,tcp_up,2,2.001082,386.93847425150585,342.0,24.0390625,1.121
+C2_loss1,access-core,netem loss 1%,tcp_up,2,3.001222,100.64920997136373,90.0,15.5546875,0.273
+C2_loss1,access-core,netem loss 1%,tcp_up,2,4.001219,176.16129300156462,169.0,12.7265625,3.032
+C2_loss1,access-core,netem loss 1%,tcp_up,2,5.001141,290.4782158307883,269.0,8.484375,0.13
+C2_loss1,access-core,netem loss 1%,tcp_up,2,6.001141,381.681664,327.0,8.484375,0.33
+C2_loss1,access-core,netem loss 1%,tcp_up,2,7.001063,436.24165265562425,352.0,48.078125,0.284
+C2_loss1,access-core,netem loss 1%,tcp_up,2,8.001094,300.9319847890915,270.0,22.625,0.297
+C2_loss1,access-core,netem loss 1%,tcp_up,2,9.00122,314.533167493863,282.0,21.2109375,0.32
+C2_loss1,access-core,netem loss 1%,tcp_up,2,10.00204,315.3627656959755,271.0,25.453125,0.105
+C2_loss1,access-core,netem loss 1%,tcp_up,3,1.001323,344.52570176937525,298.0,19.796875,0.352
+C2_loss1,access-core,netem loss 1%,tcp_up,3,2.001266,326.1257193089148,291.0,33.9375,0.196
+C2_loss1,access-core,netem loss 1%,tcp_up,3,3.002427,264.98208928716855,252.0,29.6953125,0.316
+C2_loss1,access-core,netem loss 1%,tcp_up,3,4.001286,258.244355835324,226.0,19.796875,0.17
+C2_loss1,access-core,netem loss 1%,tcp_up,3,5.001402,370.104399354321,343.0,9.8984375,0.241
+C2_loss1,access-core,netem loss 1%,tcp_up,3,6.001125,370.249880842872,321.0,15.5546875,0.385
+C2_loss1,access-core,netem loss 1%,tcp_up,3,7.001381,55.5603077645604,51.0,25.453125,0.559
+C2_loss1,access-core,netem loss 1%,tcp_up,3,8.001436,221.2373777931601,178.0,24.0390625,0.28
+C2_loss1,access-core,netem loss 1%,tcp_up,3,9.001252,241.21686379159715,215.0,26.8671875,0.113
+C2_loss1,access-core,netem loss 1%,tcp_up,3,10.002512,297.4208212169181,285.0,26.8671875,0.302
+C2_loss1,access-core,netem loss 1%,tcp_down,1,1.00111,372.87917588941355,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,1,2.001086,407.9058621728587,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,1,3.001268,353.30579883209225,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,1,4.001056,275.8339685861867,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,1,5.001357,150.94950767649038,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,1,6.001278,300.96508106468934,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,1,7.001076,296.80696304842826,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,1,8.001197,249.5308954032266,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,1,9.00117,321.9215241721965,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,1,10.00137,262.0915729871425,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,2,1.001184,339.33685369068814,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,2,2.001146,321.92507409053934,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,2,3.001358,395.2293815055011,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,2,4.001314,353.3856568087886,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,2,5.001136,323.01889873217,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,2,6.001153,418.37469199657875,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,2,7.001231,306.1603228609067,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,2,8.001191,442.51677033283977,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,2,9.001128,225.45804433240292,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,2,10.000726,208.7505362305118,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,3,1.001242,314.18257217918216,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,3,2.001246,544.20873825894,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,3,3.001211,252.71565799686311,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,3,4.001131,320.88992380315295,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,3,5.000953,379.65208227612186,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,3,6.001244,219.0886314263535,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,3,7.001164,308.3060052226372,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,3,8.001195,167.76696016116594,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,3,9.001183,259.0013749746753,,0.0,
+C2_loss1,access-core,netem loss 1%,tcp_down,3,10.001299,235.90223754878818,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,1,1.001803,23.027153110239936,5.0,111.7109375,62.648
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,1,2.001384,22.0293267428719,1.0,132.921875,56.691
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,1,3.001264,17.827931069154392,0.0,148.4765625,62.973
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,1,4.000928,17.831783325533753,1.0,117.3671875,50.215
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,1,5.000894,20.972232524207758,0.0,131.5078125,55.86
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,1,6.001583,18.861371954661138,0.0,144.234375,61.192
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,1,7.001553,17.826326453523524,1.0,118.78125,50.347
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,1,8.001479,20.973072614938484,0.0,137.1640625,58.367
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,1,9.001587,17.823866957911505,0.0,145.6484375,62.407
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,1,10.002565,18.855927035134762,1.0,117.3671875,49.613
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,2,1.000182,23.064473514261213,5.0,113.125,62.584
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,2,2.001084,22.000250526742,1.0,132.921875,56.532
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,2,3.001102,17.82547113077584,0.0,148.4765625,63.192
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,2,4.0011,17.82582812507321,1.0,117.3671875,50.19
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,2,5.001248,20.968415459651844,0.0,131.5078125,55.555
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,2,6.001287,18.873632278679477,0.0,144.234375,61.349
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,2,7.001242,17.82659422360127,1.0,118.78125,50.286
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,2,8.001128,20.973911522690234,0.0,137.1640625,58.306
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,2,9.001097,17.826344517124944,0.0,145.6484375,62.428
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,2,10.002098,19.903021067863126,1.0,117.3671875,49.222
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,3,1.001115,23.042979895783752,5.0,111.7109375,62.623
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,3,2.001199,22.018245530518175,1.0,132.921875,56.552
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,3,3.001089,17.827752528100394,0.0,148.4765625,63.056
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,3,4.001192,17.8239561890827,1.0,117.3671875,50.229
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,3,5.001149,20.97242128873284,0.0,131.5078125,55.684
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,3,6.000279,18.890802798100058,0.0,144.234375,61.178
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,3,7.001065,17.811792877566127,1.0,118.78125,50.229
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,3,8.00108,20.971205004731345,0.0,137.1640625,58.249
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,3,9.001063,17.82609481764406,0.0,145.6484375,62.444
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_up,3,10.000934,19.925514081500552,1.0,117.3671875,49.659
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,1,1.001435,17.800247906831927,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,1,2.001466,19.92232651913846,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,1,3.001326,18.8770109950492,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,1,4.001101,19.927427821393593,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,1,5.001145,18.87353778651962,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,1,6.0011,18.875217413224878,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,1,7.001083,18.874688630446652,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,1,8.001155,19.921509603280022,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,1,9.001125,18.874933891966087,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,1,10.00115,18.87389551182825,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,2,1.001091,17.80636519471097,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,2,2.000426,19.936201754026037,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,2,3.001074,18.862144920820523,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,2,4.000415,19.9360816575712,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,2,5.00038,18.87502839810596,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,2,6.001038,18.8619561674237,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,2,7.001184,18.87161215244022,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,2,8.000407,18.8890449040447,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,2,9.000513,18.872367961958147,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,2,10.001067,19.911913485525222,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,3,1.001109,17.806045024475253,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,3,2.000161,19.94184910976856,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,3,3.001199,18.854797563238247,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,3,4.001168,19.923561519139643,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,3,5.000262,18.891483506487997,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,3,6.00108,18.858941119406538,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,3,7.000633,18.8828081475369,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,3,8.000403,19.927527616797523,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,3,9.001177,17.81200504645936,,0.0,
+C3_rate20,access-core,tbf rate 20mbit burst 32kb latency 50ms,tcp_down,3,10.001045,19.92557465981099,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,1,1.000274,2.096577657337122,4.0,7.0703125,51.06
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,1,2.001167,2.0952809208676553,2.0,11.3125,51.683
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,1,3.001543,1.0481818981768072,2.0,14.140625,51.016
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,1,4.001422,2.097405780706813,2.0,15.5546875,51.075
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,1,5.00019,3.1496084057685874,3.0,15.5546875,51.059
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,1,6.001249,2.09493334967345,2.0,14.140625,51.184
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,1,7.001478,4.193343719905146,0.0,28.28125,51.209
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,1,8.001278,3.1463571883210433,2.0,25.453125,52.194
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,1,9.000232,4.19869584387709,2.0,21.2109375,54.028
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,1,10.002135,2.0931685806744236,2.0,21.2109375,52.708
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,2,1.00118,13.615421084807572,8.0,24.0390625,51.265
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,2,2.001479,3.1447877811037293,2.0,21.2109375,53.459
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,2,3.00129,3.146322674897319,5.0,12.7265625,51.224
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,2,4.001515,3.1450205341429798,1.0,19.796875,51.185
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,2,5.001285,3.14645172896803,1.0,25.453125,50.937
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,2,6.001226,4.1945515146054895,2.0,21.2109375,51.074
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,2,7.001166,3.145916823833561,4.0,8.484375,52.486
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,2,8.001335,0.0,1.0,15.5546875,51.651
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,2,9.001247,3.146004774349626,2.0,15.5546875,50.722
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,2,10.003978,3.1371605224864902,3.0,9.8984375,52.222
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,3,1.00108,37.708009985568374,12.0,38.1796875,50.814
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,3,2.001182,6.29081406550502,2.0,26.8671875,51.848
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,3,3.001131,0.0,4.0,7.0703125,60.04
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,3,4.001157,0.0,2.0,16.96875,51.171
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,3,5.0011,7.340450273834096,3.0,16.96875,56.45
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,3,6.001123,0.0,1.0,25.453125,51.744
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,3,7.001258,0.0,1.0,25.453125,53.421
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,3,8.00126,6.291443250025839,4.0,8.484375,50.974
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,3,9.001324,0.0,1.0,16.96875,51.039
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_up,3,10.002836,6.281957362420923,1.0,22.625,50.981
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,1,1.001358,10.47153931215238,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,1,2.001294,6.291858775783848,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,1,3.001411,3.1453601680158587,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,1,4.000965,3.1471316885753637,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,1,5.000921,3.1458663810871386,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,1,6.001477,3.143979971889866,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,1,7.001396,5.243304721903626,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,1,8.001239,3.1462219525498756,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,1,9.001142,1.0486776973622804,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,1,10.001243,2.096940271378296,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,2,1.001447,7.329426595620912,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,2,2.001393,2.0972652561160348,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,2,3.001306,3.14600177382456,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,2,4.001374,2.0970095096821164,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,2,5.00126,2.097391152269023,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,2,6.001231,2.097212876767098,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,2,7.001353,1.0484481405925958,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,2,8.001271,2.0973240141079077,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,2,9.001428,4.193645603367372,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,2,10.001223,3.146372944701006,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,3,1.001083,5.237208017849664,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,3,2.001327,3.144960562271241,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,3,3.001198,2.097422534894795,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,3,4.001203,2.097141500052571,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,3,5.001111,2.097345017763342,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,3,6.00149,2.0963575510693966,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,3,7.001323,1.0487511542528996,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,3,8.001462,1.0484302702561474,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,3,9.001471,2.0971332501676367,,0.0,
+C4_delay50_loss1,access-core,netem delay 25ms loss 1%,tcp_down,3,10.001178,3.146650020167061,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,1,1.000571,260.946420332956,0.0,8178.9375,50.856
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,1,2.00131,557.4305029066965,0.0,8178.9375,53.26
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,1,3.001079,492.94460381030376,2.0,8178.9375,51.943
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,1,4.001379,528.3237805649221,0.0,8178.9375,62.28
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,1,5.00132,522.2216635683835,0.0,8178.9375,54.312
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,1,6.001119,553.75942636951,0.0,8178.9375,50.48
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,1,7.001148,513.7873566811379,0.0,8178.9375,54.277
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,1,8.001261,495.92040383357397,0.0,8178.9375,52.697
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,1,9.001209,558.9200580098815,0.0,8178.9375,59.002
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,1,10.002408,508.9976442441083,0.0,8178.9375,55.256
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,2,1.001213,346.6581753988462,33.0,8170.453125,54.108
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,2,2.001095,550.5673764183347,0.0,8195.90625,58.237
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,2,3.001103,548.400867909984,0.0,8195.90625,60.074
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,2,4.00034,540.4289868077258,0.0,8195.90625,52.215
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,2,5.001142,539.583872097212,0.0,8195.90625,56.586
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,2,6.001234,510.60952082457777,0.0,8195.90625,56.818
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,2,7.001227,526.3888229005998,0.0,8195.90625,51.868
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,2,8.001162,494.96005859305126,0.0,8195.90625,52.561
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,2,9.001311,514.7741086802813,0.0,8195.90625,56.256
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,2,10.002019,494.57771890278013,0.0,8195.90625,57.302
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,3,1.001162,319.44446886669726,0.0,8068.640625,55.185
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,3,2.001283,540.9997564204408,10.0,8195.90625,58.929
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,3,3.001145,572.6015062772136,0.0,8195.90625,52.467
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,3,4.003084,575.6006767280985,0.0,8195.90625,52.631
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,3,5.001147,569.4311643016209,0.0,8195.90625,51.065
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,3,6.001154,589.2955672791513,0.0,8195.90625,51.657
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,3,7.001293,581.878799992162,0.0,8195.90625,54.144
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,3,8.001086,574.7386228786246,0.0,8195.90625,51.647
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,3,9.001157,582.9668369427717,0.0,8195.90625,52.697
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_up,3,10.001784,582.6429150836835,0.0,8195.90625,52.122
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,1,1.00112,350.879984496276,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,1,2.001331,527.3224627270218,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,1,3.001371,523.2184668394249,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,1,4.001239,528.5520857128811,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,1,5.001187,552.6282749928847,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,1,6.001097,590.4014259075718,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,1,7.001263,548.3141957450046,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,1,8.001201,552.633809123559,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,1,9.001226,594.5277086225897,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,1,10.001084,547.434395785088,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,2,1.001151,355.0586037289511,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,2,2.001149,553.6492500022738,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,2,3.001245,567.2251830985706,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,2,4.00117,586.1979386708374,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,2,5.001344,554.6001782998698,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,2,6.001075,551.699380795261,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,2,7.001355,575.507069002045,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,2,8.001125,584.1912043450641,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,2,9.001221,566.176707713915,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,2,10.000106,586.8082893787594,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,3,1.001158,370.76655668377947,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,3,2.001268,571.4110475428674,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,3,3.001051,584.1836118263228,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,3,4.001206,578.7242658988414,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,3,5.001118,597.740907126429,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,3,6.001094,554.7100285075636,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,3,7.00121,561.9715525606687,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,3,8.001303,544.1603462047472,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,3,9.000111,538.561439063776,,0.0,
+C5_delay50_dn,core-dn,netem delay 25ms,tcp_down,3,10.001279,550.9075090774854,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,1,1.000729,179.1758830872166,213.0,18.3828125,0.696
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,1,2.00117,214.86333490333945,219.0,22.625,0.254
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,1,3.00121,298.83219047943095,249.0,1.4140625,0.7
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,1,4.000654,551.8578045942826,523.0,62.21875,0.282
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,1,5.001147,342.71537631339834,284.0,18.3828125,0.235
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,1,6.001424,189.73969006299276,167.0,1.4140625,0.099
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,1,7.001227,130.0490427967326,128.0,18.3828125,0.121
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,1,8.001206,363.86350616017097,335.0,21.2109375,0.303
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,1,9.001233,354.40913975724203,308.0,16.96875,0.25
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,1,10.002017,199.07335862396363,182.0,24.0390625,2.457
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,2,1.000319,241.09556953475058,243.0,22.625,0.221
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,2,2.001309,295.40597029678116,258.0,39.59375,0.097
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,2,3.001397,343.90267266175744,294.0,24.0390625,0.339
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,2,4.001272,471.9181854976528,460.0,32.5234375,0.313
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,2,5.001334,375.3669394423907,313.0,18.3828125,0.189
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,2,6.001112,285.27601106300125,246.0,39.59375,0.676
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,2,7.001209,284.13652442544526,247.0,22.625,0.098
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,2,8.001087,346.0723045268444,282.0,22.625,0.158
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,2,9.001164,315.59707212162226,275.0,16.96875,0.251
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,2,10.000695,254.9235345176582,225.0,19.796875,3.508
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,3,1.001116,368.6872832145407,311.0,14.140625,0.275
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,3,2.001182,362.78333708229354,318.0,18.3828125,0.111
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,3,3.001217,478.133898587306,431.0,19.796875,0.145
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,3,4.001173,434.1295605900251,396.0,15.5546875,0.225
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,3,5.001262,164.61177343033594,160.0,15.5546875,0.253
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,3,6.001179,275.7983873388154,240.0,15.5546875,0.192
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,3,7.001115,314.59293878919243,293.0,15.5546875,0.171
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,3,8.001178,396.3367815701908,353.0,28.28125,0.121
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,3,9.001222,355.45162831278617,292.0,15.5546875,0.236
+C6_loss1_dn,core-dn,netem loss 1%,tcp_up,3,10.002341,206.33857550224502,212.0,1.4140625,0.216
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,1,1.001088,446.2078914684266,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,1,2.001302,315.5538535734944,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,1,3.001257,167.77971033977667,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,1,4.001153,384.867422101035,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,1,5.001368,282.00629754223655,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,1,6.001125,459.3879230032141,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,1,7.001387,370.050366656007,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,1,8.001209,292.6047816437514,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,1,9.001198,126.87909507792745,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,1,10.001108,231.75615475235057,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,2,1.001192,224.1281091915019,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,2,2.001207,484.434835609294,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,2,3.00131,327.1220194702236,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,2,4.001167,228.62225904954363,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,2,5.001539,241.0827846213623,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,2,6.001205,350.3414065884033,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,2,7.001262,519.015545435219,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,2,8.001247,348.1324610785427,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,2,9.001115,313.5656222780782,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,2,10.001164,256.888533741664,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,3,1.001133,349.82804104273345,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,3,2.001112,433.07097419063587,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,3,3.000818,192.9947301850645,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,3,4.001098,224.3324458405057,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,3,5.001158,297.77772857065213,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,3,6.001062,157.3015045753879,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,3,7.000961,147.86414588247425,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,3,8.001188,187.65251166737286,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,3,9.001048,136.33396829757757,,0.0,
+C6_loss1_dn,core-dn,netem loss 1%,tcp_down,3,10.00124,558.7836957339092,,0.0,
