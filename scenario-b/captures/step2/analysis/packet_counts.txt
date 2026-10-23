@@ -1,0 +1,8 @@
+capture               all       icmp     tcp_80   udp_5201
+P1_radio             6333          0          0          0
+P1_uesimtun0         6284         10         12        930
+P2_N2                  18          0          0          0
+P3_N3                6282         10         12        930
+P4_N4                  78          0          0          0
+P5_N6                6276         10         12        930
+SBI                   371          0          0          0

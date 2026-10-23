@@ -1,0 +1,120 @@
+Node ID : IPv4 address: 10.20.5.13
+.... 0000 = Address Type: IPv4 address (0)
+IPv4 address: 10.20.5.13
+Create PDR : [Grouped IE]: PDR ID: 1
+IE Type: Create PDR (1)
+PDR ID : 1
+IE Type: PDR ID (56)
+Precedence : 65535
+IE Type: Precedence (29)
+Precedence: 65535
+Source Interface : Core
+IE Type: Source Interface (20)
+.... 0001 = Source Interface: Core (1)
+Network Instance : internet
+IE Type: Network Instance (22)
+Network Instance: internet
+UE IP Address : 
+IE Type: UE IP Address (93)
+IPv4 address: 10.45.0.12
+FAR ID : Dynamic by CP 1
+IE Type: FAR ID (108)
+.000 0000 0000 0000 0000 0000 0000 0001 = FAR ID: 1
+Create PDR : [Grouped IE]: PDR ID: 2
+IE Type: Create PDR (1)
+PDR ID : 2
+IE Type: PDR ID (56)
+Precedence : 65535
+IE Type: Precedence (29)
+Precedence: 65535
+Source Interface : Access
+IE Type: Source Interface (20)
+.... 0000 = Source Interface: Access (0)
+F-TEID : 
+IE Type: F-TEID (21)
+Network Instance : internet
+IE Type: Network Instance (22)
+Network Instance: internet
+QFI : 
+IE Type: QFI (124)
+..00 0001 = QFI: 0x01
+Outer Header Removal : GTP-U/UDP/IP
+IE Type: Outer Header Removal (95)
+Outer Header Removal Description: GTP-U/UDP/IP (6)
+FAR ID : Dynamic by CP 2
+IE Type: FAR ID (108)
+.000 0000 0000 0000 0000 0000 0000 0010 = FAR ID: 2
+Create PDR : [Grouped IE]: PDR ID: 3
+IE Type: Create PDR (1)
+PDR ID : 3
+IE Type: PDR ID (56)
+Precedence : 255
+IE Type: Precedence (29)
+Precedence: 255
+Source Interface : CP-function
+IE Type: Source Interface (20)
+.... 0011 = Source Interface: CP-function (3)
+F-TEID : 
+IE Type: F-TEID (21)
+Outer Header Removal : GTP-U/UDP/IP
+IE Type: Outer Header Removal (95)
+Outer Header Removal Description: GTP-U/UDP/IP (6)
+FAR ID : Dynamic by CP 1
+IE Type: FAR ID (108)
+.000 0000 0000 0000 0000 0000 0000 0001 = FAR ID: 1
+Create PDR : [Grouped IE]: PDR ID: 4
+IE Type: Create PDR (1)
+PDR ID : 4
+IE Type: PDR ID (56)
+Precedence : 255
+IE Type: Precedence (29)
+Precedence: 255
+Source Interface : Access
+IE Type: Source Interface (20)
+.... 0000 = Source Interface: Access (0)
+F-TEID : 
+IE Type: F-TEID (21)
+Network Instance : internet
+IE Type: Network Instance (22)
+Network Instance: internet
+Outer Header Removal : GTP-U/UDP/IP
+IE Type: Outer Header Removal (95)
+Outer Header Removal Description: GTP-U/UDP/IP (6)
+FAR ID : Dynamic by CP 3
+IE Type: FAR ID (108)
+.000 0000 0000 0000 0000 0000 0000 0011 = FAR ID: 3
+Create FAR : [Grouped IE]: FAR ID: Dynamic by CP 1
+IE Type: Create FAR (3)
+FAR ID : Dynamic by CP 1
+IE Type: FAR ID (108)
+.000 0000 0000 0000 0000 0000 0000 0001 = FAR ID: 1
+Apply Action : 
+IE Type: Apply Action (44)
+Create FAR : [Grouped IE]: FAR ID: Dynamic by CP 2
+IE Type: Create FAR (3)
+FAR ID : Dynamic by CP 2
+IE Type: FAR ID (108)
+.000 0000 0000 0000 0000 0000 0000 0010 = FAR ID: 2
+Apply Action : 
+IE Type: Apply Action (44)
+Destination Interface : Core
+IE Type: Destination Interface (42)
+Network Instance : internet
+IE Type: Network Instance (22)
+Network Instance: internet
+Create FAR : [Grouped IE]: FAR ID: Dynamic by CP 3
+IE Type: Create FAR (3)
+FAR ID : Dynamic by CP 3
+IE Type: FAR ID (108)
+.000 0000 0000 0000 0000 0000 0000 0011 = FAR ID: 3
+Apply Action : 
+IE Type: Apply Action (44)
+Destination Interface : CP- Function
+IE Type: Destination Interface (42)
+Outer Header Creation : 
+IE Type: Outer Header Creation (84)
+.... .... .... .0.. = Low Layer SSM and C-TEID: False
+TEID: 0x0000000b
+QFI : 
+IE Type: QFI (124)
+..00 0001 = QFI: 0x01

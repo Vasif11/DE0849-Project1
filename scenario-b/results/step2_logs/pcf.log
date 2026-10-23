@@ -1,0 +1,6 @@
+10/23 13:38:52.127: [pcf] INFO: Setup NF EndPoint(addr) [10.20.4.12:7777] (../src/pcf/npcf-handler.c:150)
+10/23 13:38:52.128: [sbi] INFO: [15c348de-cee3-41f1-a022-6703e5fa11d6] Setup NF Instance [type:UDR] (../lib/sbi/path.c:349)
+10/23 13:38:52.351: [pcf] WARNING: UnRef NF EndPoint(addr) [10.20.4.13:7777] (../src/pcf/npcf-handler.c:482)
+10/23 13:38:52.351: [pcf] INFO: Setup NF EndPoint(addr) [10.20.4.13:7777] (../src/pcf/npcf-handler.c:482)
+10/23 13:38:52.356: [pcf] WARNING: UnRef NF EndPoint(addr) [10.20.4.19:7777] (../src/pcf/nbsf-handler.c:125)
+10/23 13:38:52.356: [pcf] INFO: Setup NF EndPoint(addr) [10.20.4.19:7777] (../src/pcf/nbsf-handler.c:125)

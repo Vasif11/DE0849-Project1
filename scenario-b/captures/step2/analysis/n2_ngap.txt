@@ -1,0 +1,11 @@
+1792762732.064908000|10.20.2.10|10.20.2.12|15|InitialUEMessage, Registration request [RRCEstablishmentCause=mo-Signalling]
+1792762732.100804000|10.20.2.12|10.20.2.10|4|SACK (Ack=0, Arwnd=106496) , DownlinkNASTransport, Authentication request
+1792762732.102505000|10.20.2.10|10.20.2.12|46|SACK (Ack=0, Arwnd=106496) , UplinkNASTransport, Authentication response
+1792762732.112873000|10.20.2.12|10.20.2.10|4|SACK (Ack=1, Arwnd=106496) , DownlinkNASTransport, Security mode command
+1792762732.114105000|10.20.2.10|10.20.2.12|46|SACK (Ack=1, Arwnd=106496) , UplinkNASTransport, Security mode complete, Registration request
+1792762732.134066000|10.20.2.12|10.20.2.10|14|SACK (Ack=2, Arwnd=106496) , InitialContextSetupRequest, Registration accept
+1792762732.134803000|10.20.2.10|10.20.2.12|14|SACK (Ack=2, Arwnd=106496) , InitialContextSetupResponse
+1792762732.337954000|10.20.2.10|10.20.2.12|46,46|UplinkNASTransport, Registration complete, UplinkNASTransport, UL NAS transport, PDU session establishment request
+1792762732.338494000|10.20.2.12|10.20.2.10|4|SACK (Ack=5, Arwnd=106496) , DownlinkNASTransport, Configuration update command
+1792762732.369994000|10.20.2.12|10.20.2.10|29|PDUSessionResourceSetupRequest, DL NAS transport, PDU session establishment accept
+1792762732.373298000|10.20.2.10|10.20.2.12|29|PDUSessionResourceSetupResponse

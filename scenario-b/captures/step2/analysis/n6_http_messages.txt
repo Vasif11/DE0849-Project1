@@ -1,0 +1,9 @@
+Hypertext Transfer Protocol
+    GET / HTTP/1.1\r\n
+        Request Method: GET
+    Host: 10.20.6.20\r\n
+Hypertext Transfer Protocol
+    HTTP/1.1 200 OK\r\n
+    Server: nginx/1.27.5\r\n
+    Content-Type: text/html\r\n
+    Content-Length: 400\r\n

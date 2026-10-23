@@ -1,0 +1,22 @@
+
+===================================================================
+Protocol Hierarchy Statistics
+Filter: 
+
+frame                                    frames:6276 bytes:6757390
+  eth                                    frames:6276 bytes:6757390
+    ip                                   frames:6272 bytes:6757222
+      icmp                               frames:10 bytes:980
+      tcp                                frames:5332 bytes:5466230
+        http                             frames:2 bytes:606
+          data-text-lines                frames:1 bytes:466
+        iperf3                           frames:3859 bytes:5368229
+          data                           frames:3822 bytes:5364060
+          iperf3                         frames:4 bytes:280
+            iperf3                       frames:4 bytes:280
+              iperf3                     frames:4 bytes:280
+      udp                                frames:930 bytes:1290012
+        iperf3                           frames:930 bytes:1290012
+          data                           frames:928 bytes:1289920
+    arp                                  frames:4 bytes:168
+===================================================================

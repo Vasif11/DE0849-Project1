@@ -1,0 +1,13 @@
+
+===================================================================
+Protocol Hierarchy Statistics
+Filter: 
+
+frame                                    frames:18 bytes:2432
+  eth                                    frames:18 bytes:2432
+    ip                                   frames:18 bytes:2432
+      sctp                               frames:18 bytes:2432
+        ngap                             frames:11 bytes:1822
+          sctp                           frames:1 bytes:238
+            ngap                         frames:1 bytes:238
+===================================================================

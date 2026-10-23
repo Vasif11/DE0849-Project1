@@ -1,0 +1,2 @@
+10/23 13:38:52.081: [sbi] INFO: [15c3130a-cee3-41f1-8a66-335ae6dbf045] Setup NF Instance [type:UDM] (../lib/sbi/path.c:349)
+10/23 13:38:52.112: [ausf] INFO: Setup NF EndPoint(addr) [10.20.4.15:7777] (../src/ausf/nudm-handler.c:339)

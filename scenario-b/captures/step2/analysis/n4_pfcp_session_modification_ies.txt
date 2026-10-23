@@ -1,0 +1,16 @@
+Type: IPv4 (0x0800)
+Update FAR : [Grouped IE]: FAR ID: Dynamic by CP 1
+IE Type: Update FAR (10)
+FAR ID : Dynamic by CP 1
+IE Type: FAR ID (108)
+.000 0000 0000 0000 0000 0000 0000 0001 = FAR ID: 1
+Apply Action : 
+IE Type: Apply Action (44)
+Outer Header Creation : 
+IE Type: Outer Header Creation (84)
+...0 .... .... .... = IPv4: False
+.... .0.. .... .... = UDP/IPv4: False
+.... ...1 .... .... = GTP-U/UDP/IPv4: True
+.... .... .... .0.. = Low Layer SSM and C-TEID: False
+TEID: 0x0000000b
+IPv4 Address: 10.20.3.10

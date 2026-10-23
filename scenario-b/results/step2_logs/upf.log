@@ -1,0 +1,2 @@
+10/23 13:38:52.364: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:212)
+10/23 13:38:52.365: [upf] INFO: UE F-SEID[UP:0x4a CP:0x2c] APN[internet] PDN-Type[1] IPv4[10.45.0.12] IPv6[] (../src/upf/context.c:498)

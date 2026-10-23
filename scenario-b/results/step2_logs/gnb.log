@@ -1,0 +1,5 @@
+[2026-10-23 13:38:49.559] [rrc] [debug] UE[14] new signal detected
+[2026-10-23 13:38:52.062] [rrc] [info] RRC Setup for UE[14]
+[2026-10-23 13:38:52.064] [ngap] [debug] Initial NAS message received from UE[14]
+[2026-10-23 13:38:52.134] [ngap] [debug] Initial Context Setup Request received
+[2026-10-23 13:38:52.373] [ngap] [info] PDU session resource(s) setup for UE[14] count[1]
