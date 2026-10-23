@@ -1,0 +1,8 @@
+
+===================================================================
+HTTP Statistics
+* HTTP Response Status Codes                Packets
+  200 OK                                          1
+* HTTP Request Methods                      Packets
+  GET                                             1 
+===================================================================

@@ -1,0 +1,23 @@
+
+Warns (2)
+=============
+   Frequency      Group           Protocol  Summary
+           1   Sequence                TCP  D-SACK Sequence
+           1   Sequence                TCP  Connection reset (RST)
+
+Notes (22)
+=============
+   Frequency      Group           Protocol  Summary
+          10 Reassemble             iPerf3  Unreassembled fragment (change preferences to enable reassembly)
+           1   Sequence                TCP  This frame is a (suspected) retransmission
+           1   Sequence                TCP  Ambiguous ACK following Karn's definition
+           7   Sequence                TCP  Duplicate ACK (#1)
+           2   Sequence                TCP  This frame initiates the connection closing
+           1   Sequence                TCP  This frame undergoes the connection closing
+
+Chats (7)
+=============
+   Frequency      Group           Protocol  Summary
+           2   Sequence                TCP  Connection establish request (SYN): server port 5201
+           2   Sequence                TCP  Connection establish acknowledge (SYN+ACK): server port 5201
+           3   Sequence                TCP  Connection finish (FIN)

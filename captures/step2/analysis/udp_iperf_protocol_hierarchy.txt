@@ -1,0 +1,16 @@
+
+===================================================================
+Protocol Hierarchy Statistics
+Filter: 
+
+frame                                    frames:893 bytes:1290040
+  eth                                    frames:893 bytes:1290040
+    ip                                   frames:893 bytes:1290040
+      tcp                                frames:27 bytes:2588
+        iperf3                           frames:16 bytes:1858
+          _ws.short                      frames:3 bytes:942
+          _ws.unreassembled              frames:10 bytes:676
+      udp                                frames:866 bytes:1287452
+        iperf3                           frames:866 bytes:1287452
+          data                           frames:864 bytes:1287360
+===================================================================
