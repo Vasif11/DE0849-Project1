@@ -1,0 +1,5 @@
+| case                                  | availability before   | availability during   | availability after   |   first failed probe after inject [s] |   time to first success after fix [s] |   curl exit code during failure |
+|:--------------------------------------|:----------------------|:----------------------|:---------------------|--------------------------------------:|--------------------------------------:|--------------------------------:|
+| F1 missing return route on host       | 100 %                 | 10 %                  | 100 %                |                                  0.15 |                                  0.75 |                              28 |
+| F2 IP forwarding off on access router | 100 %                 | 0 %                   | 100 %                |                                  0.24 |                                  1.04 |                              28 |
+| F3 Nginx container stopped            | 100 %                 | 7 %                   | 100 %                |                                  0.73 |                                  0.88 |                              28 |

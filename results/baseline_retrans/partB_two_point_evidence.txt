@@ -1,0 +1,10 @@
+iperf3: 2.7033132191088467 Gbit/s, retransmits=47
+tcpdump: 0 packets dropped by kernel 0 packets dropped by kernel 
+interface drop counters on the path (delta): 0
+softnet backlog drops (delta): 0
+UE  (sender)   TcpRetransSegs,DSACKRecv,SACKReorder,OFOQueue,DSACKOldSent = 47,12,97,0,0
+srv (receiver) TcpRetransSegs,DSACKRecv,SACKReorder,OFOQueue,DSACKOldSent = 0,0,0,42,12
+
+point     data_segs retransmission   out_of_order  spurious_retr
+P1           704296             47              0              0
+P4           704296            445              0              0

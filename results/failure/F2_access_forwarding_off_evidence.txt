@@ -1,0 +1,51 @@
+$ ue curl -s -o /dev/null --max-time 2 -w code=%{http_code} total=%{time_total}\n http://10.0.4.10:8080/
+code=000 total=2.004412
+
+$ ue ping -c 3 -W 1 10.0.1.1
+PING 10.0.1.1 (10.0.1.1) 56(84) bytes of data.
+64 bytes from 10.0.1.1: icmp_seq=1 ttl=64 time=0.196 ms
+64 bytes from 10.0.1.1: icmp_seq=2 ttl=64 time=0.059 ms
+64 bytes from 10.0.1.1: icmp_seq=3 ttl=64 time=0.031 ms
+
+--- 10.0.1.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2044ms
+rtt min/avg/max/mdev = 0.031/0.095/0.196/0.072 ms
+
+$ ue ping -c 3 -W 1 10.0.4.10
+PING 10.0.4.10 (10.0.4.10) 56(84) bytes of data.
+
+--- 10.0.4.10 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2038ms
+
+
+$ ip netns exec access sysctl net.ipv4.ip_forward
+net.ipv4.ip_forward = 0
+
+$ ip netns exec access nstat -z IpInAddrErrors IpForwDatagrams IpInReceives
+#kernel
+IpInReceives                    52                 0.0
+IpInAddrErrors                  49                 0.0
+IpForwDatagrams                 0                  0.0
+
+$ ip -n access -s link show acc-ue
+2: acc-ue@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether ba:a2:b4:05:c3:0f brd ff:ff:ff:ff:ff:ff link-netns ue
+    RX:    bytes   packets errors dropped  missed   mcast           
+    224832745748 150686642      0      65       0       0 
+    TX:    bytes   packets errors dropped carrier collsns           
+     65650649908  48712689      0    1894       0       0 
+
+$ ip -n access -s link show acc-core
+3: acc-core@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether 5e:8d:71:81:31:4e brd ff:ff:ff:ff:ff:ff link-netns core
+    RX:    bytes   packets errors dropped  missed   mcast           
+     65653500234  48714562      0    2219       0       0 
+    TX:    bytes   packets errors dropped carrier collsns           
+    224737129171 150621589      0     776       0       0 
+
+### packet counts per observation point
+F2_access_forwarding_off_P1_ue-eth0.pcap    424 packets
+F2_access_forwarding_off_P2_acc-core.pcap    364 packets
+F2_access_forwarding_off_P3_core-dn.pcap    364 packets
+F2_access_forwarding_off_P4_br-dn.pcap    644 packets
+F2_access_forwarding_off_host-eth0.pcap      0 packets
