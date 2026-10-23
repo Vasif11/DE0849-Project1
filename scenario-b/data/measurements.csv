@@ -1,0 +1,469 @@
+condition,link,spec,rep,layer,metric,value,unit
+C0_baseline,none,,1,L1 network,rtt_avg_ms,1.6511999999999998,ms
+C0_baseline,none,,1,L1 network,rtt_min_ms,0.99,ms
+C0_baseline,none,,1,L1 network,rtt_max_ms,4.38,ms
+C0_baseline,none,,1,L1 network,rtt_std_ms,1.0109804868678653,ms
+C0_baseline,none,,1,L1 network,icmp_loss_percent,0.0,%
+C0_baseline,none,,2,L1 network,rtt_avg_ms,1.6306666666666667,ms
+C0_baseline,none,,2,L1 network,rtt_min_ms,1.06,ms
+C0_baseline,none,,2,L1 network,rtt_max_ms,4.18,ms
+C0_baseline,none,,2,L1 network,rtt_std_ms,0.7676921677129551,ms
+C0_baseline,none,,2,L1 network,icmp_loss_percent,0.0,%
+C0_baseline,none,,3,L1 network,rtt_avg_ms,1.7337333333333336,ms
+C0_baseline,none,,3,L1 network,rtt_min_ms,0.802,ms
+C0_baseline,none,,3,L1 network,rtt_max_ms,3.7,ms
+C0_baseline,none,,3,L1 network,rtt_std_ms,0.8340256728593586,ms
+C0_baseline,none,,3,L1 network,icmp_loss_percent,0.0,%
+C0_baseline,none,,1,L2 transport,tcp_up_mbps,463.6898184684296,Mbit/s
+C0_baseline,none,,1,L2 transport,tcp_up_retrans,665.0,segments
+C0_baseline,none,,1,L2 transport,tcp_up_srtt_ms,1.992,ms
+C0_baseline,none,,2,L2 transport,tcp_up_mbps,430.53002580851245,Mbit/s
+C0_baseline,none,,2,L2 transport,tcp_up_retrans,712.0,segments
+C0_baseline,none,,2,L2 transport,tcp_up_srtt_ms,2.72,ms
+C0_baseline,none,,3,L2 transport,tcp_up_mbps,410.06035321518704,Mbit/s
+C0_baseline,none,,3,L2 transport,tcp_up_retrans,480.0,segments
+C0_baseline,none,,3,L2 transport,tcp_up_srtt_ms,1.914,ms
+C0_baseline,none,,1,L2 transport,tcp_down_mbps,443.49212278622724,Mbit/s
+C0_baseline,none,,1,L2 transport,tcp_down_retrans,814.0,segments
+C0_baseline,none,,1,L2 transport,tcp_down_srtt_ms,,ms
+C0_baseline,none,,2,L2 transport,tcp_down_mbps,431.3514699585772,Mbit/s
+C0_baseline,none,,2,L2 transport,tcp_down_retrans,679.0,segments
+C0_baseline,none,,2,L2 transport,tcp_down_srtt_ms,,ms
+C0_baseline,none,,3,L2 transport,tcp_down_mbps,444.87502884768065,Mbit/s
+C0_baseline,none,,3,L2 transport,tcp_down_retrans,909.0,segments
+C0_baseline,none,,3,L2 transport,tcp_down_srtt_ms,,ms
+C0_baseline,none,,1,L2 transport,udp_offered_mbps,29.993400965803023,Mbit/s
+C0_baseline,none,,1,L2 transport,udp_received_mbps,29.990834592645566,Mbit/s
+C0_baseline,none,,1,L2 transport,udp_loss_percent,0.0,%
+C0_baseline,none,,1,L2 transport,udp_jitter_ms,0.11885817051267585,ms
+C0_baseline,none,,1,L2 transport,udp_packets,27822.0,datagrams
+C0_baseline,none,,2,L2 transport,udp_offered_mbps,29.999632844205557,Mbit/s
+C0_baseline,none,,2,L2 transport,udp_received_mbps,29.997368315546986,Mbit/s
+C0_baseline,none,,2,L2 transport,udp_loss_percent,0.0,%
+C0_baseline,none,,2,L2 transport,udp_jitter_ms,0.04228987197988013,ms
+C0_baseline,none,,2,L2 transport,udp_packets,27822.0,datagrams
+C0_baseline,none,,3,L2 transport,udp_offered_mbps,30.00021499374368,Mbit/s
+C0_baseline,none,,3,L2 transport,udp_received_mbps,29.99840014334716,Mbit/s
+C0_baseline,none,,3,L2 transport,udp_loss_percent,0.0,%
+C0_baseline,none,,3,L2 transport,udp_jitter_ms,0.033653767935052877,ms
+C0_baseline,none,,3,L2 transport,udp_packets,27820.0,datagrams
+C0_baseline,none,,1,L3 application,http_success_percent,100.0,%
+C0_baseline,none,,1,L3 application,http_total_median_ms,3.2085,ms
+C0_baseline,none,,1,L3 application,http_total_p95_ms,10.093649999999991,ms
+C0_baseline,none,,1,L3 application,http_connect_median_ms,1.506,ms
+C0_baseline,none,,2,L3 application,http_success_percent,100.0,%
+C0_baseline,none,,2,L3 application,http_total_median_ms,1.8940000000000001,ms
+C0_baseline,none,,2,L3 application,http_total_p95_ms,3.7888499999999987,ms
+C0_baseline,none,,2,L3 application,http_connect_median_ms,1.0135,ms
+C0_baseline,none,,3,L3 application,http_success_percent,100.0,%
+C0_baseline,none,,3,L3 application,http_total_median_ms,1.8944999999999999,ms
+C0_baseline,none,,3,L3 application,http_total_p95_ms,4.9787,ms
+C0_baseline,none,,3,L3 application,http_connect_median_ms,1.004,ms
+C0_baseline,none,,1,L3 application,http1m_success_percent,100.0,%
+C0_baseline,none,,1,L3 application,http1m_total_median_ms,33.001000000000005,ms
+C0_baseline,none,,1,L3 application,http1m_total_p95_ms,38.741200000000006,ms
+C0_baseline,none,,1,L3 application,http1m_connect_median_ms,1.062,ms
+C0_baseline,none,,2,L3 application,http1m_success_percent,100.0,%
+C0_baseline,none,,2,L3 application,http1m_total_median_ms,26.186,ms
+C0_baseline,none,,2,L3 application,http1m_total_p95_ms,28.858999999999998,ms
+C0_baseline,none,,2,L3 application,http1m_connect_median_ms,0.967,ms
+C0_baseline,none,,3,L3 application,http1m_success_percent,100.0,%
+C0_baseline,none,,3,L3 application,http1m_total_median_ms,28.274,ms
+C0_baseline,none,,3,L3 application,http1m_total_p95_ms,31.304199999999998,ms
+C0_baseline,none,,3,L3 application,http1m_connect_median_ms,1.017,ms
+C0_baseline,none,,1,L3 application,http_tcp_retrans_segs,0.0,segments
+C0_baseline,none,,1,L3 application,http_tcp_timeouts,0.0,events
+C0_baseline,none,,2,L3 application,http_tcp_retrans_segs,0.0,segments
+C0_baseline,none,,2,L3 application,http_tcp_timeouts,0.0,events
+C0_baseline,none,,3,L3 application,http_tcp_retrans_segs,0.0,segments
+C0_baseline,none,,3,L3 application,http_tcp_timeouts,0.0,events
+C1_delay50_n3,n3,netem delay 25ms,1,L1 network,rtt_avg_ms,52.763333333333335,ms
+C1_delay50_n3,n3,netem delay 25ms,1,L1 network,rtt_min_ms,51.6,ms
+C1_delay50_n3,n3,netem delay 25ms,1,L1 network,rtt_max_ms,54.6,ms
+C1_delay50_n3,n3,netem delay 25ms,1,L1 network,rtt_std_ms,0.8660187675490214,ms
+C1_delay50_n3,n3,netem delay 25ms,1,L1 network,icmp_loss_percent,0.0,%
+C1_delay50_n3,n3,netem delay 25ms,2,L1 network,rtt_avg_ms,52.67666666666665,ms
+C1_delay50_n3,n3,netem delay 25ms,2,L1 network,rtt_min_ms,51.4,ms
+C1_delay50_n3,n3,netem delay 25ms,2,L1 network,rtt_max_ms,55.1,ms
+C1_delay50_n3,n3,netem delay 25ms,2,L1 network,rtt_std_ms,1.0880806680710238,ms
+C1_delay50_n3,n3,netem delay 25ms,2,L1 network,icmp_loss_percent,0.0,%
+C1_delay50_n3,n3,netem delay 25ms,3,L1 network,rtt_avg_ms,53.22,ms
+C1_delay50_n3,n3,netem delay 25ms,3,L1 network,rtt_min_ms,51.7,ms
+C1_delay50_n3,n3,netem delay 25ms,3,L1 network,rtt_max_ms,61.6,ms
+C1_delay50_n3,n3,netem delay 25ms,3,L1 network,rtt_std_ms,1.8690584020690282,ms
+C1_delay50_n3,n3,netem delay 25ms,3,L1 network,icmp_loss_percent,0.0,%
+C1_delay50_n3,n3,netem delay 25ms,1,L2 transport,tcp_up_mbps,22.627716614393627,Mbit/s
+C1_delay50_n3,n3,netem delay 25ms,1,L2 transport,tcp_up_retrans,145.0,segments
+C1_delay50_n3,n3,netem delay 25ms,1,L2 transport,tcp_up_srtt_ms,53.651,ms
+C1_delay50_n3,n3,netem delay 25ms,2,L2 transport,tcp_up_mbps,19.607335463363015,Mbit/s
+C1_delay50_n3,n3,netem delay 25ms,2,L2 transport,tcp_up_retrans,147.0,segments
+C1_delay50_n3,n3,netem delay 25ms,2,L2 transport,tcp_up_srtt_ms,52.458,ms
+C1_delay50_n3,n3,netem delay 25ms,3,L2 transport,tcp_up_mbps,19.813919887212602,Mbit/s
+C1_delay50_n3,n3,netem delay 25ms,3,L2 transport,tcp_up_retrans,130.0,segments
+C1_delay50_n3,n3,netem delay 25ms,3,L2 transport,tcp_up_srtt_ms,52.623,ms
+C1_delay50_n3,n3,netem delay 25ms,1,L2 transport,tcp_down_mbps,24.009670104377175,Mbit/s
+C1_delay50_n3,n3,netem delay 25ms,1,L2 transport,tcp_down_retrans,685.0,segments
+C1_delay50_n3,n3,netem delay 25ms,1,L2 transport,tcp_down_srtt_ms,,ms
+C1_delay50_n3,n3,netem delay 25ms,2,L2 transport,tcp_down_mbps,25.47708987373439,Mbit/s
+C1_delay50_n3,n3,netem delay 25ms,2,L2 transport,tcp_down_retrans,221.0,segments
+C1_delay50_n3,n3,netem delay 25ms,2,L2 transport,tcp_down_srtt_ms,,ms
+C1_delay50_n3,n3,netem delay 25ms,3,L2 transport,tcp_down_mbps,20.968940820279105,Mbit/s
+C1_delay50_n3,n3,netem delay 25ms,3,L2 transport,tcp_down_retrans,323.0,segments
+C1_delay50_n3,n3,netem delay 25ms,3,L2 transport,tcp_down_srtt_ms,,ms
+C1_delay50_n3,n3,netem delay 25ms,1,L2 transport,udp_offered_mbps,29.999587850241053,Mbit/s
+C1_delay50_n3,n3,netem delay 25ms,1,L2 transport,udp_received_mbps,29.845023398300928,Mbit/s
+C1_delay50_n3,n3,netem delay 25ms,1,L2 transport,udp_loss_percent,0.0035942779095679677,%
+C1_delay50_n3,n3,netem delay 25ms,1,L2 transport,udp_jitter_ms,0.07072981441294193,ms
+C1_delay50_n3,n3,netem delay 25ms,1,L2 transport,udp_packets,27822.0,datagrams
+C1_delay50_n3,n3,netem delay 25ms,2,L2 transport,udp_offered_mbps,29.99908549391977,Mbit/s
+C1_delay50_n3,n3,netem delay 25ms,2,L2 transport,udp_received_mbps,29.844842298308702,Mbit/s
+C1_delay50_n3,n3,netem delay 25ms,2,L2 transport,udp_loss_percent,0.0,%
+C1_delay50_n3,n3,netem delay 25ms,2,L2 transport,udp_jitter_ms,0.04379278491630026,ms
+C1_delay50_n3,n3,netem delay 25ms,2,L2 transport,udp_packets,27821.0,datagrams
+C1_delay50_n3,n3,netem delay 25ms,3,L2 transport,udp_offered_mbps,29.99949944449938,Mbit/s
+C1_delay50_n3,n3,netem delay 25ms,3,L2 transport,udp_received_mbps,29.838000703927065,Mbit/s
+C1_delay50_n3,n3,netem delay 25ms,3,L2 transport,udp_loss_percent,0.0,%
+C1_delay50_n3,n3,netem delay 25ms,3,L2 transport,udp_jitter_ms,0.0630560121669595,ms
+C1_delay50_n3,n3,netem delay 25ms,3,L2 transport,udp_packets,27821.0,datagrams
+C1_delay50_n3,n3,netem delay 25ms,1,L3 application,http_success_percent,100.0,%
+C1_delay50_n3,n3,netem delay 25ms,1,L3 application,http_total_median_ms,105.573,ms
+C1_delay50_n3,n3,netem delay 25ms,1,L3 application,http_total_p95_ms,107.92325,ms
+C1_delay50_n3,n3,netem delay 25ms,1,L3 application,http_connect_median_ms,52.262,ms
+C1_delay50_n3,n3,netem delay 25ms,2,L3 application,http_success_percent,100.0,%
+C1_delay50_n3,n3,netem delay 25ms,2,L3 application,http_total_median_ms,106.09599999999999,ms
+C1_delay50_n3,n3,netem delay 25ms,2,L3 application,http_total_p95_ms,107.4203,ms
+C1_delay50_n3,n3,netem delay 25ms,2,L3 application,http_connect_median_ms,52.0635,ms
+C1_delay50_n3,n3,netem delay 25ms,3,L3 application,http_success_percent,100.0,%
+C1_delay50_n3,n3,netem delay 25ms,3,L3 application,http_total_median_ms,106.4725,ms
+C1_delay50_n3,n3,netem delay 25ms,3,L3 application,http_total_p95_ms,108.367,ms
+C1_delay50_n3,n3,netem delay 25ms,3,L3 application,http_connect_median_ms,52.5285,ms
+C1_delay50_n3,n3,netem delay 25ms,1,L3 application,http1m_success_percent,100.0,%
+C1_delay50_n3,n3,netem delay 25ms,1,L3 application,http1m_total_median_ms,531.686,ms
+C1_delay50_n3,n3,netem delay 25ms,1,L3 application,http1m_total_p95_ms,537.072,ms
+C1_delay50_n3,n3,netem delay 25ms,1,L3 application,http1m_connect_median_ms,52.94,ms
+C1_delay50_n3,n3,netem delay 25ms,2,L3 application,http1m_success_percent,100.0,%
+C1_delay50_n3,n3,netem delay 25ms,2,L3 application,http1m_total_median_ms,530.7579999999999,ms
+C1_delay50_n3,n3,netem delay 25ms,2,L3 application,http1m_total_p95_ms,699.9947999999999,ms
+C1_delay50_n3,n3,netem delay 25ms,2,L3 application,http1m_connect_median_ms,53.830000000000005,ms
+C1_delay50_n3,n3,netem delay 25ms,3,L3 application,http1m_success_percent,100.0,%
+C1_delay50_n3,n3,netem delay 25ms,3,L3 application,http1m_total_median_ms,482.058,ms
+C1_delay50_n3,n3,netem delay 25ms,3,L3 application,http1m_total_p95_ms,574.3332,ms
+C1_delay50_n3,n3,netem delay 25ms,3,L3 application,http1m_connect_median_ms,52.57,ms
+C1_delay50_n3,n3,netem delay 25ms,1,L3 application,http_tcp_retrans_segs,0.0,segments
+C1_delay50_n3,n3,netem delay 25ms,1,L3 application,http_tcp_timeouts,0.0,events
+C1_delay50_n3,n3,netem delay 25ms,2,L3 application,http_tcp_retrans_segs,0.0,segments
+C1_delay50_n3,n3,netem delay 25ms,2,L3 application,http_tcp_timeouts,0.0,events
+C1_delay50_n3,n3,netem delay 25ms,3,L3 application,http_tcp_retrans_segs,0.0,segments
+C1_delay50_n3,n3,netem delay 25ms,3,L3 application,http_tcp_timeouts,0.0,events
+C2_delay50_n6,n6,netem delay 25ms,1,L1 network,rtt_avg_ms,52.49333333333334,ms
+C2_delay50_n6,n6,netem delay 25ms,1,L1 network,rtt_min_ms,51.5,ms
+C2_delay50_n6,n6,netem delay 25ms,1,L1 network,rtt_max_ms,55.0,ms
+C2_delay50_n6,n6,netem delay 25ms,1,L1 network,rtt_std_ms,1.046812348013732,ms
+C2_delay50_n6,n6,netem delay 25ms,1,L1 network,icmp_loss_percent,0.0,%
+C2_delay50_n6,n6,netem delay 25ms,2,L1 network,rtt_avg_ms,52.716666666666676,ms
+C2_delay50_n6,n6,netem delay 25ms,2,L1 network,rtt_min_ms,51.4,ms
+C2_delay50_n6,n6,netem delay 25ms,2,L1 network,rtt_max_ms,55.4,ms
+C2_delay50_n6,n6,netem delay 25ms,2,L1 network,rtt_std_ms,1.145631382412255,ms
+C2_delay50_n6,n6,netem delay 25ms,2,L1 network,icmp_loss_percent,0.0,%
+C2_delay50_n6,n6,netem delay 25ms,3,L1 network,rtt_avg_ms,52.51,ms
+C2_delay50_n6,n6,netem delay 25ms,3,L1 network,rtt_min_ms,51.5,ms
+C2_delay50_n6,n6,netem delay 25ms,3,L1 network,rtt_max_ms,54.5,ms
+C2_delay50_n6,n6,netem delay 25ms,3,L1 network,rtt_std_ms,0.9739184983248397,ms
+C2_delay50_n6,n6,netem delay 25ms,3,L1 network,icmp_loss_percent,0.0,%
+C2_delay50_n6,n6,netem delay 25ms,1,L2 transport,tcp_up_mbps,42.64749316907354,Mbit/s
+C2_delay50_n6,n6,netem delay 25ms,1,L2 transport,tcp_up_retrans,604.0,segments
+C2_delay50_n6,n6,netem delay 25ms,1,L2 transport,tcp_up_srtt_ms,52.7,ms
+C2_delay50_n6,n6,netem delay 25ms,2,L2 transport,tcp_up_mbps,32.319173987215045,Mbit/s
+C2_delay50_n6,n6,netem delay 25ms,2,L2 transport,tcp_up_retrans,350.0,segments
+C2_delay50_n6,n6,netem delay 25ms,2,L2 transport,tcp_up_srtt_ms,53.024,ms
+C2_delay50_n6,n6,netem delay 25ms,3,L2 transport,tcp_up_mbps,21.588238617240258,Mbit/s
+C2_delay50_n6,n6,netem delay 25ms,3,L2 transport,tcp_up_retrans,138.0,segments
+C2_delay50_n6,n6,netem delay 25ms,3,L2 transport,tcp_up_srtt_ms,53.158,ms
+C2_delay50_n6,n6,netem delay 25ms,1,L2 transport,tcp_down_mbps,23.90409539108276,Mbit/s
+C2_delay50_n6,n6,netem delay 25ms,1,L2 transport,tcp_down_retrans,160.0,segments
+C2_delay50_n6,n6,netem delay 25ms,1,L2 transport,tcp_down_srtt_ms,,ms
+C2_delay50_n6,n6,netem delay 25ms,2,L2 transport,tcp_down_mbps,28.098470603221735,Mbit/s
+C2_delay50_n6,n6,netem delay 25ms,2,L2 transport,tcp_down_retrans,286.0,segments
+C2_delay50_n6,n6,netem delay 25ms,2,L2 transport,tcp_down_srtt_ms,,ms
+C2_delay50_n6,n6,netem delay 25ms,3,L2 transport,tcp_down_mbps,31.98105310504501,Mbit/s
+C2_delay50_n6,n6,netem delay 25ms,3,L2 transport,tcp_down_retrans,445.0,segments
+C2_delay50_n6,n6,netem delay 25ms,3,L2 transport,tcp_down_srtt_ms,,ms
+C2_delay50_n6,n6,netem delay 25ms,1,L2 transport,udp_offered_mbps,29.999398563590702,Mbit/s
+C2_delay50_n6,n6,netem delay 25ms,1,L2 transport,udp_received_mbps,29.831991165592257,Mbit/s
+C2_delay50_n6,n6,netem delay 25ms,1,L2 transport,udp_loss_percent,0.0,%
+C2_delay50_n6,n6,netem delay 25ms,1,L2 transport,udp_jitter_ms,0.19066590625927382,ms
+C2_delay50_n6,n6,netem delay 25ms,1,L2 transport,udp_packets,27826.0,datagrams
+C2_delay50_n6,n6,netem delay 25ms,2,L2 transport,udp_offered_mbps,29.999257898625274,Mbit/s
+C2_delay50_n6,n6,netem delay 25ms,2,L2 transport,udp_received_mbps,29.84514313873685,Mbit/s
+C2_delay50_n6,n6,netem delay 25ms,2,L2 transport,udp_loss_percent,0.0,%
+C2_delay50_n6,n6,netem delay 25ms,2,L2 transport,udp_jitter_ms,0.07263817677757153,ms
+C2_delay50_n6,n6,netem delay 25ms,2,L2 transport,udp_packets,27822.0,datagrams
+C2_delay50_n6,n6,netem delay 25ms,3,L2 transport,udp_offered_mbps,30.000115996241718,Mbit/s
+C2_delay50_n6,n6,netem delay 25ms,3,L2 transport,udp_received_mbps,29.846756392048,Mbit/s
+C2_delay50_n6,n6,netem delay 25ms,3,L2 transport,udp_loss_percent,0.0,%
+C2_delay50_n6,n6,netem delay 25ms,3,L2 transport,udp_jitter_ms,0.0707798696022597,ms
+C2_delay50_n6,n6,netem delay 25ms,3,L2 transport,udp_packets,27820.0,datagrams
+C2_delay50_n6,n6,netem delay 25ms,1,L3 application,http_success_percent,100.0,%
+C2_delay50_n6,n6,netem delay 25ms,1,L3 application,http_total_median_ms,105.03850000000001,ms
+C2_delay50_n6,n6,netem delay 25ms,1,L3 application,http_total_p95_ms,107.0827,ms
+C2_delay50_n6,n6,netem delay 25ms,1,L3 application,http_connect_median_ms,52.068000000000005,ms
+C2_delay50_n6,n6,netem delay 25ms,2,L3 application,http_success_percent,100.0,%
+C2_delay50_n6,n6,netem delay 25ms,2,L3 application,http_total_median_ms,104.725,ms
+C2_delay50_n6,n6,netem delay 25ms,2,L3 application,http_total_p95_ms,107.03065000000001,ms
+C2_delay50_n6,n6,netem delay 25ms,2,L3 application,http_connect_median_ms,51.874,ms
+C2_delay50_n6,n6,netem delay 25ms,3,L3 application,http_success_percent,100.0,%
+C2_delay50_n6,n6,netem delay 25ms,3,L3 application,http_total_median_ms,105.059,ms
+C2_delay50_n6,n6,netem delay 25ms,3,L3 application,http_total_p95_ms,107.3253,ms
+C2_delay50_n6,n6,netem delay 25ms,3,L3 application,http_connect_median_ms,52.3035,ms
+C2_delay50_n6,n6,netem delay 25ms,1,L3 application,http1m_success_percent,100.0,%
+C2_delay50_n6,n6,netem delay 25ms,1,L3 application,http1m_total_median_ms,490.11199999999997,ms
+C2_delay50_n6,n6,netem delay 25ms,1,L3 application,http1m_total_p95_ms,537.8672,ms
+C2_delay50_n6,n6,netem delay 25ms,1,L3 application,http1m_connect_median_ms,52.48,ms
+C2_delay50_n6,n6,netem delay 25ms,2,L3 application,http1m_success_percent,100.0,%
+C2_delay50_n6,n6,netem delay 25ms,2,L3 application,http1m_total_median_ms,535.169,ms
+C2_delay50_n6,n6,netem delay 25ms,2,L3 application,http1m_total_p95_ms,810.7749999999999,ms
+C2_delay50_n6,n6,netem delay 25ms,2,L3 application,http1m_connect_median_ms,52.305,ms
+C2_delay50_n6,n6,netem delay 25ms,3,L3 application,http1m_success_percent,100.0,%
+C2_delay50_n6,n6,netem delay 25ms,3,L3 application,http1m_total_median_ms,480.48999999999995,ms
+C2_delay50_n6,n6,netem delay 25ms,3,L3 application,http1m_total_p95_ms,761.2331999999999,ms
+C2_delay50_n6,n6,netem delay 25ms,3,L3 application,http1m_connect_median_ms,51.888999999999996,ms
+C2_delay50_n6,n6,netem delay 25ms,1,L3 application,http_tcp_retrans_segs,0.0,segments
+C2_delay50_n6,n6,netem delay 25ms,1,L3 application,http_tcp_timeouts,0.0,events
+C2_delay50_n6,n6,netem delay 25ms,2,L3 application,http_tcp_retrans_segs,0.0,segments
+C2_delay50_n6,n6,netem delay 25ms,2,L3 application,http_tcp_timeouts,0.0,events
+C2_delay50_n6,n6,netem delay 25ms,3,L3 application,http_tcp_retrans_segs,0.0,segments
+C2_delay50_n6,n6,netem delay 25ms,3,L3 application,http_tcp_timeouts,0.0,events
+C3_loss1_n3,n3,netem loss 1%,1,L1 network,rtt_avg_ms,1.6395666666666666,ms
+C3_loss1_n3,n3,netem loss 1%,1,L1 network,rtt_min_ms,0.837,ms
+C3_loss1_n3,n3,netem loss 1%,1,L1 network,rtt_max_ms,4.64,ms
+C3_loss1_n3,n3,netem loss 1%,1,L1 network,rtt_std_ms,1.01220318538609,ms
+C3_loss1_n3,n3,netem loss 1%,1,L1 network,icmp_loss_percent,0.0,%
+C3_loss1_n3,n3,netem loss 1%,2,L1 network,rtt_avg_ms,1.5736896551724135,ms
+C3_loss1_n3,n3,netem loss 1%,2,L1 network,rtt_min_ms,0.845,ms
+C3_loss1_n3,n3,netem loss 1%,2,L1 network,rtt_max_ms,4.3,ms
+C3_loss1_n3,n3,netem loss 1%,2,L1 network,rtt_std_ms,0.8189822561939857,ms
+C3_loss1_n3,n3,netem loss 1%,2,L1 network,icmp_loss_percent,3.3333333333333335,%
+C3_loss1_n3,n3,netem loss 1%,3,L1 network,rtt_avg_ms,1.913,ms
+C3_loss1_n3,n3,netem loss 1%,3,L1 network,rtt_min_ms,0.93,ms
+C3_loss1_n3,n3,netem loss 1%,3,L1 network,rtt_max_ms,5.02,ms
+C3_loss1_n3,n3,netem loss 1%,3,L1 network,rtt_std_ms,1.0726864438858876,ms
+C3_loss1_n3,n3,netem loss 1%,3,L1 network,icmp_loss_percent,0.0,%
+C3_loss1_n3,n3,netem loss 1%,1,L2 transport,tcp_up_mbps,113.4203205613758,Mbit/s
+C3_loss1_n3,n3,netem loss 1%,1,L2 transport,tcp_up_retrans,1049.0,segments
+C3_loss1_n3,n3,netem loss 1%,1,L2 transport,tcp_up_srtt_ms,1.049,ms
+C3_loss1_n3,n3,netem loss 1%,2,L2 transport,tcp_up_mbps,96.96775808607174,Mbit/s
+C3_loss1_n3,n3,netem loss 1%,2,L2 transport,tcp_up_retrans,935.0,segments
+C3_loss1_n3,n3,netem loss 1%,2,L2 transport,tcp_up_srtt_ms,0.772,ms
+C3_loss1_n3,n3,netem loss 1%,3,L2 transport,tcp_up_mbps,114.37608012749374,Mbit/s
+C3_loss1_n3,n3,netem loss 1%,3,L2 transport,tcp_up_retrans,1030.0,segments
+C3_loss1_n3,n3,netem loss 1%,3,L2 transport,tcp_up_srtt_ms,0.708,ms
+C3_loss1_n3,n3,netem loss 1%,1,L2 transport,tcp_down_mbps,115.5410589298713,Mbit/s
+C3_loss1_n3,n3,netem loss 1%,1,L2 transport,tcp_down_retrans,1072.0,segments
+C3_loss1_n3,n3,netem loss 1%,1,L2 transport,tcp_down_srtt_ms,,ms
+C3_loss1_n3,n3,netem loss 1%,2,L2 transport,tcp_down_mbps,112.29076644398324,Mbit/s
+C3_loss1_n3,n3,netem loss 1%,2,L2 transport,tcp_down_retrans,1051.0,segments
+C3_loss1_n3,n3,netem loss 1%,2,L2 transport,tcp_down_srtt_ms,,ms
+C3_loss1_n3,n3,netem loss 1%,3,L2 transport,tcp_down_mbps,112.18588613772138,Mbit/s
+C3_loss1_n3,n3,netem loss 1%,3,L2 transport,tcp_down_retrans,1110.0,segments
+C3_loss1_n3,n3,netem loss 1%,3,L2 transport,tcp_down_srtt_ms,,ms
+C3_loss1_n3,n3,netem loss 1%,1,L2 transport,udp_offered_mbps,29.999687014616416,Mbit/s
+C3_loss1_n3,n3,netem loss 1%,1,L2 transport,udp_received_mbps,29.67917991824738,Mbit/s
+C3_loss1_n3,n3,netem loss 1%,1,L2 transport,udp_loss_percent,1.0567936736161034,%
+C3_loss1_n3,n3,netem loss 1%,1,L2 transport,udp_jitter_ms,0.0513537977182365,ms
+C3_loss1_n3,n3,netem loss 1%,1,L2 transport,udp_packets,27820.0,datagrams
+C3_loss1_n3,n3,netem loss 1%,2,L2 transport,udp_offered_mbps,29.9993118902112,Mbit/s
+C3_loss1_n3,n3,netem loss 1%,2,L2 transport,udp_received_mbps,29.699515029467456,Mbit/s
+C3_loss1_n3,n3,netem loss 1%,2,L2 transport,udp_loss_percent,0.992020703040759,%
+C3_loss1_n3,n3,netem loss 1%,2,L2 transport,udp_jitter_ms,0.03259367300229116,ms
+C3_loss1_n3,n3,netem loss 1%,2,L2 transport,udp_packets,27822.0,datagrams
+C3_loss1_n3,n3,netem loss 1%,3,L2 transport,udp_offered_mbps,30.00003799867005,Mbit/s
+C3_loss1_n3,n3,netem loss 1%,3,L2 transport,udp_received_mbps,29.707047328523334,Mbit/s
+C3_loss1_n3,n3,netem loss 1%,3,L2 transport,udp_loss_percent,0.9705248023005032,%
+C3_loss1_n3,n3,netem loss 1%,3,L2 transport,udp_jitter_ms,0.04999755880028842,ms
+C3_loss1_n3,n3,netem loss 1%,3,L2 transport,udp_packets,27820.0,datagrams
+C3_loss1_n3,n3,netem loss 1%,1,L3 application,http_success_percent,100.0,%
+C3_loss1_n3,n3,netem loss 1%,1,L3 application,http_total_median_ms,1.905,ms
+C3_loss1_n3,n3,netem loss 1%,1,L3 application,http_total_p95_ms,4.987,ms
+C3_loss1_n3,n3,netem loss 1%,1,L3 application,http_connect_median_ms,1.028,ms
+C3_loss1_n3,n3,netem loss 1%,2,L3 application,http_success_percent,100.0,%
+C3_loss1_n3,n3,netem loss 1%,2,L3 application,http_total_median_ms,1.86,ms
+C3_loss1_n3,n3,netem loss 1%,2,L3 application,http_total_p95_ms,557.8714499999973,ms
+C3_loss1_n3,n3,netem loss 1%,2,L3 application,http_connect_median_ms,1.0154999999999998,ms
+C3_loss1_n3,n3,netem loss 1%,3,L3 application,http_success_percent,100.0,%
+C3_loss1_n3,n3,netem loss 1%,3,L3 application,http_total_median_ms,1.9445000000000001,ms
+C3_loss1_n3,n3,netem loss 1%,3,L3 application,http_total_p95_ms,4.817649999999996,ms
+C3_loss1_n3,n3,netem loss 1%,3,L3 application,http_connect_median_ms,1.0505,ms
+C3_loss1_n3,n3,netem loss 1%,1,L3 application,http1m_success_percent,100.0,%
+C3_loss1_n3,n3,netem loss 1%,1,L3 application,http1m_total_median_ms,60.187,ms
+C3_loss1_n3,n3,netem loss 1%,1,L3 application,http1m_total_p95_ms,66.0322,ms
+C3_loss1_n3,n3,netem loss 1%,1,L3 application,http1m_connect_median_ms,1.2260000000000002,ms
+C3_loss1_n3,n3,netem loss 1%,2,L3 application,http1m_success_percent,100.0,%
+C3_loss1_n3,n3,netem loss 1%,2,L3 application,http1m_total_median_ms,59.627,ms
+C3_loss1_n3,n3,netem loss 1%,2,L3 application,http1m_total_p95_ms,118.80139999999999,ms
+C3_loss1_n3,n3,netem loss 1%,2,L3 application,http1m_connect_median_ms,0.9840000000000001,ms
+C3_loss1_n3,n3,netem loss 1%,3,L3 application,http1m_success_percent,100.0,%
+C3_loss1_n3,n3,netem loss 1%,3,L3 application,http1m_total_median_ms,34.373,ms
+C3_loss1_n3,n3,netem loss 1%,3,L3 application,http1m_total_p95_ms,42.923199999999994,ms
+C3_loss1_n3,n3,netem loss 1%,3,L3 application,http1m_connect_median_ms,0.958,ms
+C3_loss1_n3,n3,netem loss 1%,1,L3 application,http_tcp_retrans_segs,1.0,segments
+C3_loss1_n3,n3,netem loss 1%,1,L3 application,http_tcp_timeouts,0.0,events
+C3_loss1_n3,n3,netem loss 1%,2,L3 application,http_tcp_retrans_segs,4.0,segments
+C3_loss1_n3,n3,netem loss 1%,2,L3 application,http_tcp_timeouts,3.0,events
+C3_loss1_n3,n3,netem loss 1%,3,L3 application,http_tcp_retrans_segs,3.0,segments
+C3_loss1_n3,n3,netem loss 1%,3,L3 application,http_tcp_timeouts,1.0,events
+C4_loss1_n6,n6,netem loss 1%,1,L1 network,rtt_avg_ms,1.3175333333333334,ms
+C4_loss1_n6,n6,netem loss 1%,1,L1 network,rtt_min_ms,0.877,ms
+C4_loss1_n6,n6,netem loss 1%,1,L1 network,rtt_max_ms,3.63,ms
+C4_loss1_n6,n6,netem loss 1%,1,L1 network,rtt_std_ms,0.6152593920780323,ms
+C4_loss1_n6,n6,netem loss 1%,1,L1 network,icmp_loss_percent,0.0,%
+C4_loss1_n6,n6,netem loss 1%,2,L1 network,rtt_avg_ms,1.5651071428571426,ms
+C4_loss1_n6,n6,netem loss 1%,2,L1 network,rtt_min_ms,0.945,ms
+C4_loss1_n6,n6,netem loss 1%,2,L1 network,rtt_max_ms,3.97,ms
+C4_loss1_n6,n6,netem loss 1%,2,L1 network,rtt_std_ms,0.7865898898167359,ms
+C4_loss1_n6,n6,netem loss 1%,2,L1 network,icmp_loss_percent,6.666666666666667,%
+C4_loss1_n6,n6,netem loss 1%,3,L1 network,rtt_avg_ms,1.6939666666666666,ms
+C4_loss1_n6,n6,netem loss 1%,3,L1 network,rtt_min_ms,0.978,ms
+C4_loss1_n6,n6,netem loss 1%,3,L1 network,rtt_max_ms,4.88,ms
+C4_loss1_n6,n6,netem loss 1%,3,L1 network,rtt_std_ms,1.0559409101588622,ms
+C4_loss1_n6,n6,netem loss 1%,3,L1 network,icmp_loss_percent,0.0,%
+C4_loss1_n6,n6,netem loss 1%,1,L2 transport,tcp_up_mbps,111.9624789247883,Mbit/s
+C4_loss1_n6,n6,netem loss 1%,1,L2 transport,tcp_up_retrans,1008.0,segments
+C4_loss1_n6,n6,netem loss 1%,1,L2 transport,tcp_up_srtt_ms,1.028,ms
+C4_loss1_n6,n6,netem loss 1%,2,L2 transport,tcp_up_mbps,99.59756929856681,Mbit/s
+C4_loss1_n6,n6,netem loss 1%,2,L2 transport,tcp_up_retrans,941.0,segments
+C4_loss1_n6,n6,netem loss 1%,2,L2 transport,tcp_up_srtt_ms,0.92,ms
+C4_loss1_n6,n6,netem loss 1%,3,L2 transport,tcp_up_mbps,95.92537503693005,Mbit/s
+C4_loss1_n6,n6,netem loss 1%,3,L2 transport,tcp_up_retrans,888.0,segments
+C4_loss1_n6,n6,netem loss 1%,3,L2 transport,tcp_up_srtt_ms,0.871,ms
+C4_loss1_n6,n6,netem loss 1%,1,L2 transport,tcp_down_mbps,111.45033277529991,Mbit/s
+C4_loss1_n6,n6,netem loss 1%,1,L2 transport,tcp_down_retrans,1025.0,segments
+C4_loss1_n6,n6,netem loss 1%,1,L2 transport,tcp_down_srtt_ms,,ms
+C4_loss1_n6,n6,netem loss 1%,2,L2 transport,tcp_down_mbps,107.88862016897858,Mbit/s
+C4_loss1_n6,n6,netem loss 1%,2,L2 transport,tcp_down_retrans,1002.0,segments
+C4_loss1_n6,n6,netem loss 1%,2,L2 transport,tcp_down_srtt_ms,,ms
+C4_loss1_n6,n6,netem loss 1%,3,L2 transport,tcp_down_mbps,107.04915089795726,Mbit/s
+C4_loss1_n6,n6,netem loss 1%,3,L2 transport,tcp_down_retrans,975.0,segments
+C4_loss1_n6,n6,netem loss 1%,3,L2 transport,tcp_down_srtt_ms,,ms
+C4_loss1_n6,n6,netem loss 1%,1,L2 transport,udp_offered_mbps,29.999563853515173,Mbit/s
+C4_loss1_n6,n6,netem loss 1%,1,L2 transport,udp_received_mbps,29.69150408664642,Mbit/s
+C4_loss1_n6,n6,netem loss 1%,1,L2 transport,udp_loss_percent,1.020774926317303,%
+C4_loss1_n6,n6,netem loss 1%,1,L2 transport,udp_jitter_ms,0.05821068000509327,ms
+C4_loss1_n6,n6,netem loss 1%,1,L2 transport,udp_packets,27822.0,datagrams
+C4_loss1_n6,n6,netem loss 1%,2,L2 transport,udp_offered_mbps,29.999551855166626,Mbit/s
+C4_loss1_n6,n6,netem loss 1%,2,L2 transport,udp_received_mbps,29.718025312962723,Mbit/s
+C4_loss1_n6,n6,netem loss 1%,2,L2 transport,udp_loss_percent,0.9309179785781037,%
+C4_loss1_n6,n6,netem loss 1%,2,L2 transport,udp_jitter_ms,0.03492773129783738,ms
+C4_loss1_n6,n6,netem loss 1%,2,L2 transport,udp_packets,27822.0,datagrams
+C4_loss1_n6,n6,netem loss 1%,3,L2 transport,udp_offered_mbps,29.999361459703515,Mbit/s
+C4_loss1_n6,n6,netem loss 1%,3,L2 transport,udp_received_mbps,29.699826517462288,Mbit/s
+C4_loss1_n6,n6,netem loss 1%,3,L2 transport,udp_loss_percent,0.992056360303368,%
+C4_loss1_n6,n6,netem loss 1%,3,L2 transport,udp_jitter_ms,0.021413125728473665,ms
+C4_loss1_n6,n6,netem loss 1%,3,L2 transport,udp_packets,27821.0,datagrams
+C4_loss1_n6,n6,netem loss 1%,1,L3 application,http_success_percent,100.0,%
+C4_loss1_n6,n6,netem loss 1%,1,L3 application,http_total_median_ms,2.4955,ms
+C4_loss1_n6,n6,netem loss 1%,1,L3 application,http_total_p95_ms,6.096549999999998,ms
+C4_loss1_n6,n6,netem loss 1%,1,L3 application,http_connect_median_ms,1.2305,ms
+C4_loss1_n6,n6,netem loss 1%,2,L3 application,http_success_percent,100.0,%
+C4_loss1_n6,n6,netem loss 1%,2,L3 application,http_total_median_ms,2.0635000000000003,ms
+C4_loss1_n6,n6,netem loss 1%,2,L3 application,http_total_p95_ms,7.52744999999999,ms
+C4_loss1_n6,n6,netem loss 1%,2,L3 application,http_connect_median_ms,1.051,ms
+C4_loss1_n6,n6,netem loss 1%,3,L3 application,http_success_percent,100.0,%
+C4_loss1_n6,n6,netem loss 1%,3,L3 application,http_total_median_ms,1.9729999999999999,ms
+C4_loss1_n6,n6,netem loss 1%,3,L3 application,http_total_p95_ms,5.8071,ms
+C4_loss1_n6,n6,netem loss 1%,3,L3 application,http_connect_median_ms,1.047,ms
+C4_loss1_n6,n6,netem loss 1%,1,L3 application,http1m_success_percent,100.0,%
+C4_loss1_n6,n6,netem loss 1%,1,L3 application,http1m_total_median_ms,63.1,ms
+C4_loss1_n6,n6,netem loss 1%,1,L3 application,http1m_total_p95_ms,78.1982,ms
+C4_loss1_n6,n6,netem loss 1%,1,L3 application,http1m_connect_median_ms,1.229,ms
+C4_loss1_n6,n6,netem loss 1%,2,L3 application,http1m_success_percent,100.0,%
+C4_loss1_n6,n6,netem loss 1%,2,L3 application,http1m_total_median_ms,34.781,ms
+C4_loss1_n6,n6,netem loss 1%,2,L3 application,http1m_total_p95_ms,45.669399999999996,ms
+C4_loss1_n6,n6,netem loss 1%,2,L3 application,http1m_connect_median_ms,1.049,ms
+C4_loss1_n6,n6,netem loss 1%,3,L3 application,http1m_success_percent,100.0,%
+C4_loss1_n6,n6,netem loss 1%,3,L3 application,http1m_total_median_ms,52.577,ms
+C4_loss1_n6,n6,netem loss 1%,3,L3 application,http1m_total_p95_ms,862.3625999999997,ms
+C4_loss1_n6,n6,netem loss 1%,3,L3 application,http1m_connect_median_ms,1.171,ms
+C4_loss1_n6,n6,netem loss 1%,1,L3 application,http_tcp_retrans_segs,2.0,segments
+C4_loss1_n6,n6,netem loss 1%,1,L3 application,http_tcp_timeouts,1.0,events
+C4_loss1_n6,n6,netem loss 1%,2,L3 application,http_tcp_retrans_segs,3.0,segments
+C4_loss1_n6,n6,netem loss 1%,2,L3 application,http_tcp_timeouts,1.0,events
+C4_loss1_n6,n6,netem loss 1%,3,L3 application,http_tcp_retrans_segs,3.0,segments
+C4_loss1_n6,n6,netem loss 1%,3,L3 application,http_tcp_timeouts,2.0,events
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L1 network,rtt_avg_ms,1.447,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L1 network,rtt_min_ms,0.874,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L1 network,rtt_max_ms,4.09,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L1 network,rtt_std_ms,0.7091110510763604,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L1 network,icmp_loss_percent,0.0,%
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L1 network,rtt_avg_ms,1.5255333333333334,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L1 network,rtt_min_ms,0.969,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L1 network,rtt_max_ms,4.13,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L1 network,rtt_std_ms,0.8265522798131815,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L1 network,icmp_loss_percent,0.0,%
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L1 network,rtt_avg_ms,1.7361999999999997,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L1 network,rtt_min_ms,0.826,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L1 network,rtt_max_ms,4.54,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L1 network,rtt_std_ms,1.0838431429965731,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L1 network,icmp_loss_percent,0.0,%
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L2 transport,tcp_up_mbps,18.461309651402658,Mbit/s
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L2 transport,tcp_up_retrans,8.0,segments
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L2 transport,tcp_up_srtt_ms,47.134,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L2 transport,tcp_up_mbps,18.460468648437082,Mbit/s
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L2 transport,tcp_up_retrans,9.0,segments
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L2 transport,tcp_up_srtt_ms,47.815,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L2 transport,tcp_up_mbps,18.462683331942316,Mbit/s
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L2 transport,tcp_up_retrans,8.0,segments
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L2 transport,tcp_up_srtt_ms,46.919,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L2 transport,tcp_down_mbps,18.452891174368762,Mbit/s
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L2 transport,tcp_down_retrans,9.0,segments
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L2 transport,tcp_down_srtt_ms,,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L2 transport,tcp_down_mbps,18.452985274157992,Mbit/s
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L2 transport,tcp_down_retrans,8.0,segments
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L2 transport,tcp_down_srtt_ms,,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L2 transport,tcp_down_mbps,18.453012950749237,Mbit/s
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L2 transport,tcp_down_retrans,11.0,segments
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L2 transport,tcp_down_srtt_ms,,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L2 transport,udp_offered_mbps,29.996918449898914,Mbit/s
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L2 transport,udp_received_mbps,18.822969494494775,Mbit/s
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L2 transport,udp_loss_percent,36.9168284091726,%
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L2 transport,udp_jitter_ms,0.23162001729513448,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L2 transport,udp_packets,27822.0,datagrams
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L2 transport,udp_offered_mbps,29.99950702597973,Mbit/s
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L2 transport,udp_received_mbps,18.822969805117722,Mbit/s
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L2 transport,udp_loss_percent,36.9194823867721,%
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L2 transport,udp_jitter_ms,0.24047348706852056,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L2 transport,udp_packets,27820.0,datagrams
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L2 transport,udp_offered_mbps,29.998851526906275,Mbit/s
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L2 transport,udp_received_mbps,18.536416552076208,Mbit/s
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L2 transport,udp_loss_percent,36.91815535027497,%
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L2 transport,udp_jitter_ms,0.18725296099928918,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L2 transport,udp_packets,27820.0,datagrams
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L3 application,http_success_percent,100.0,%
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L3 application,http_total_median_ms,1.9785000000000001,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L3 application,http_total_p95_ms,5.201149999999999,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L3 application,http_connect_median_ms,1.0070000000000001,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L3 application,http_success_percent,100.0,%
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L3 application,http_total_median_ms,1.977,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L3 application,http_total_p95_ms,5.05515,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L3 application,http_connect_median_ms,1.0825,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L3 application,http_success_percent,100.0,%
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L3 application,http_total_median_ms,2.0455,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L3 application,http_total_p95_ms,5.054749999999999,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L3 application,http_connect_median_ms,1.0365000000000002,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L3 application,http1m_success_percent,100.0,%
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L3 application,http1m_total_median_ms,443.435,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L3 application,http1m_total_p95_ms,444.21880000000004,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L3 application,http1m_connect_median_ms,1.439,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L3 application,http1m_success_percent,100.0,%
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L3 application,http1m_total_median_ms,442.585,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L3 application,http1m_total_p95_ms,442.7262,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L3 application,http1m_connect_median_ms,0.995,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L3 application,http1m_success_percent,100.0,%
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L3 application,http1m_total_median_ms,442.938,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L3 application,http1m_total_p95_ms,446.0318,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L3 application,http1m_connect_median_ms,1.1540000000000001,ms
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L3 application,http_tcp_retrans_segs,0.0,segments
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,L3 application,http_tcp_timeouts,0.0,events
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L3 application,http_tcp_retrans_segs,0.0,segments
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,L3 application,http_tcp_timeouts,0.0,events
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L3 application,http_tcp_retrans_segs,0.0,segments
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,L3 application,http_tcp_timeouts,0.0,events

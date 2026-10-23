@@ -1,0 +1,16 @@
+## n3 scenario-b-gnb/eth0
+qdisc netem 8024: root refcnt 5 limit 10000 delay 25ms seed 13729631180312835956
+ Sent 218100107 bytes 178468 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+## n3 scenario-b-upf/eth1
+qdisc netem 8025: root refcnt 5 limit 10000 delay 25ms seed 3449330812813690254
+ Sent 119135606 bytes 103783 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+## n6 scenario-b-upf/eth0
+qdisc noqueue 0: root refcnt 2 
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+## n6 -/veth3fd3a41
+qdisc noqueue 0: root refcnt 2 
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0

@@ -1,0 +1,7 @@
+condition,link,spec
+C0_baseline,none,
+C1_delay50_n3,n3,netem delay 25ms
+C2_delay50_n6,n6,netem delay 25ms
+C3_loss1_n3,n3,netem loss 1%
+C4_loss1_n6,n6,netem loss 1%
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms

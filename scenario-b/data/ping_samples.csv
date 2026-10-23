@@ -1,0 +1,538 @@
+condition,link,spec,rep,seq,rtt_ms
+C0_baseline,none,,1,1,1.04
+C0_baseline,none,,1,2,1.1
+C0_baseline,none,,1,3,1.34
+C0_baseline,none,,1,4,1.15
+C0_baseline,none,,1,5,1.24
+C0_baseline,none,,1,6,1.22
+C0_baseline,none,,1,7,1.67
+C0_baseline,none,,1,8,1.06
+C0_baseline,none,,1,9,0.998
+C0_baseline,none,,1,10,1.29
+C0_baseline,none,,1,11,0.99
+C0_baseline,none,,1,12,3.97
+C0_baseline,none,,1,13,4.38
+C0_baseline,none,,1,14,2.85
+C0_baseline,none,,1,15,2.18
+C0_baseline,none,,1,16,1.15
+C0_baseline,none,,1,17,1.02
+C0_baseline,none,,1,18,1.12
+C0_baseline,none,,1,19,1.04
+C0_baseline,none,,1,20,0.998
+C0_baseline,none,,1,21,1.2
+C0_baseline,none,,1,22,1.54
+C0_baseline,none,,1,23,1.06
+C0_baseline,none,,1,24,1.55
+C0_baseline,none,,1,25,1.07
+C0_baseline,none,,1,26,1.3
+C0_baseline,none,,1,27,1.22
+C0_baseline,none,,1,28,1.23
+C0_baseline,none,,1,29,4.08
+C0_baseline,none,,1,30,3.48
+C0_baseline,none,,2,1,1.8
+C0_baseline,none,,2,2,1.61
+C0_baseline,none,,2,3,1.71
+C0_baseline,none,,2,4,1.79
+C0_baseline,none,,2,5,1.22
+C0_baseline,none,,2,6,1.32
+C0_baseline,none,,2,7,1.55
+C0_baseline,none,,2,8,1.21
+C0_baseline,none,,2,9,1.43
+C0_baseline,none,,2,10,1.42
+C0_baseline,none,,2,11,1.06
+C0_baseline,none,,2,12,1.44
+C0_baseline,none,,2,13,2.3
+C0_baseline,none,,2,14,1.22
+C0_baseline,none,,2,15,1.46
+C0_baseline,none,,2,16,4.18
+C0_baseline,none,,2,17,3.98
+C0_baseline,none,,2,18,2.81
+C0_baseline,none,,2,19,1.73
+C0_baseline,none,,2,20,1.08
+C0_baseline,none,,2,21,1.71
+C0_baseline,none,,2,22,1.13
+C0_baseline,none,,2,23,1.08
+C0_baseline,none,,2,24,1.34
+C0_baseline,none,,2,25,1.42
+C0_baseline,none,,2,26,1.09
+C0_baseline,none,,2,27,1.06
+C0_baseline,none,,2,28,1.41
+C0_baseline,none,,2,29,1.13
+C0_baseline,none,,2,30,1.23
+C0_baseline,none,,3,1,0.802
+C0_baseline,none,,3,2,1.07
+C0_baseline,none,,3,3,1.1
+C0_baseline,none,,3,4,2.31
+C0_baseline,none,,3,5,3.7
+C0_baseline,none,,3,6,2.78
+C0_baseline,none,,3,7,1.11
+C0_baseline,none,,3,8,1.06
+C0_baseline,none,,3,9,1.64
+C0_baseline,none,,3,10,1.81
+C0_baseline,none,,3,11,1.05
+C0_baseline,none,,3,12,1.07
+C0_baseline,none,,3,13,1.31
+C0_baseline,none,,3,14,1.36
+C0_baseline,none,,3,15,1.96
+C0_baseline,none,,3,16,2.73
+C0_baseline,none,,3,17,1.21
+C0_baseline,none,,3,18,1.69
+C0_baseline,none,,3,19,2.31
+C0_baseline,none,,3,20,3.51
+C0_baseline,none,,3,21,3.69
+C0_baseline,none,,3,22,2.48
+C0_baseline,none,,3,23,1.21
+C0_baseline,none,,3,24,1.21
+C0_baseline,none,,3,25,1.14
+C0_baseline,none,,3,26,1.36
+C0_baseline,none,,3,27,1.14
+C0_baseline,none,,3,28,1.73
+C0_baseline,none,,3,29,1.2
+C0_baseline,none,,3,30,1.27
+C1_delay50_n3,n3,netem delay 25ms,1,1,53.9
+C1_delay50_n3,n3,netem delay 25ms,1,2,53.0
+C1_delay50_n3,n3,netem delay 25ms,1,3,53.0
+C1_delay50_n3,n3,netem delay 25ms,1,4,52.9
+C1_delay50_n3,n3,netem delay 25ms,1,5,52.3
+C1_delay50_n3,n3,netem delay 25ms,1,6,51.7
+C1_delay50_n3,n3,netem delay 25ms,1,7,51.8
+C1_delay50_n3,n3,netem delay 25ms,1,8,51.6
+C1_delay50_n3,n3,netem delay 25ms,1,9,53.3
+C1_delay50_n3,n3,netem delay 25ms,1,10,52.2
+C1_delay50_n3,n3,netem delay 25ms,1,11,52.2
+C1_delay50_n3,n3,netem delay 25ms,1,12,52.0
+C1_delay50_n3,n3,netem delay 25ms,1,13,54.6
+C1_delay50_n3,n3,netem delay 25ms,1,14,54.3
+C1_delay50_n3,n3,netem delay 25ms,1,15,54.1
+C1_delay50_n3,n3,netem delay 25ms,1,16,53.4
+C1_delay50_n3,n3,netem delay 25ms,1,17,53.1
+C1_delay50_n3,n3,netem delay 25ms,1,18,52.5
+C1_delay50_n3,n3,netem delay 25ms,1,19,51.7
+C1_delay50_n3,n3,netem delay 25ms,1,20,52.0
+C1_delay50_n3,n3,netem delay 25ms,1,21,52.3
+C1_delay50_n3,n3,netem delay 25ms,1,22,52.9
+C1_delay50_n3,n3,netem delay 25ms,1,23,52.0
+C1_delay50_n3,n3,netem delay 25ms,1,24,53.7
+C1_delay50_n3,n3,netem delay 25ms,1,25,53.4
+C1_delay50_n3,n3,netem delay 25ms,1,26,53.9
+C1_delay50_n3,n3,netem delay 25ms,1,27,53.0
+C1_delay50_n3,n3,netem delay 25ms,1,28,52.1
+C1_delay50_n3,n3,netem delay 25ms,1,29,51.6
+C1_delay50_n3,n3,netem delay 25ms,1,30,52.4
+C1_delay50_n3,n3,netem delay 25ms,2,1,52.4
+C1_delay50_n3,n3,netem delay 25ms,2,2,52.4
+C1_delay50_n3,n3,netem delay 25ms,2,3,52.3
+C1_delay50_n3,n3,netem delay 25ms,2,4,52.4
+C1_delay50_n3,n3,netem delay 25ms,2,5,53.8
+C1_delay50_n3,n3,netem delay 25ms,2,6,55.1
+C1_delay50_n3,n3,netem delay 25ms,2,7,53.2
+C1_delay50_n3,n3,netem delay 25ms,2,8,51.9
+C1_delay50_n3,n3,netem delay 25ms,2,9,51.6
+C1_delay50_n3,n3,netem delay 25ms,2,10,52.0
+C1_delay50_n3,n3,netem delay 25ms,2,11,52.0
+C1_delay50_n3,n3,netem delay 25ms,2,12,51.9
+C1_delay50_n3,n3,netem delay 25ms,2,13,51.9
+C1_delay50_n3,n3,netem delay 25ms,2,14,52.7
+C1_delay50_n3,n3,netem delay 25ms,2,15,53.9
+C1_delay50_n3,n3,netem delay 25ms,2,16,52.4
+C1_delay50_n3,n3,netem delay 25ms,2,17,51.9
+C1_delay50_n3,n3,netem delay 25ms,2,18,51.5
+C1_delay50_n3,n3,netem delay 25ms,2,19,51.4
+C1_delay50_n3,n3,netem delay 25ms,2,20,51.8
+C1_delay50_n3,n3,netem delay 25ms,2,21,51.8
+C1_delay50_n3,n3,netem delay 25ms,2,22,52.0
+C1_delay50_n3,n3,netem delay 25ms,2,23,52.2
+C1_delay50_n3,n3,netem delay 25ms,2,24,54.4
+C1_delay50_n3,n3,netem delay 25ms,2,25,54.6
+C1_delay50_n3,n3,netem delay 25ms,2,26,54.6
+C1_delay50_n3,n3,netem delay 25ms,2,27,54.8
+C1_delay50_n3,n3,netem delay 25ms,2,28,52.8
+C1_delay50_n3,n3,netem delay 25ms,2,29,52.1
+C1_delay50_n3,n3,netem delay 25ms,2,30,52.5
+C1_delay50_n3,n3,netem delay 25ms,3,1,54.2
+C1_delay50_n3,n3,netem delay 25ms,3,2,54.2
+C1_delay50_n3,n3,netem delay 25ms,3,3,53.6
+C1_delay50_n3,n3,netem delay 25ms,3,4,52.9
+C1_delay50_n3,n3,netem delay 25ms,3,5,52.6
+C1_delay50_n3,n3,netem delay 25ms,3,6,51.8
+C1_delay50_n3,n3,netem delay 25ms,3,7,52.4
+C1_delay50_n3,n3,netem delay 25ms,3,8,52.4
+C1_delay50_n3,n3,netem delay 25ms,3,9,52.0
+C1_delay50_n3,n3,netem delay 25ms,3,10,53.7
+C1_delay50_n3,n3,netem delay 25ms,3,11,53.8
+C1_delay50_n3,n3,netem delay 25ms,3,12,52.9
+C1_delay50_n3,n3,netem delay 25ms,3,13,52.4
+C1_delay50_n3,n3,netem delay 25ms,3,14,51.8
+C1_delay50_n3,n3,netem delay 25ms,3,15,61.6
+C1_delay50_n3,n3,netem delay 25ms,3,16,52.0
+C1_delay50_n3,n3,netem delay 25ms,3,17,52.2
+C1_delay50_n3,n3,netem delay 25ms,3,18,52.6
+C1_delay50_n3,n3,netem delay 25ms,3,19,54.5
+C1_delay50_n3,n3,netem delay 25ms,3,20,54.6
+C1_delay50_n3,n3,netem delay 25ms,3,21,55.0
+C1_delay50_n3,n3,netem delay 25ms,3,22,53.2
+C1_delay50_n3,n3,netem delay 25ms,3,23,52.1
+C1_delay50_n3,n3,netem delay 25ms,3,24,51.9
+C1_delay50_n3,n3,netem delay 25ms,3,25,51.8
+C1_delay50_n3,n3,netem delay 25ms,3,26,51.7
+C1_delay50_n3,n3,netem delay 25ms,3,27,51.8
+C1_delay50_n3,n3,netem delay 25ms,3,28,53.0
+C1_delay50_n3,n3,netem delay 25ms,3,29,54.3
+C1_delay50_n3,n3,netem delay 25ms,3,30,53.6
+C2_delay50_n6,n6,netem delay 25ms,1,1,51.9
+C2_delay50_n6,n6,netem delay 25ms,1,2,51.7
+C2_delay50_n6,n6,netem delay 25ms,1,3,51.7
+C2_delay50_n6,n6,netem delay 25ms,1,4,51.7
+C2_delay50_n6,n6,netem delay 25ms,1,5,51.5
+C2_delay50_n6,n6,netem delay 25ms,1,6,54.7
+C2_delay50_n6,n6,netem delay 25ms,1,7,55.0
+C2_delay50_n6,n6,netem delay 25ms,1,8,53.3
+C2_delay50_n6,n6,netem delay 25ms,1,9,53.0
+C2_delay50_n6,n6,netem delay 25ms,1,10,52.3
+C2_delay50_n6,n6,netem delay 25ms,1,11,52.3
+C2_delay50_n6,n6,netem delay 25ms,1,12,52.5
+C2_delay50_n6,n6,netem delay 25ms,1,13,51.8
+C2_delay50_n6,n6,netem delay 25ms,1,14,51.7
+C2_delay50_n6,n6,netem delay 25ms,1,15,51.8
+C2_delay50_n6,n6,netem delay 25ms,1,16,51.7
+C2_delay50_n6,n6,netem delay 25ms,1,17,51.8
+C2_delay50_n6,n6,netem delay 25ms,1,18,52.6
+C2_delay50_n6,n6,netem delay 25ms,1,19,53.2
+C2_delay50_n6,n6,netem delay 25ms,1,20,52.7
+C2_delay50_n6,n6,netem delay 25ms,1,21,52.6
+C2_delay50_n6,n6,netem delay 25ms,1,22,52.1
+C2_delay50_n6,n6,netem delay 25ms,1,23,51.8
+C2_delay50_n6,n6,netem delay 25ms,1,24,51.7
+C2_delay50_n6,n6,netem delay 25ms,1,25,51.7
+C2_delay50_n6,n6,netem delay 25ms,1,26,51.5
+C2_delay50_n6,n6,netem delay 25ms,1,27,51.7
+C2_delay50_n6,n6,netem delay 25ms,1,28,54.5
+C2_delay50_n6,n6,netem delay 25ms,1,29,53.9
+C2_delay50_n6,n6,netem delay 25ms,1,30,54.4
+C2_delay50_n6,n6,netem delay 25ms,2,1,51.4
+C2_delay50_n6,n6,netem delay 25ms,2,2,52.0
+C2_delay50_n6,n6,netem delay 25ms,2,3,54.8
+C2_delay50_n6,n6,netem delay 25ms,2,4,55.3
+C2_delay50_n6,n6,netem delay 25ms,2,5,54.7
+C2_delay50_n6,n6,netem delay 25ms,2,6,54.1
+C2_delay50_n6,n6,netem delay 25ms,2,7,52.6
+C2_delay50_n6,n6,netem delay 25ms,2,8,51.7
+C2_delay50_n6,n6,netem delay 25ms,2,9,52.1
+C2_delay50_n6,n6,netem delay 25ms,2,10,52.1
+C2_delay50_n6,n6,netem delay 25ms,2,11,52.2
+C2_delay50_n6,n6,netem delay 25ms,2,12,52.0
+C2_delay50_n6,n6,netem delay 25ms,2,13,51.7
+C2_delay50_n6,n6,netem delay 25ms,2,14,52.1
+C2_delay50_n6,n6,netem delay 25ms,2,15,52.0
+C2_delay50_n6,n6,netem delay 25ms,2,16,53.1
+C2_delay50_n6,n6,netem delay 25ms,2,17,52.6
+C2_delay50_n6,n6,netem delay 25ms,2,18,51.8
+C2_delay50_n6,n6,netem delay 25ms,2,19,52.2
+C2_delay50_n6,n6,netem delay 25ms,2,20,52.5
+C2_delay50_n6,n6,netem delay 25ms,2,21,52.5
+C2_delay50_n6,n6,netem delay 25ms,2,22,52.0
+C2_delay50_n6,n6,netem delay 25ms,2,23,51.6
+C2_delay50_n6,n6,netem delay 25ms,2,24,52.6
+C2_delay50_n6,n6,netem delay 25ms,2,25,55.4
+C2_delay50_n6,n6,netem delay 25ms,2,26,54.4
+C2_delay50_n6,n6,netem delay 25ms,2,27,53.2
+C2_delay50_n6,n6,netem delay 25ms,2,28,52.8
+C2_delay50_n6,n6,netem delay 25ms,2,29,52.0
+C2_delay50_n6,n6,netem delay 25ms,2,30,52.0
+C2_delay50_n6,n6,netem delay 25ms,3,1,51.5
+C2_delay50_n6,n6,netem delay 25ms,3,2,51.9
+C2_delay50_n6,n6,netem delay 25ms,3,3,53.8
+C2_delay50_n6,n6,netem delay 25ms,3,4,54.5
+C2_delay50_n6,n6,netem delay 25ms,3,5,54.2
+C2_delay50_n6,n6,netem delay 25ms,3,6,53.1
+C2_delay50_n6,n6,netem delay 25ms,3,7,52.1
+C2_delay50_n6,n6,netem delay 25ms,3,8,51.9
+C2_delay50_n6,n6,netem delay 25ms,3,9,51.8
+C2_delay50_n6,n6,netem delay 25ms,3,10,51.8
+C2_delay50_n6,n6,netem delay 25ms,3,11,51.5
+C2_delay50_n6,n6,netem delay 25ms,3,12,51.9
+C2_delay50_n6,n6,netem delay 25ms,3,13,53.3
+C2_delay50_n6,n6,netem delay 25ms,3,14,52.6
+C2_delay50_n6,n6,netem delay 25ms,3,15,52.6
+C2_delay50_n6,n6,netem delay 25ms,3,16,52.3
+C2_delay50_n6,n6,netem delay 25ms,3,17,52.7
+C2_delay50_n6,n6,netem delay 25ms,3,18,51.8
+C2_delay50_n6,n6,netem delay 25ms,3,19,51.8
+C2_delay50_n6,n6,netem delay 25ms,3,20,51.6
+C2_delay50_n6,n6,netem delay 25ms,3,21,51.9
+C2_delay50_n6,n6,netem delay 25ms,3,22,52.1
+C2_delay50_n6,n6,netem delay 25ms,3,23,51.9
+C2_delay50_n6,n6,netem delay 25ms,3,24,51.9
+C2_delay50_n6,n6,netem delay 25ms,3,25,54.3
+C2_delay50_n6,n6,netem delay 25ms,3,26,54.4
+C2_delay50_n6,n6,netem delay 25ms,3,27,54.1
+C2_delay50_n6,n6,netem delay 25ms,3,28,52.5
+C2_delay50_n6,n6,netem delay 25ms,3,29,51.9
+C2_delay50_n6,n6,netem delay 25ms,3,30,51.6
+C3_loss1_n3,n3,netem loss 1%,1,1,0.837
+C3_loss1_n3,n3,netem loss 1%,1,2,1.35
+C3_loss1_n3,n3,netem loss 1%,1,3,1.24
+C3_loss1_n3,n3,netem loss 1%,1,4,1.03
+C3_loss1_n3,n3,netem loss 1%,1,5,1.06
+C3_loss1_n3,n3,netem loss 1%,1,6,1.3
+C3_loss1_n3,n3,netem loss 1%,1,7,1.14
+C3_loss1_n3,n3,netem loss 1%,1,8,1.27
+C3_loss1_n3,n3,netem loss 1%,1,9,1.36
+C3_loss1_n3,n3,netem loss 1%,1,10,1.11
+C3_loss1_n3,n3,netem loss 1%,1,11,1.35
+C3_loss1_n3,n3,netem loss 1%,1,12,1.27
+C3_loss1_n3,n3,netem loss 1%,1,13,4.16
+C3_loss1_n3,n3,netem loss 1%,1,14,4.64
+C3_loss1_n3,n3,netem loss 1%,1,15,2.87
+C3_loss1_n3,n3,netem loss 1%,1,16,1.72
+C3_loss1_n3,n3,netem loss 1%,1,17,1.45
+C3_loss1_n3,n3,netem loss 1%,1,18,1.18
+C3_loss1_n3,n3,netem loss 1%,1,19,1.2
+C3_loss1_n3,n3,netem loss 1%,1,20,1.13
+C3_loss1_n3,n3,netem loss 1%,1,21,1.69
+C3_loss1_n3,n3,netem loss 1%,1,22,1.45
+C3_loss1_n3,n3,netem loss 1%,1,23,1.18
+C3_loss1_n3,n3,netem loss 1%,1,24,1.08
+C3_loss1_n3,n3,netem loss 1%,1,25,1.14
+C3_loss1_n3,n3,netem loss 1%,1,26,1.04
+C3_loss1_n3,n3,netem loss 1%,1,27,1.42
+C3_loss1_n3,n3,netem loss 1%,1,28,1.03
+C3_loss1_n3,n3,netem loss 1%,1,29,2.08
+C3_loss1_n3,n3,netem loss 1%,1,30,4.41
+C3_loss1_n3,n3,netem loss 1%,2,1,0.845
+C3_loss1_n3,n3,netem loss 1%,2,2,1.14
+C3_loss1_n3,n3,netem loss 1%,2,3,1.18
+C3_loss1_n3,n3,netem loss 1%,2,4,1.2
+C3_loss1_n3,n3,netem loss 1%,2,6,1.11
+C3_loss1_n3,n3,netem loss 1%,2,7,1.31
+C3_loss1_n3,n3,netem loss 1%,2,8,1.2
+C3_loss1_n3,n3,netem loss 1%,2,9,1.21
+C3_loss1_n3,n3,netem loss 1%,2,10,1.36
+C3_loss1_n3,n3,netem loss 1%,2,11,1.19
+C3_loss1_n3,n3,netem loss 1%,2,12,1.28
+C3_loss1_n3,n3,netem loss 1%,2,13,1.1
+C3_loss1_n3,n3,netem loss 1%,2,14,1.92
+C3_loss1_n3,n3,netem loss 1%,2,15,1.69
+C3_loss1_n3,n3,netem loss 1%,2,16,4.3
+C3_loss1_n3,n3,netem loss 1%,2,17,4.07
+C3_loss1_n3,n3,netem loss 1%,2,18,2.45
+C3_loss1_n3,n3,netem loss 1%,2,19,2.09
+C3_loss1_n3,n3,netem loss 1%,2,20,1.77
+C3_loss1_n3,n3,netem loss 1%,2,21,1.21
+C3_loss1_n3,n3,netem loss 1%,2,22,1.22
+C3_loss1_n3,n3,netem loss 1%,2,23,2.24
+C3_loss1_n3,n3,netem loss 1%,2,24,1.43
+C3_loss1_n3,n3,netem loss 1%,2,25,1.55
+C3_loss1_n3,n3,netem loss 1%,2,26,0.912
+C3_loss1_n3,n3,netem loss 1%,2,27,1.18
+C3_loss1_n3,n3,netem loss 1%,2,28,1.16
+C3_loss1_n3,n3,netem loss 1%,2,29,1.22
+C3_loss1_n3,n3,netem loss 1%,2,30,1.1
+C3_loss1_n3,n3,netem loss 1%,3,1,0.93
+C3_loss1_n3,n3,netem loss 1%,3,2,1.52
+C3_loss1_n3,n3,netem loss 1%,3,3,1.14
+C3_loss1_n3,n3,netem loss 1%,3,4,1.13
+C3_loss1_n3,n3,netem loss 1%,3,5,1.88
+C3_loss1_n3,n3,netem loss 1%,3,6,1.14
+C3_loss1_n3,n3,netem loss 1%,3,7,5.02
+C3_loss1_n3,n3,netem loss 1%,3,8,4.11
+C3_loss1_n3,n3,netem loss 1%,3,9,3.99
+C3_loss1_n3,n3,netem loss 1%,3,10,3.14
+C3_loss1_n3,n3,netem loss 1%,3,11,2.51
+C3_loss1_n3,n3,netem loss 1%,3,12,1.68
+C3_loss1_n3,n3,netem loss 1%,3,13,1.13
+C3_loss1_n3,n3,netem loss 1%,3,14,1.93
+C3_loss1_n3,n3,netem loss 1%,3,15,1.27
+C3_loss1_n3,n3,netem loss 1%,3,16,1.03
+C3_loss1_n3,n3,netem loss 1%,3,17,1.19
+C3_loss1_n3,n3,netem loss 1%,3,18,1.31
+C3_loss1_n3,n3,netem loss 1%,3,19,1.15
+C3_loss1_n3,n3,netem loss 1%,3,20,1.24
+C3_loss1_n3,n3,netem loss 1%,3,21,1.33
+C3_loss1_n3,n3,netem loss 1%,3,22,1.28
+C3_loss1_n3,n3,netem loss 1%,3,23,1.36
+C3_loss1_n3,n3,netem loss 1%,3,24,1.34
+C3_loss1_n3,n3,netem loss 1%,3,25,2.43
+C3_loss1_n3,n3,netem loss 1%,3,26,1.37
+C3_loss1_n3,n3,netem loss 1%,3,27,2.78
+C3_loss1_n3,n3,netem loss 1%,3,28,3.67
+C3_loss1_n3,n3,netem loss 1%,3,29,1.95
+C3_loss1_n3,n3,netem loss 1%,3,30,1.44
+C4_loss1_n6,n6,netem loss 1%,1,1,1.05
+C4_loss1_n6,n6,netem loss 1%,1,2,1.2
+C4_loss1_n6,n6,netem loss 1%,1,3,0.877
+C4_loss1_n6,n6,netem loss 1%,1,4,1.06
+C4_loss1_n6,n6,netem loss 1%,1,5,1.02
+C4_loss1_n6,n6,netem loss 1%,1,6,1.09
+C4_loss1_n6,n6,netem loss 1%,1,7,1.21
+C4_loss1_n6,n6,netem loss 1%,1,8,1.08
+C4_loss1_n6,n6,netem loss 1%,1,9,1.4
+C4_loss1_n6,n6,netem loss 1%,1,10,0.965
+C4_loss1_n6,n6,netem loss 1%,1,11,1.05
+C4_loss1_n6,n6,netem loss 1%,1,12,3.3
+C4_loss1_n6,n6,netem loss 1%,1,13,3.63
+C4_loss1_n6,n6,netem loss 1%,1,14,1.79
+C4_loss1_n6,n6,netem loss 1%,1,15,1.3
+C4_loss1_n6,n6,netem loss 1%,1,16,1.33
+C4_loss1_n6,n6,netem loss 1%,1,17,1.06
+C4_loss1_n6,n6,netem loss 1%,1,18,1.07
+C4_loss1_n6,n6,netem loss 1%,1,19,1.59
+C4_loss1_n6,n6,netem loss 1%,1,20,1.1
+C4_loss1_n6,n6,netem loss 1%,1,21,0.984
+C4_loss1_n6,n6,netem loss 1%,1,22,1.33
+C4_loss1_n6,n6,netem loss 1%,1,23,0.996
+C4_loss1_n6,n6,netem loss 1%,1,24,1.2
+C4_loss1_n6,n6,netem loss 1%,1,25,1.13
+C4_loss1_n6,n6,netem loss 1%,1,26,1.13
+C4_loss1_n6,n6,netem loss 1%,1,27,0.974
+C4_loss1_n6,n6,netem loss 1%,1,28,1.12
+C4_loss1_n6,n6,netem loss 1%,1,29,1.29
+C4_loss1_n6,n6,netem loss 1%,1,30,1.2
+C4_loss1_n6,n6,netem loss 1%,2,1,1.22
+C4_loss1_n6,n6,netem loss 1%,2,3,1.0
+C4_loss1_n6,n6,netem loss 1%,2,4,0.945
+C4_loss1_n6,n6,netem loss 1%,2,5,1.21
+C4_loss1_n6,n6,netem loss 1%,2,6,1.13
+C4_loss1_n6,n6,netem loss 1%,2,7,1.49
+C4_loss1_n6,n6,netem loss 1%,2,8,2.58
+C4_loss1_n6,n6,netem loss 1%,2,9,3.84
+C4_loss1_n6,n6,netem loss 1%,2,10,2.45
+C4_loss1_n6,n6,netem loss 1%,2,11,1.25
+C4_loss1_n6,n6,netem loss 1%,2,12,1.47
+C4_loss1_n6,n6,netem loss 1%,2,13,1.15
+C4_loss1_n6,n6,netem loss 1%,2,14,1.13
+C4_loss1_n6,n6,netem loss 1%,2,15,1.09
+C4_loss1_n6,n6,netem loss 1%,2,16,1.08
+C4_loss1_n6,n6,netem loss 1%,2,17,1.26
+C4_loss1_n6,n6,netem loss 1%,2,18,1.52
+C4_loss1_n6,n6,netem loss 1%,2,19,1.42
+C4_loss1_n6,n6,netem loss 1%,2,20,1.14
+C4_loss1_n6,n6,netem loss 1%,2,21,1.55
+C4_loss1_n6,n6,netem loss 1%,2,22,1.57
+C4_loss1_n6,n6,netem loss 1%,2,23,1.18
+C4_loss1_n6,n6,netem loss 1%,2,24,1.37
+C4_loss1_n6,n6,netem loss 1%,2,25,3.97
+C4_loss1_n6,n6,netem loss 1%,2,26,2.43
+C4_loss1_n6,n6,netem loss 1%,2,28,0.998
+C4_loss1_n6,n6,netem loss 1%,2,29,1.08
+C4_loss1_n6,n6,netem loss 1%,2,30,1.3
+C4_loss1_n6,n6,netem loss 1%,3,1,0.987
+C4_loss1_n6,n6,netem loss 1%,3,2,0.994
+C4_loss1_n6,n6,netem loss 1%,3,3,1.05
+C4_loss1_n6,n6,netem loss 1%,3,4,0.982
+C4_loss1_n6,n6,netem loss 1%,3,5,1.37
+C4_loss1_n6,n6,netem loss 1%,3,6,1.05
+C4_loss1_n6,n6,netem loss 1%,3,7,4.88
+C4_loss1_n6,n6,netem loss 1%,3,8,4.12
+C4_loss1_n6,n6,netem loss 1%,3,9,2.56
+C4_loss1_n6,n6,netem loss 1%,3,10,1.47
+C4_loss1_n6,n6,netem loss 1%,3,11,1.22
+C4_loss1_n6,n6,netem loss 1%,3,12,1.25
+C4_loss1_n6,n6,netem loss 1%,3,13,1.34
+C4_loss1_n6,n6,netem loss 1%,3,14,1.19
+C4_loss1_n6,n6,netem loss 1%,3,15,1.18
+C4_loss1_n6,n6,netem loss 1%,3,16,1.16
+C4_loss1_n6,n6,netem loss 1%,3,17,1.79
+C4_loss1_n6,n6,netem loss 1%,3,18,1.27
+C4_loss1_n6,n6,netem loss 1%,3,19,1.02
+C4_loss1_n6,n6,netem loss 1%,3,20,1.09
+C4_loss1_n6,n6,netem loss 1%,3,21,0.978
+C4_loss1_n6,n6,netem loss 1%,3,22,1.16
+C4_loss1_n6,n6,netem loss 1%,3,23,1.38
+C4_loss1_n6,n6,netem loss 1%,3,24,3.05
+C4_loss1_n6,n6,netem loss 1%,3,25,4.18
+C4_loss1_n6,n6,netem loss 1%,3,26,2.38
+C4_loss1_n6,n6,netem loss 1%,3,27,2.3
+C4_loss1_n6,n6,netem loss 1%,3,28,1.25
+C4_loss1_n6,n6,netem loss 1%,3,29,0.998
+C4_loss1_n6,n6,netem loss 1%,3,30,1.17
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,1,0.874
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,2,1.19
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,3,1.16
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,4,1.24
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,5,1.14
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,6,1.54
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,7,1.37
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,8,1.01
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,9,1.38
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,10,1.47
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,11,1.44
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,12,1.02
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,13,0.999
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,14,2.22
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,15,4.09
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,16,3.55
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,17,1.92
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,18,1.56
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,19,1.14
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,20,1.16
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,21,1.06
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,22,1.07
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,23,0.947
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,24,0.98
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,25,1.43
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,26,1.39
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,27,1.17
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,28,1.3
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,29,1.14
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,1,30,1.45
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,1,0.969
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,2,1.18
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,3,1.19
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,4,1.35
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,5,1.58
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,6,1.14
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,7,1.11
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,8,1.09
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,9,1.43
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,10,1.29
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,11,1.24
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,12,1.12
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,13,1.29
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,14,4.05
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,15,4.13
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,16,3.28
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,17,2.23
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,18,1.27
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,19,1.27
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,20,1.78
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,21,1.23
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,22,1.1
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,23,1.07
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,24,1.07
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,25,1.06
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,26,0.987
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,27,1.51
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,28,1.28
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,29,1.32
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,2,30,1.15
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,1,0.826
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,2,1.16
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,3,1.5
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,4,1.1
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,5,1.13
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,6,1.13
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,7,1.25
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,8,1.2
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,9,2.32
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,10,4.54
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,11,2.92
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,12,1.39
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,13,1.26
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,14,1.22
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,15,1.16
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,16,1.13
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,17,1.19
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,18,1.23
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,19,1.11
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,20,1.23
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,21,1.07
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,22,1.47
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,23,1.08
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,24,4.13
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,25,4.19
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,26,4.12
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,27,2.1
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,28,1.39
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,29,1.24
+C5_rate20_n3,n3,tbf rate 20mbit burst 32kb latency 50ms,3,30,1.3

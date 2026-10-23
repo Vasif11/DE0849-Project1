@@ -1,0 +1,12 @@
+# Kernel UDP MIB of the user-plane containers, read after the Step 3 and timeline runs
+# (cumulative since each container start; the UPF was restarted during failure case F2)
+2026-10-23T17:10:56+03:00
+== scenario-b-gnb started 2026-10-23T13:10:14.643134087Z
+Udp: InDatagrams NoPorts InErrors OutDatagrams RcvbufErrors SndbufErrors InCsumErrors IgnoredMulti MemErrors
+Udp: 48079027 0 9652 48048765 9652 30937 0 0 0
+== scenario-b-ue started 2026-10-23T13:38:49.315993561Z
+Udp: InDatagrams NoPorts InErrors OutDatagrams RcvbufErrors SndbufErrors InCsumErrors IgnoredMulti MemErrors
+Udp: 11079786 0 0 28609089 0 0 0 0 0
+== scenario-b-upf started 2026-10-23T13:37:39.745847806Z
+Udp: InDatagrams NoPorts InErrors OutDatagrams RcvbufErrors SndbufErrors InCsumErrors IgnoredMulti MemErrors
+Udp: 28554287 20 30695 11085751 30695 0 0 0 0
